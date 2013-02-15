@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/registration/services/UpdateCountry/UpdateCountryRequest/v1"
+	xmlns:tns="http://www.sample.project.com.au/registration/services/UpdateCountry/UpdateCountryRequest/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Request/v1" xmlns:pref1="http://www.sample.project.com.au/registration/model/Country/v1">
+
+
+	<import schemaLocation="../../../../common/messages/1.0/Request.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Request/v1">
+	</import>
+	<import schemaLocation="../../../model/Country/1.0/Country.xsd" namespace="http://www.sample.project.com.au/registration/model/Country/v1"></import>
+	<complexType name="UpdateCountryRequest">
+		<complexContent>
+			<extension base="pref:Request">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<sequence>
+								<element name="country" type="pref1:Country">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<!-- 	<element name="updateCountryRequest" type="tns:UpdateCountryRequest"></element>
+	-->
+</schema>

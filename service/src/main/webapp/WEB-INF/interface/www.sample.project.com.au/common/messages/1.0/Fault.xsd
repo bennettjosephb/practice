@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema	targetNamespace="http://www.sample.project.com.au/common/message/Fault/v1"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	version="1.1">
+	
+	<complexType name="Fault">
+		<annotation>
+			<documentation>An abstract base type extended by BusinessException and TechnicalException.</documentation>
+		</annotation>
+		
+		<sequence>
+			<element name="code" type="string">
+				<annotation>
+					<documentation>Element contains the error/exception code. E.g. ACCOUNT_NOT_FOUND</documentation>
+				</annotation>
+			</element>
+			
+			<element name="description" type="string">
+				<annotation>
+					<documentation>Element contains the error/exception description E.g. Account details not found using account number - abc.</documentation>
+				</annotation>
+			</element>
+			
+			<element name="sourceSystem" type="string">
+				<annotation>
+					<documentation>Element contains the system name which generates the error. E.g. CRM, PAYMENTS etc.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

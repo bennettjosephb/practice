@@ -1,0 +1,73 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.persistence.impl.jpa;
+
+//import com.mycompany.domain.Address;
+import au.com.project.sample.domain.Employee;
+import au.com.project.sample.domain.PhoneNumber;
+import com.mycompany.domain.service.EmployeeFacadeRemote;
+import com.mycompany.domain.service.PhoneNumberFacadeRemote;
+import com.mycompany.domain.service.impl.PhoneNumberFacade;
+import java.util.ArrayList;
+import java.util.List;
+import javax.naming.Context;
+
+/**
+ *
+ * @author SONY
+ */
+public class TestingClass {
+
+    public static void main(String[] args) {
+        try {
+            Context jndiContext = getInitialContext();
+            Object ref = jndiContext.lookup("EmployeeFacade/remote");
+            EmployeeFacadeRemote dao = (EmployeeFacadeRemote) ref;
+
+            Employee employee = new Employee();
+            employee.setFirstName("Master Suite");
+//            Address address = new Address();
+//            address.setCity("MEL");
+//            address.setCountry("AUS");
+//            address.setNumber("12");
+//            address.setPostalCode("3012");
+//            address.setStreet1("2/165A, SUNSHINE ROAD");
+//            address.setStreet2("WEST FOOTSCRAY");
+            //employee.setAddress(address);
+            PhoneNumber phoneNumber = new PhoneNumber();
+            //phoneNumber.setAreaCode("04");
+            //phoneNumber.setCountryCode("+61");
+            //phoneNumber.setNumber("70363030");
+            //phoneNumber.setPerson(employee);
+            List<PhoneNumber> phoneNumbers = new ArrayList<PhoneNumber>();
+            
+            PhoneNumberFacadeRemote phoneNumberFacade = null;
+            
+            phoneNumbers.add(phoneNumber);
+//            employee.setPhoneNumber(phoneNumbers);
+            employee.setRollNumber("123456");
+//            employee.setColour("BLACK");
+//            employee.setHeight(123);
+//            employee.setWeight(1234);
+            dao.create(employee);
+
+//            Employee cabin_2 = dao.find(1);
+//            System.out.println(cabin_2.getName());
+//            System.out.println(cabin_2.GETC());
+//            System.out.println(cabin_2.getShipId());
+//            System.out.println(cabin_2.getBedCount());
+            
+            dao.edit(employee);
+
+        } catch (javax.naming.NamingException ne) {
+            ne.printStackTrace();
+        }
+    }
+
+    public static Context getInitialContext()
+            throws javax.naming.NamingException {
+        return new javax.naming.InitialContext();
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/common/message/Response/v1"
+	xmlns:tns="http://www.sample.project.com.au/common/message/Response/v1"
+	elementFormDefault="qualified" xmlns:pref="http://www.sample.project.com.au/common/message/Header/v1">
+	<import schemaLocation="Header.xsd" namespace="http://www.sample.project.com.au/common/message/Header/v1"></import>
+
+
+	<complexType name="Response">
+		<sequence>
+			<element name="header" type="pref:Header"></element>
+		</sequence>
+	</complexType>
+
+	<element name="response" type="tns:Response"></element>
+</schema>

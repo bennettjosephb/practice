@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryResponse/v1"
+	xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryResponse/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Response/v1"
+	xmlns:pref1="http://www.sample.project.com.au/common/message/ResponseMessage/v1" 
+	xmlns:pref2="http://www.sample.project.com.au/registration/model/Country/v1">
+
+	<import
+		schemaLocation="../../../../common/messages/1.0/Response.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Response/v1">
+	</import>
+	<import
+		schemaLocation="../../../../common/messages/1.0/ResponseMessage.xsd"
+		namespace="http://www.sample.project.com.au/common/message/ResponseMessage/v1">
+	</import>
+	<import 
+		schemaLocation="../../../model/Country/1.0/Country.xsd" 
+		namespace="http://www.sample.project.com.au/registration/model/Country/v1">
+	</import>
+	<complexType name="SaveCountryResponse">
+		<complexContent>
+			<extension base="pref:Response">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<complexContent>
+								<extension
+									base="pref1:ResponseMessage">
+									<sequence>
+										<element name="status"
+											type="boolean">
+										</element>
+									</sequence>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+
+<!-- 	<element name="saveCountryResponse" type="tns:SaveCountryResponse"></element>
+ --></schema>

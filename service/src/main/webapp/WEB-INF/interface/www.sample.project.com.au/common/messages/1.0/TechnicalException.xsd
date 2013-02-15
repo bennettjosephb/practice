@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:fault="http://www.sample.project.com.au/common/message/Fault/v1"
+	targetNamespace="http://www.sample.project.com.au/common/message/TechnicalException/v1"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	version="1.1">
+	
+	<import schemaLocation="Fault.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Fault/v1" />
+	
+	<element name="technicalException">
+		<annotation>
+			<documentation>Description about the technical failures</documentation>
+		</annotation>
+	
+		<complexType>
+			<complexContent mixed="false">
+				<extension base="fault:Fault" />
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

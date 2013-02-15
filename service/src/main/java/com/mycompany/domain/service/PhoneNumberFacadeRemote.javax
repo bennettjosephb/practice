@@ -1,0 +1,32 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.domain.service;
+
+import au.com.project.sample.domain.PhoneNumber;
+import java.util.List;
+import javax.ejb.Remote;
+
+/**
+ *
+ * @author SONY
+ */
+@Remote
+public interface PhoneNumberFacadeRemote {
+
+    PhoneNumber create(PhoneNumber phoneNumber);
+
+    void edit(PhoneNumber phoneNumber);
+
+    void remove(PhoneNumber phoneNumber);
+
+    PhoneNumber find(Object id);
+
+    List<PhoneNumber> findAll();
+
+    List<PhoneNumber> findRange(int[] range);
+
+    int count();
+    
+}

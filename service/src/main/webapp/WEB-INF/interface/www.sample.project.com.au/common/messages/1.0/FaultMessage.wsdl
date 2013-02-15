@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:busex="http://www.sample.project.com.au/common/message/BusinessException/v1"
+	xmlns:techex="http://www.sample.project.com.au/common/message/TechnicalException/v1"
+	targetNamespace="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+
+	<documentation>Fault Message v1.1. This file must be imported by every WSDL for consistent use of SOAP Faults.</documentation>
+
+	<types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+
+			<import schemaLocation="BusinessException.xsd"
+				namespace="http://www.sample.project.com.au/common/message/BusinessException/v1" />
+			
+			<import schemaLocation="TechnicalException.xsd"
+				namespace="http://www.sample.project.com.au/common/message/TechnicalException/v1" />
+		</schema>
+	</types>
+
+	<message name="technicalFault">
+		<part name="technicalFault" element="techex:technicalException" />
+	</message>
+
+	<message name="businessFault">
+		<part name="businessFault" element="busex:businessException" />
+	</message>
+</definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/registration/services/SetCity/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/registration/services/SetCity/SetCityRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/registration/services/SetCity/SetCityResponse/v1"
+	name="SetCity"
+	targetNamespace="http://www.sample.project.com.au/registration/services/SetCity/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/registration/services/SetCity/v1"
+			xmlns:pref="http://www.sample.project.com.au/registration/services/SetCity/SetCityRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/registration/services/SetCity/SetCityResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="SetCityRequest.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SetCity/SetCityRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="SetCityResponse.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SetCity/SetCityResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="setCityRequest">
+		<wsdl:part element="pref:setCityRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="setCityResponse">
+		<wsdl:part element="pref1:setCityResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="SetCity">
+		<wsdl:operation name="SetCity">
+			<wsdl:input message="tns:setCityRequest" />
+			<wsdl:output message="tns:setCityResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SetCitySOAP" type="tns:SetCity">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SetCity">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/registration/services/SetCity/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="SetCity">
+		<wsdl:port binding="tns:SetCitySOAP" name="SetCitySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

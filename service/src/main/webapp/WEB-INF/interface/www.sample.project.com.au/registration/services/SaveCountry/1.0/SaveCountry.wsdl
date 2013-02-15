@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="SaveCountry"
+	targetNamespace="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
+			xmlns:pref="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="SaveCountryRequest.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="SaveCountryResponse.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SaveCountry/SaveCountryResponse/v1">
+			</xsd:import>
+			<xsd:element name="saveCountryRequest" type="pref:SaveCountryRequest"></xsd:element>
+			<xsd:element name="saveCountryResponse" type="pref1:SaveCountryResponse"></xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="saveCountryRequest">
+		<wsdl:part element="tns:saveCountryRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="saveCountryResponse">
+		<wsdl:part element="tns:saveCountryResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="SaveCountry">
+		<wsdl:operation name="SaveCountry">
+			<wsdl:input message="tns:saveCountryRequest" />
+			<wsdl:output message="tns:saveCountryResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SaveCountrySOAP" type="tns:SaveCountry">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SaveCountry">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/registration/services/SaveCountry/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="SaveCountry">
+		<wsdl:port binding="tns:SaveCountrySOAP" name="SaveCountrySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

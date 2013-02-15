@@ -1,0 +1,30 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.domain.service.impl;
+
+import au.com.project.sample.domain.Employee;
+import com.mycompany.domain.service.AbstractFacade;
+import com.mycompany.domain.service.EmployeeFacadeLocal;
+import com.mycompany.domain.service.EmployeeFacadeRemote;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+/**
+ *
+ * @author SONY
+ */
+@Stateless
+public class EmployeeFacade extends AbstractFacade<Employee> implements EmployeeFacadeLocal, EmployeeFacadeRemote {
+    @PersistenceContext(unitName = "project")
+    private EntityManager em;
+
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+    public EmployeeFacade() {
+        super(Employee.class);
+    }
+}

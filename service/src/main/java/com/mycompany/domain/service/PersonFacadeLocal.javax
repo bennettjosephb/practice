@@ -1,0 +1,32 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.domain.service;
+
+import au.com.project.sample.domain.Person;
+import java.util.List;
+import javax.ejb.Local;
+
+/**
+ *
+ * @author SONY
+ */
+@Local
+public interface PersonFacadeLocal {
+
+    Person create(Person person);
+
+    void edit(Person person);
+
+    void remove(Person person);
+
+    Person find(Object id);
+
+    List<Person> findAll();
+
+    List<Person> findRange(int[] range);
+
+    int count();
+    
+}

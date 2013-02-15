@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:ntfctn="http://www.sample.project.com.au/common/message/Notifications/v1"
+	targetNamespace="http://www.sample.project.com.au/common/message/ResponseMessage/v1"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	version="1.1">
+	
+	<import schemaLocation="Notifications.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Notifications/v1"/>
+		
+	<complexType name="ResponseMessage">
+		<sequence>
+			<element name="notifications" type="ntfctn:Notifications" minOccurs="0">
+				<annotation>
+					<documentation>Notifications (optional) provide a means of conveying information other than faults e.g. Phone has been ordered but stocks are low which may delay delivery. Faults must only be conveyed via SOAP Faults (Business/TechnicalException). Business logic must not be coded against Notifications.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

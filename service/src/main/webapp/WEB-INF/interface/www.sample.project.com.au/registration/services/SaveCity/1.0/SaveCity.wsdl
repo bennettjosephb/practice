@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCity/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityResponse/v1"
+	name="SaveCity"
+	targetNamespace="http://www.sample.project.com.au/registration/services/SaveCity/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/registration/services/SaveCity/v1"
+			xmlns:pref="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="SaveCityRequest.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="SaveCityResponse.xsd"
+				namespace="http://www.sample.project.com.au/registration/services/SaveCity/SaveCityResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="saveCityRequest">
+		<wsdl:part element="pref:saveCityRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="saveCityResponse">
+		<wsdl:part element="pref1:saveCityResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="SaveCity">
+		<wsdl:operation name="SaveCity">
+			<wsdl:input message="tns:saveCityRequest" />
+			<wsdl:output message="tns:saveCityResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SaveCitySOAP" type="tns:SaveCity">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SaveCity">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/registration/services/SaveCity/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="SaveCity">
+		<wsdl:port binding="tns:SaveCitySOAP" name="SaveCitySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
