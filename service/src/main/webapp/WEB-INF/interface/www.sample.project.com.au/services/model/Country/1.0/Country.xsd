@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sample.project.com.au/registration/model/Country/v1" xmlns:tns="http://www.sample.project.com.au/registration/model/Country/v1" elementFormDefault="qualified">
+    <complexType name="Country">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="id" type="string"></element>
+    		<element name="code" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

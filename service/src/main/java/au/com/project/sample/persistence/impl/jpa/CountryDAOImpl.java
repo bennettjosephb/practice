@@ -6,6 +6,7 @@ package au.com.project.sample.persistence.impl.jpa;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -13,8 +14,11 @@ import org.hibernate.criterion.Restrictions;
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.CountryDAO;
+import au.com.project.sample.process.impl.CountryControllerImpl;
 
 public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
+
+	private static Logger log = Logger.getLogger(CountryDAOImpl.class);
 
 	private SessionFactory sessionFactory;
 
@@ -23,7 +27,9 @@ public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 	}
 
 	public void createCountry(Country country) {
+		log.trace("Converting the code to Upper Case");
 		country.setCode(country.getCode().toUpperCase());
+		log.trace("Persisting Country Entity");
 		saveOrUpdate(country);
 	}
 
@@ -40,7 +46,8 @@ public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 	}
 
 	public List<Country> findAllCountry() {
-		return null;// findAll();
+		log.trace("Retriving All Countries");
+		return findAll();
 	}
 
 	public List<Country> findRangeCountry(int[] range) {

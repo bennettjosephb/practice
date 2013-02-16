@@ -7,6 +7,7 @@ package au.com.project.sample.persistence;
 import java.io.Serializable;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -16,12 +17,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import au.com.project.sample.common.HibernateFactory;
 import au.com.project.sample.common.message.DataAccessLayerException;
+import au.com.project.sample.persistence.impl.jpa.CountryDAOImpl;
 
 /**
  * 
  * @author SONY
  */
 public abstract class AbstractDAO<T> {
+
+	private static Logger log = Logger.getLogger(AbstractDAO.class);
 
 	private Transaction tx;
 
@@ -41,22 +45,40 @@ public abstract class AbstractDAO<T> {
 
 	@Transactional(readOnly = false)
 	public void saveOrUpdate(T entity) {
-		Session session = getSession();
-		session.save(entity);
-		session.close();
+		if (entity != null) {
+			log.trace("Session Creating");
+			Session session = getSession();
+			log.trace("Entity " + entity.getClass().getName() + " Saving");
+			session.saveOrUpdate(entity);
+			log.trace("Entity " + entity.getClass().getName() + " Saved");
+			session.close();
+			log.trace("Session Closed");
+		}
 	}
 
 	@Transactional(readOnly = false)
 	public void save(T entity) {
-		Session session = getSession();
-		session.save(entity);
-		session.close();
+		if (entity != null) {
+			log.trace("Session Creating");
+			Session session = getSession();
+			log.trace("Entity " + entity.getClass().getName() + " Saving");
+			session.save(entity);
+			log.trace("Entity " + entity.getClass().getName() + " Saved");
+			session.close();
+			log.trace("Session Closed");
+		}
 	}
 
 	public void update(T entity) {
-		Session session = getSession();
-		session.update(entity);
-		session.close();
+		if (entity != null) {
+			log.trace("Session Creating");
+			Session session = getSession();
+			log.trace("Entity " + entity.getClass().getName() + " Updating");
+			session.update(entity);
+			log.trace("Entity " + entity.getClass().getName() + " Updated");
+			session.close();
+			log.trace("Session Closed");
+		}
 	}
 
 	/*
@@ -104,19 +126,19 @@ public abstract class AbstractDAO<T> {
 		return obj;
 	}
 
-	protected List findAll(Class clazz) {
+	protected List<T> findAll() {
 		List objects = null;
-		try {
-			startOperation();
-			Query query = getSession().createQuery("from " + clazz.getName());
-			objects = query.list();
-			tx.commit();
-		} catch (HibernateException e) {
-			handleException(e);
-		} finally {
-			HibernateFactory.close(getSession());
-		}
-		return objects;
+		log.trace("Session Creating");
+		Session session = getSession();
+		log.trace("Query Creating for Execution");
+		Query query = session.createQuery("from "
+				+ (this.entityClass.getName()));
+		log.trace("Query Created for Execution");
+		objects = query.list();
+		log.trace("Entites Retrieved Successfully");
+		session.close();
+		log.trace("Session Closed");
+		return (List<T>) objects;
 	}
 
 	protected void handleException(HibernateException e)

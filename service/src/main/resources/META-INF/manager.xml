@@ -8,6 +8,11 @@
 
 	<import resource="controller.xml" />
 
+	<bean id="getCountryManager"
+		class="au.com.project.sample.registration.services.getcountry.GetCountryManager">
+		<property name="countryController" ref="countryController" />
+	</bean>
+
 	<bean id="saveCountryManager"
 		class="au.com.project.sample.registration.services.savecountry.SaveCountryManager">
 		<property name="countryController" ref="countryController" />

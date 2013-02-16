@@ -4,18 +4,19 @@
  */
 package au.com.project.sample.process.impl;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.persistence.CountryDAO;
 import au.com.project.sample.process.CountryController;
 import au.com.project.sample.process.impl.dto.CountryDTO;
 
-/**
- * 
- * @author SONY
- */
 public class CountryControllerImpl implements CountryController {
+
+	private static Logger log = Logger.getLogger(CountryControllerImpl.class);
 
 	private CountryDAO countryDAO;
 
@@ -32,7 +33,9 @@ public class CountryControllerImpl implements CountryController {
 	}
 
 	public void createCountry(CountryDTO countryDTO) {
+		log.trace("Creating Country Entity");
 		countryDAO.createCountry(updateCountry(countryDTO));
+		log.trace("Created Country Entity");
 	}
 
 	public void editCountry(CountryDTO countryDTO) {
@@ -46,7 +49,8 @@ public class CountryControllerImpl implements CountryController {
 	}
 
 	public List<CountryDTO> findAllCountry() {
-		return null;
+		log.trace("Retriving All Countries");
+		return updateCountryDTO(countryDAO.findAllCountry());
 	}
 
 	public List<CountryDTO> findRangeCountry(int[] range) {
@@ -63,6 +67,23 @@ public class CountryControllerImpl implements CountryController {
 
 	public void setCountryDAO(CountryDAO countryDAO) {
 		this.countryDAO = countryDAO;
+	}
+
+	private List<CountryDTO> updateCountryDTO(List<Country> countryList) {
+
+		List<CountryDTO> countries = new ArrayList<CountryDTO>();
+
+		for (Country country : countryList) {
+
+			CountryDTO countryDTO = new CountryDTO();
+			countryDTO.setCode(country.getCode());
+			countryDTO.setId(country.getId());
+			countryDTO.setName(country.getName());
+			countries.add(countryDTO);
+
+		}
+
+		return countries;
 	}
 
 }

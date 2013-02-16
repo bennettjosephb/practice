@@ -21,6 +21,17 @@
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 
 	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/registration/services/GetCountry/v1"
+		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
+		implementor="#getCountry"
+		serviceName="tns:GetCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/GetCountry/1.0/GetCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
 		id="saveCountryService" address="/SaveCountryService" endpointName="tns:SaveCountrySOAP"
 		implementor="#saveCountry" serviceName="tns:SaveCountry"
@@ -45,6 +56,16 @@
 		id="saveCityService" address="/SaveCityService" endpointName="tns:SaveCitySOAP"
 		implementor="#saveCity" serviceName="tns:SaveCity"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/SaveCity/1.0/SaveCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/account/CreateAccount/v1"
+		id="createAccountService" address="/CreateAccountService" endpointName="tns:CreateAccountSOAP"
+		implementor="au.com.project.sample.services.account.createaccount.CreateAccountImpl" serviceName="tns:CreateAccount"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateAccount/1.0/CreateAccount.wsdl">
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxws:features>
