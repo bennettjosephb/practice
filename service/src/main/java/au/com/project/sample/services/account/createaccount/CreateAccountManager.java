@@ -16,6 +16,14 @@ public class CreateAccountManager {
 		UserInfo userInfo = createAccountRequest.getMessage().getUserInfo();
 		userInfoDTO.setFirstName(userInfo.getFirstName());
 		userInfoDTO.setLastName(userInfo.getLastName());
+		userInfoDTO.setConfirmPassword(userInfo.getConfirmPassword());
+		userInfoDTO.setLastName(userInfo.getEmailId());
+		userInfoDTO.setLocation(userInfo.getLocation());
+		userInfoDTO.setPassword(userInfo.getPassword());
+		userInfoDTO.setPhoneNumber(userInfo.getPhoneNumber());
+		userInfoDTO.setUsername(userInfo.getUsername());
+		userInfoDTO.setDateOfBirth(userInfo.getDateOfBirth());
+		userInfoDTO.setGender(userInfo.getGender());
 
 		
 		return userInfoDTO;

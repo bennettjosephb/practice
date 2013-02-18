@@ -2,6 +2,8 @@ package au.com.project.sample.process.impl.dto;
 
 import java.util.Calendar;
 
+import au.com.project.sample.services.model.Gender;
+
 public class UserInfoDTO {
 
     private  String firstName;
@@ -14,11 +16,11 @@ public class UserInfoDTO {
     
     private  String confirmPassword;
     
-    private  String gender;
+    private  Gender gender;
     
     private  String phoneNumber;
     
-    private  String emailAddress;
+    private  String emailId;
     
     private  String location;
     
@@ -64,11 +66,11 @@ public class UserInfoDTO {
 		this.confirmPassword = confirmPassword;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
@@ -78,14 +80,6 @@ public class UserInfoDTO {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public String getEmailAddress() {
-		return emailAddress;
-	}
-
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
 	}
 
 	public String getLocation() {
@@ -102,6 +96,14 @@ public class UserInfoDTO {
 
 	public void setDateOfBirth(Calendar dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 }

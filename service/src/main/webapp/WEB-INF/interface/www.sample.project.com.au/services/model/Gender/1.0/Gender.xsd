@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/Gender/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/Gender/v1"
+	elementFormDefault="qualified">
+	<simpleType name="Gender">
+		<restriction base="string">
+			<enumeration value="MALE"/>
+			<enumeration value="FEMALE"/>
+			<enumeration value="OTHER"/>
+		</restriction>
+	</simpleType>
+</schema>

@@ -1,32 +1,72 @@
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.Currency;
-import au.com.project.sample.process.CurrencyController;
 import java.util.List;
 
-public class CurrencyControllerImpl  implements CurrencyController{
+import org.apache.log4j.Logger;
 
-    public void createCurrency(Currency currency){}
+import au.com.project.sample.domain.Currency;
+import au.com.project.sample.persistence.CurrencyDAO;
+import au.com.project.sample.process.CurrencyController;
+import au.com.project.sample.process.impl.dto.CurrencyDTO;
 
-    public void editCurrency(Currency currency){}
+public class CurrencyControllerImpl implements CurrencyController {
 
-    public void removeCurrency(Currency currency){}
+	private static Logger log = Logger.getLogger(CurrencyControllerImpl.class);
 
-//    public void updateSalary(Long salary, Currency currency){}
-//
-//    public void updateCurrency(String location, Location applicant){}
-//
-//    public void updateCurrency(String location, Long applicantId){}
-//
-//    public void addCurrency(String location, Long applicantId){}
-//
-//    public void updateCurrency(Currency currency, Long applicantId){}
+	private CurrencyDAO currencyDAO;
 
-    public Currency findCurrency(Object id){return null;}
+	private Currency updateCurrency(CurrencyDTO currencyDTO) {
+		Currency currency = new Currency();
 
-    public List<Currency> findAllCurrency(){return null;}
+		currency.setName(currencyDTO.getName());
+		currency.setCode(currencyDTO.getCode());
 
-    public List<Currency> findRangeCurrency(int[] range){return null;}
+		return currency;
+	}
 
-    public int countCurrency(){return 0;}
+	public void createCurrency(CurrencyDTO currencyDTO) {
+		log.info("Creating Currency");
+		currencyDAO.createCurrency(updateCurrency(currencyDTO));
+		log.info("Currency Created");
+	}
+
+	public void editCurrency(CurrencyDTO currencyDTO) {
+	}
+
+	public void removeCurrency(CurrencyDTO currencyDTO) {
+	}
+
+	// public void updateSalary(Long salary, CurrencyDTO currencyDTO){}
+	//
+	// public void updateCurrency(String location, Location applicant){}
+	//
+	// public void updateCurrency(String location, Long applicantId){}
+	//
+	// public void addCurrency(String location, Long applicantId){}
+	//
+	// public void updateCurrency(CurrencyDTO currencyDTO, Long applicantId){}
+
+	public CurrencyDTO findCurrency(Object id) {
+		return null;
+	}
+
+	public List<CurrencyDTO> findAllCurrency() {
+		return null;
+	}
+
+	public List<CurrencyDTO> findRangeCurrency(int[] range) {
+		return null;
+	}
+
+	public int countCurrency() {
+		return 0;
+	}
+
+	public CurrencyDAO getCurrencyDAO() {
+		return currencyDAO;
+	}
+
+	public void setCurrencyDAO(CurrencyDAO currencyDAO) {
+		this.currencyDAO = currencyDAO;
+	}
 }

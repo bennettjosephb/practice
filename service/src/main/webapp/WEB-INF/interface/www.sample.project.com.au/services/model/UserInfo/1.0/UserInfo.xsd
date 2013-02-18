@@ -2,19 +2,20 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.sample.project.com.au/services/model/UserInfo/v1"
 	xmlns:tns="http://www.sample.project.com.au/services/model/UserInfo/v1"
-	elementFormDefault="qualified">
+	elementFormDefault="qualified" xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1">
+	<import schemaLocation="../../Gender/1.0/Gender.xsd" namespace="http://www.sample.project.com.au/services/model/Gender/v1"></import>
 	<complexType name="UserInfo">
 		<sequence>
-			<element name="firstName" type="string"/>
-			<element name="lastName" type="string"/>
-			<element name="username" type="string"/>
-			<element name="password" type="string"/>
-			<element name="confirmPassword" type="string"/>
-			<element name="gender" type="string"/>
-			<element name="phoneNumber" type="string"/>
-			<element name="emailAddress" type="string"/>
-			<element name="location" type="string"/>
-			<element name="dateOfBirth" type="date"/>
+			<element name="firstName" type="string" />
+			<element name="lastName" type="string" />
+			<element name="username" type="string" />
+			<element name="password" type="string" />
+			<element name="confirmPassword" type="string" />
+			<element name="gender" type="pref:Gender" />
+			<element name="phoneNumber" type="string" />
+			<element name="emailId" type="string" />
+			<element name="location" type="string" />
+			<element name="dateOfBirth" type="date" />
 		</sequence>
 	</complexType>
 </schema>

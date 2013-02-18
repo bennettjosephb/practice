@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/RoleInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/RoleInfo/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1">
+	<complexType name="RoleInfo">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="value" type="int" />
+			<element name="code" type="string" />
+		</sequence>
+	</complexType>
+</schema>

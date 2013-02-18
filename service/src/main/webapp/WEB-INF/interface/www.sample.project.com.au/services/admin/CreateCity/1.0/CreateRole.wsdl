@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/services/admin/CreateRole/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleResponse/v1"
+	name="CreateRole"
+	targetNamespace="http://www.sample.project.com.au/services/admin/CreateRole/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/services/admin/CreateRole/v1"
+			xmlns:pref="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="CreateRoleRequest.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="CreateRoleResponse.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="createRoleRequest">
+		<wsdl:part element="pref:createRoleRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="createRoleResponse">
+		<wsdl:part element="pref1:createRoleResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="CreateRole">
+		<wsdl:operation name="CreateRole">
+			<wsdl:input message="tns:createRoleRequest" />
+			<wsdl:output message="tns:createRoleResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CreateRoleSOAP" type="tns:CreateRole">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateRole">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/services/admin/CreateRole/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CreateRole">
+		<wsdl:port binding="tns:CreateRoleSOAP" name="CreateRoleSOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -109,8 +109,7 @@ public class Applicant extends Person implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "TOT_EXP_ID")
     private TotalExperience totalExperience = new TotalExperience();
-    @OneToOne
-    @JoinColumn(name = "APP_USE_ID")
+    @OneToOne(mappedBy="applicant")
     private ApplicationUser applicationUser;
 
     @Override

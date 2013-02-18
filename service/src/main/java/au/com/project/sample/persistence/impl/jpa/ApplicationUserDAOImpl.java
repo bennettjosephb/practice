@@ -4,65 +4,68 @@
  */
 package au.com.project.sample.persistence.impl.jpa;
 
-import au.com.project.sample.persistence.local.ApplicationUserDAOLocal;
-import au.com.project.sample.domain.ApplicationUser;
-import au.com.project.sample.persistence.AbstractDAO;
-import au.com.project.sample.persistence.remote.ApplicationUserDAORemote;
 import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
+import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 
+import au.com.project.sample.domain.ApplicationUser;
+import au.com.project.sample.persistence.AbstractDAO;
+import au.com.project.sample.persistence.ApplicationUserDAO;
+
 /**
- *
+ * 
  * @author SONY
  */
-public class ApplicationUserDAOImpl extends AbstractDAO<ApplicationUser> implements ApplicationUserDAOLocal, ApplicationUserDAORemote {
-   
-    public ApplicationUserDAOImpl() {
-        super(ApplicationUser.class);
-    }
+public class ApplicationUserDAOImpl extends AbstractDAO<ApplicationUser>
+		implements ApplicationUserDAO {
 
-    public void createApplicationUser(ApplicationUser applicationUser) {
-        saveOrUpdate(applicationUser);
-    }
+	private static Logger log = Logger.getLogger(ApplicationUserDAOImpl.class);
 
-    public void editApplicationUser(ApplicationUser applicationUser) {
-        //edit(applicationUser);
-    }
+	private SessionFactory sessionFactory;
 
-    public void removeApplicationUser(ApplicationUser applicationUser) {
-        //remove(applicationUser);
-    }
+	public ApplicationUserDAOImpl() {
+		super(ApplicationUser.class);
+	}
 
-    public ApplicationUser findApplicationUser(Object id) {
-        return null;//find(id);
-    }
+	public void createApplicationUser(ApplicationUser applicationUser) {
+		log.info("Creating Application User");
+		saveOrUpdate(applicationUser);
+		log.info("Application User Created");
+	}
 
-    public List<ApplicationUser> findAllApplicationUser() {
-        return null;//findAll();
-    }
+	public void editApplicationUser(ApplicationUser applicationUser) {
+		// edit(applicationUser);
+	}
 
-    public List<ApplicationUser> findRangeApplicationUser(int[] range) {
-        return null;//findRange(range);
-    }
+	public void removeApplicationUser(ApplicationUser applicationUser) {
+		// remove(applicationUser);
+	}
 
-    public int countApplicationUser() {
-        return 0;//count();
-    }
+	public ApplicationUser findApplicationUser(Object id) {
+		return null;// find(id);
+	}
 
-	@Override
-	protected SessionFactory getSessionFactory() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ApplicationUser> findAllApplicationUser() {
+		return null;// findAll();
+	}
+
+	public List<ApplicationUser> findRangeApplicationUser(int[] range) {
+		return null;// findRange(range);
+	}
+
+	public int countApplicationUser() {
+		return 0;// count();
 	}
 
 	@Override
-	protected void setSessionFactory(SessionFactory sessionFactory) {
-		// TODO Auto-generated method stub
-		
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
-    
+
+	@Override
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
 }

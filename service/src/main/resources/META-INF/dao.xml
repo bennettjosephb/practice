@@ -6,6 +6,23 @@
 	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:cxf="http://cxf.apache.org/core"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
+
+
+	<bean id="currencyDAO"
+		class="au.com.project.sample.persistence.impl.jpa.CurrencyDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="authenticationRoleDAO"
+		class="au.com.project.sample.persistence.impl.jpa.AuthenticationRoleDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="applicationUserDAO"
+		class="au.com.project.sample.persistence.impl.jpa.ApplicationUserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
 	<bean id="countryDAO"
 		class="au.com.project.sample.persistence.impl.jpa.CountryDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />

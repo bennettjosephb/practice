@@ -8,6 +8,22 @@
 
 	<import resource="controller.xml" />
 
+
+	<bean id="createCurrencyManager"
+		class="au.com.project.sample.services.account.createcurrency.CreateCurrencyManager">
+		<property name="currencyController" ref="currencyController" />
+	</bean>
+
+	<bean id="createRoleManager"
+		class="au.com.project.sample.services.account.createrole.CreateRoleManager">
+		<property name="authenticationRoleController" ref="authenticationRoleController" />
+	</bean>
+
+	<bean id="createAccountManager"
+		class="au.com.project.sample.services.account.createaccount.CreateAccountManager">
+		<property name="createAccountController" ref="createAccountController" />
+	</bean>
+
 	<bean id="getCountryManager"
 		class="au.com.project.sample.registration.services.getcountry.GetCountryManager">
 		<property name="countryController" ref="countryController" />

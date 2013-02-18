@@ -4,14 +4,16 @@
  */
 package au.com.project.sample.domain;
 
-import au.com.project.sample.domain.phonenumber.ContactNumber;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,6 +27,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import au.com.project.sample.domain.phonenumber.ContactNumber;
+
 /**
  *
  * @author SONY
@@ -33,14 +37,14 @@ import javax.persistence.TemporalType;
 @Inheritance(strategy=InheritanceType 
 .JOINED)
 @Table(name="PROJECT_PERSON")
-@SequenceGenerator(name="PERSON_SEQUENCE",
-                   sequenceName="PERSON_SEQUENCE")
 public class Person implements Serializable {
+	
     private static final long serialVersionUID = 1L;
+    
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="PERSON_SEQUENCE")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="PERSON_ID")
-    private Long id = -1l;
+    private Long id;
 
     @Column(name="PERSON_FIRST_NAME", nullable=false)
     private String firstName;
@@ -53,10 +57,11 @@ public class Person implements Serializable {
     
     @Column(name="PERSON_DOB", nullable=false)
     @Temporal(TemporalType.DATE)
-    private Calendar dob;
+    private Calendar dateOfBirth;
     
     @Column(name="PERSON_GENDER", nullable=false)
-    private Boolean gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
     
     @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn (name="ADDRESS_ID")
@@ -94,7 +99,6 @@ public class Person implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Person)) {
             return false;
         }
@@ -122,24 +126,24 @@ public class Person implements Serializable {
 //        this.phoneNumber.add(phoneNumber);
 //    }
 
-    /**
-     * @return the dob
-     */
-    public Calendar getDob() {
-        return dob;
-    }
-
-    /**
-     * @param dob the dob to set
-     */
-    public void setDob(Calendar dob) {
-        this.dob = dob;
-    }
+//    /**
+//     * @return the dob
+//     */
+//    public Calendar getDob() {
+//        return dob;
+//    }
+//
+//    /**
+//     * @param dob the dob to set
+//     */
+//    public void setDob(Calendar dob) {
+//        this.dob = dob;
+//    }
 
     /**
      * @param gender the gender to set
      */
-    public void setGender(Boolean gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -160,7 +164,7 @@ public class Person implements Serializable {
     /**
      * @return the gender
      */
-    public Boolean getGender() {
+    public Gender getGender() {
         return gender;
     }
 
@@ -277,4 +281,12 @@ public class Person implements Serializable {
         homeNumber.setPerson(this);
         this.homeNumber.add(homeNumber);
     }
+
+	public Calendar getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Calendar dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 }

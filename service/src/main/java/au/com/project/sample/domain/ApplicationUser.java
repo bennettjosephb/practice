@@ -23,12 +23,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="PROJECT_APPLICATION_USER")
-@SequenceGenerator(name="APPLICATION_USER_SEQUENCE",
-                   sequenceName="APPLICATION_USER_SEQUENCE")
 public class ApplicationUser implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="APPLICATION_USER_SEQUENCE")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "APP_USE_ID")
     private Long id;
     
@@ -42,7 +40,8 @@ public class ApplicationUser implements Serializable {
     @JoinColumn(name = "AUT_ROL_ID")
     private AuthenticationRole authenticationRole;
 
-    @OneToOne(mappedBy="applicationUser")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "APP_ID")
     private Applicant applicant;
 
     public Long getId() {

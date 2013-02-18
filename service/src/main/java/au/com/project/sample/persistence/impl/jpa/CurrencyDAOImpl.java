@@ -2,6 +2,7 @@ package au.com.project.sample.persistence.impl.jpa;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 
 import au.com.project.sample.domain.Currency;
@@ -10,6 +11,8 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.CurrencyDAO;
 
 public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDAO {
+
+	private static Logger log = Logger.getLogger(CurrencyDAOImpl.class);
 
 	private SessionFactory sessionFactory;
 

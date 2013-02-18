@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/CurrencyInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/CurrencyInfo/v1"
+	elementFormDefault="qualified">
+	<complexType name="CurrencyInfo">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="code" type="string" />
+		</sequence>
+	</complexType>
+</schema>

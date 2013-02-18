@@ -4,28 +4,72 @@
  */
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.AuthenticationRole;
-import au.com.project.sample.process.AuthenticationRoleController;
 import java.util.List;
 
+import au.com.project.sample.domain.AuthenticationRole;
+import au.com.project.sample.persistence.AuthenticationRoleDAO;
+import au.com.project.sample.process.AuthenticationRoleController;
+import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
+
 /**
- *
+ * 
  * @author SONY
  */
-public class AuthenticationRoleControllerImpl implements  AuthenticationRoleController{
+public class AuthenticationRoleControllerImpl implements
+		AuthenticationRoleController {
 
-    public void createAuthenticationRole(AuthenticationRole authenticationRole){}
+	private AuthenticationRoleDAO authenticationRoleDAO;
 
-    public void editAuthenticationRole(AuthenticationRole authenticationRole){}
+	private AuthenticationRole updateAuthenticationRole(
+			AuthenticationRoleDTO authenticationRoleDTO) {
+		AuthenticationRole authenticationRole = new AuthenticationRole();
 
-    public void removeAuthenticationRole(AuthenticationRole authenticationRole){}
+		authenticationRole.setName(authenticationRoleDTO.getName());
+		authenticationRole.setCode(authenticationRoleDTO.getCode());
+		authenticationRole.setValue(authenticationRoleDTO.getValue());
 
-    public AuthenticationRole findAuthenticationRole(Object id){return null;}
+		return authenticationRole;
+	}
 
-    public List<AuthenticationRole> findAllAuthenticationRole(){return null;}
+	public void createAuthenticationRole(
+			AuthenticationRoleDTO authenticationRoleDTO) {
 
-    public List<AuthenticationRole> findRangeAuthenticationRole(int[] range){return null;}
+		authenticationRoleDAO
+				.createAuthenticationRole(updateAuthenticationRole(authenticationRoleDTO));
 
-    public int countAuthenticationRole(){return 0;}
-    
+	}
+
+	public void editAuthenticationRole(
+			AuthenticationRoleDTO authenticationRoleDTO) {
+	}
+
+	public void removeAuthenticationRole(
+			AuthenticationRoleDTO authenticationRoleDTO) {
+	}
+
+	public AuthenticationRoleDTO findAuthenticationRole(Object id) {
+		return null;
+	}
+
+	public List<AuthenticationRoleDTO> findAllAuthenticationRole() {
+		return null;
+	}
+
+	public List<AuthenticationRoleDTO> findRangeAuthenticationRole(int[] range) {
+		return null;
+	}
+
+	public int countAuthenticationRole() {
+		return 0;
+	}
+
+	public AuthenticationRoleDAO getAuthenticationRoleDAO() {
+		return authenticationRoleDAO;
+	}
+
+	public void setAuthenticationRoleDAO(
+			AuthenticationRoleDAO authenticationRoleDAO) {
+		this.authenticationRoleDAO = authenticationRoleDAO;
+	}
+
 }

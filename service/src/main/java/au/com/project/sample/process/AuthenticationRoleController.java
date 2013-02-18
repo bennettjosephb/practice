@@ -4,28 +4,28 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.AuthenticationRole;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
 
 /**
- *
+ * 
  * @author SONY
  */
 public interface AuthenticationRoleController {
 
-    void createAuthenticationRole(AuthenticationRole authenticationRole);
+	void createAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
-    void editAuthenticationRole(AuthenticationRole authenticationRole);
+	void editAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
-    void removeAuthenticationRole(AuthenticationRole authenticationRole);
+	void removeAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
-    AuthenticationRole findAuthenticationRole(Object id);
+	AuthenticationRoleDTO findAuthenticationRole(Object id);
 
-    List<AuthenticationRole> findAllAuthenticationRole();
+	List<AuthenticationRoleDTO> findAllAuthenticationRole();
 
-    List<AuthenticationRole> findRangeAuthenticationRole(int[] range);
+	List<AuthenticationRoleDTO> findRangeAuthenticationRole(int[] range);
 
-    int countAuthenticationRole();
-    
+	int countAuthenticationRole();
+
 }

@@ -57,12 +57,12 @@ public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
 	}
 
 	@Override
-	protected SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
 	@Override
-	protected void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 }

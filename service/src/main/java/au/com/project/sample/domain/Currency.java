@@ -19,18 +19,17 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PROJECT_CURRENCY")
-@SequenceGenerator(name="CURRENCY_SEQUENCE",
-                   sequenceName="CURRENCY_SEQUENCE")
 public class Currency implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="CURRENCY_SEQUENCE")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "CUR_ID")
     private Long id;
-    @Column(name = "CUR_NAME")
+    @Column(name = "CUR_NAME", nullable = false)
     private String name;
-    @Column(name = "CUR_CODE",unique=true)
+    @Column(name = "CUR_CODE",unique=true, nullable = false)
     private String code;
+    
     public Long getId() {
         return id;
     }

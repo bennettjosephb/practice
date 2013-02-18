@@ -64,8 +64,28 @@
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/account/CreateAccount/v1"
 		id="createAccountService" address="/CreateAccountService" endpointName="tns:CreateAccountSOAP"
-		implementor="au.com.project.sample.services.account.createaccount.CreateAccountImpl" serviceName="tns:CreateAccount"
+		implementor="#createAccount" serviceName="tns:CreateAccount"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateAccount/1.0/CreateAccount.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateRole/v1"
+		id="CreateRoleService" address="/CreateRoleService" endpointName="tns:CreateRoleSOAP"
+		implementor="#createRole" serviceName="tns:CreateRole"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateRole/1.0/CreateRole.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCurrency/v1"
+		id="CreateCurrencyService" address="/CreateCurrencyService" endpointName="tns:CreateCurrencySOAP"
+		implementor="#createCurrency" serviceName="tns:CreateCurrency"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCurrency/1.0/CreateCurrency.wsdl">
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxws:features>

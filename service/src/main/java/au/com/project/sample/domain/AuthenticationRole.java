@@ -17,109 +17,124 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
- *
+ * 
  * @author SONY
  */
 @Entity
 @Table(name = "PROJECT_AUTHENTICATION_ROLE")
-@SequenceGenerator(name="AUTHENTICATION_ROLE_SEQUENCE",
-                   sequenceName="AUTHENTICATION_ROLE_SEQUENCE")
 public class AuthenticationRole implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @return the serialVersionUID
-     */
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-    @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="AUTHENTICATION_ROLE_SEQUENCE")
-    @Column(name = "AUT_ROL_ID")
-    private Long id;
-    
-    @Column(name = "AUT_ROL_NAME")
-    private String name;
-    
-    @Column(name = "AUT_ROL_VALUE")
-    private Integer value ;
-    
-    @OneToMany(cascade= CascadeType.ALL, mappedBy="authenticationRole")    
-    private List<ApplicationUser> applicationUser;
+	/**
+	 * @return the serialVersionUID
+	 */
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "AUT_ROL_ID")
+	private Long id;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	@Column(name = "AUT_ROL_NAME")
+	private String name;
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
+	@Column(name = "AUT_ROL_CODE")
+	private String code;
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof AuthenticationRole)) {
-            return false;
-        }
-        AuthenticationRole other = (AuthenticationRole) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
+	@Column(name = "AUT_ROL_VALUE")
+	private Integer value;
 
-    @Override
-    public String toString() {
-        return "com.mycompany.domain.Role[ id=" + id + " ]";
-    }
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "authenticationRole")
+	private List<ApplicationUser> applicationUser;
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    /**
-     * @return the value
-     */
-    public Integer getValue() {
-        return value;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 0;
+		hash += (id != null ? id.hashCode() : 0);
+		return hash;
+	}
 
-    /**
-     * @param value the value to set
-     */
-    public void setValue(Integer value) {
-        this.value = value;
-    }
+	@Override
+	public boolean equals(Object object) {
+		// TODO: Warning - this method won't work in the case the id fields are
+		// not set
+		if (!(object instanceof AuthenticationRole)) {
+			return false;
+		}
+		AuthenticationRole other = (AuthenticationRole) object;
+		if ((this.id == null && other.id != null)
+				|| (this.id != null && !this.id.equals(other.id))) {
+			return false;
+		}
+		return true;
+	}
 
-    /**
-     * @return the applicationUser
-     */
-    public List<ApplicationUser> getApplicationUser() {
-        return applicationUser;
-    }
+	@Override
+	public String toString() {
+		return "com.mycompany.domain.Role[ id=" + id + " ]";
+	}
 
-    /**
-     * @param applicationUser the applicationUser to set
-     */
-    public void setApplicationUser(List<ApplicationUser> applicationUser) {
-        this.applicationUser = applicationUser;
-    }
-    
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the value
+	 */
+	public Integer getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value
+	 *            the value to set
+	 */
+	public void setValue(Integer value) {
+		this.value = value;
+	}
+
+	/**
+	 * @return the applicationUser
+	 */
+	public List<ApplicationUser> getApplicationUser() {
+		return applicationUser;
+	}
+
+	/**
+	 * @param applicationUser
+	 *            the applicationUser to set
+	 */
+	public void setApplicationUser(List<ApplicationUser> applicationUser) {
+		this.applicationUser = applicationUser;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
 }

@@ -8,9 +8,10 @@ import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
 
 public class CreateAccountImpl implements CreateAccount {
+	
+	private CreateAccountManager createAccountManager;
 
 	public CreateAccountImpl() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@WebResult(name = "createAccountResponse", targetNamespace = "http://www.sample.project.com.au/services/account/CreateAccount/CreateAccountResponse/v1", partName = "response")
@@ -18,8 +19,15 @@ public class CreateAccountImpl implements CreateAccount {
 	public CreateAccountResponse createAccount(
 			@WebParam(partName = "request", name = "createAccountRequest", targetNamespace = "http://www.sample.project.com.au/services/account/CreateAccount/CreateAccountRequest/v1") CreateAccountRequest request)
 			throws BusinessFault, TechnicalFault {
-		// TODO Auto-generated method stub
-		return null;
+		return createAccountManager.createAccountResponse(request);
+	}
+
+	public CreateAccountManager getCreateAccountManager() {
+		return createAccountManager;
+	}
+
+	public void setCreateAccountManager(CreateAccountManager createAccountManager) {
+		this.createAccountManager = createAccountManager;
 	}
 
 }

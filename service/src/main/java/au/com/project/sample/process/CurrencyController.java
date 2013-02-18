@@ -1,18 +1,18 @@
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.Currency;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.CurrencyDTO;
 
 public interface CurrencyController {
 
-    public void createCurrency(Currency currency);
+    public void createCurrency(CurrencyDTO currencyDTO);
 
-    public void editCurrency(Currency currency);
+    public void editCurrency(CurrencyDTO currencyDTO);
 
-    public void removeCurrency(Currency currency);
+    public void removeCurrency(CurrencyDTO currencyDTO);
 
-//    public void updateSalary(Long salary, Currency currency);
+//    public void updateSalary(Long salary, CurrencyDTO currencyDTO);
 //
 //    public void updateCurrency(String location, Location applicant);
 //
@@ -20,13 +20,13 @@ public interface CurrencyController {
 //
 //    public void addCurrency(String location, Long applicantId);
 //
-//    public void updateCurrency(Currency currency, Long applicantId);
+//    public void updateCurrency(CurrencyDTO currencyDTO, Long applicantId);
 
-    Currency findCurrency(Object id);
+    CurrencyDTO findCurrency(Object id);
 
-    List<Currency> findAllCurrency();
+    List<CurrencyDTO> findAllCurrency();
 
-    List<Currency> findRangeCurrency(int[] range);
+    List<CurrencyDTO> findRangeCurrency(int[] range);
 
     int countCurrency();
 }
