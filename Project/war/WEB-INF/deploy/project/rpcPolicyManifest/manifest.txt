@@ -1,0 +1,3 @@
+# Module project
+# RPC service class, partial path of RPC policy file
+com.gwtplatform.dispatch.shared.DispatchService, 7A86F2D3EF894C6596D1E0D619CAC158.gwt.rpc
