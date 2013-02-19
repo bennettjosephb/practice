@@ -4,22 +4,19 @@
  */
 package au.com.project.sample.persistence.impl.jpa;
 
-import au.com.project.sample.persistence.local.CertficationDAOLocal;
-import au.com.project.sample.domain.Certification;
-import au.com.project.sample.persistence.AbstractDAO;
-import au.com.project.sample.persistence.remote.CertficationDAORemote;
 import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 import org.hibernate.SessionFactory;
+
+import au.com.project.sample.domain.Certification;
+import au.com.project.sample.persistence.AbstractDAO;
+import au.com.project.sample.persistence.CertficationDAO;
 
 /**
  *
  * @author SONY
  */
-public class CertficationDAOImpl extends AbstractDAO<Certification> implements CertficationDAOLocal, CertficationDAORemote {
+public class CertficationDAOImpl extends AbstractDAO<Certification> implements CertficationDAO {
 
 	private SessionFactory sessionFactory;
 

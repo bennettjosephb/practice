@@ -4,23 +4,22 @@
  */
 package au.com.project.sample.persistence.impl.jpa;
 
-import au.com.project.sample.persistence.local.CategoryDAOLocal;
-import au.com.project.sample.domain.Category;
-import au.com.project.sample.persistence.AbstractDAO;
-import au.com.project.sample.persistence.remote.CategoryDAORemote;
 import java.util.List;
+
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 import org.hibernate.SessionFactory;
+
+import au.com.project.sample.domain.Category;
+import au.com.project.sample.persistence.AbstractDAO;
+import au.com.project.sample.persistence.CategoryDAO;
 
 /**
  *
  * @author SONY
  */
 @Stateless
-public class CategoryDAOImpl extends AbstractDAO<Category> implements CategoryDAOLocal, CategoryDAORemote {
+public class CategoryDAOImpl extends AbstractDAO<Category> implements CategoryDAO {
 
     private SessionFactory sessionFactory;
 
@@ -65,5 +64,5 @@ public class CategoryDAOImpl extends AbstractDAO<Category> implements CategoryDA
 	protected void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-    
+
 }

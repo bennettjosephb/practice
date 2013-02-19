@@ -9,8 +9,11 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import au.com.project.sample.domain.Country;
+import au.com.project.sample.domain.Currency;
 import au.com.project.sample.persistence.CountryDAO;
+import au.com.project.sample.persistence.CurrencyDAO;
 import au.com.project.sample.persistence.impl.jpa.CountryDAOImpl;
+import au.com.project.sample.persistence.impl.jpa.CurrencyDAOImpl;
 
 public class SetUp implements ServletContextListener {
 
@@ -25,37 +28,36 @@ public class SetUp implements ServletContextListener {
 
 	public void contextInitialized(ServletContextEvent arg0) {
 		
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo");
-		System.out.println("uyiyiuyuyoiuoiupoupo34567");
-		
 		try {
-			System.out.println("uyiyiuyuyoiuoiupoupo1");
 			InputStream in = Class.class
 					.getResourceAsStream("/au/com/project/sample/common/Country.txt");
 
-			System.out.println("uyiyiuyuyoiuoiupoupo2");
 			BufferedReader br = new BufferedReader(new InputStreamReader(in, "UTF-8"));
-			System.out.println("uyiyiuyuyoiuoiupoupo");
 
 			String line = null;
-			System.out.println("uyiyiuyuyoiuoiupoupo3");
 			CountryDAO countryDAO = new CountryDAOImpl();
-			System.out.println("uyiyiuyuyoiuoiupoupo4");
+
 			while ((line = br.readLine()) != null) {
 				String str[] = line.split("[,]");
-				System.out.println(line);
-				System.out.println(str[0] + ":" + str[1]);
 				Country country = new Country();
 				country.setCode(str[0].trim());
 				country.setName(str[1].trim());
 				countryDAO.createCountry(country);
+			}
+			
+			in = Class.class
+					.getResourceAsStream("/au/com/project/sample/common/Currency.txt");
+
+			br = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+
+			CurrencyDAO currencyDAO = new CurrencyDAOImpl();
+ 
+			while ((line = br.readLine()) != null) {
+				String str[] = line.split("[,]");
+				Currency currency = new Currency();
+				currency.setCode(str[0].trim());
+				currency.setName(str[1].trim());
+				currencyDAO.createCurrency(currency);
 			}
 		} catch (IOException e) {
 			System.out.println("uyiyiuyuyoiuoiupoupo");

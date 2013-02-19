@@ -31,10 +31,10 @@ public class State implements Serializable {
 	@Column(name = "STA_ID")
 	private Long id;
 
-	@Column(name = "STA_NAME")
+	@Column(name = "STA_NAME", nullable = false)
 	private String name;
 
-	@Column(name = "STA_CODE", unique = true)
+	@Column(name = "STA_CODE", unique = true, nullable = false)
 	private String code;
 
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -76,7 +76,8 @@ public class State implements Serializable {
 
 	@Override
 	public String toString() {
-		return "com.mycompany.domain.State[ id=" + id + " ]";
+		return "com.mycompany.domain.State[ code = " + getCode() + " : name = "
+				+ getName() + " : id = " + getId() + " ]";
 	}
 
 	/**

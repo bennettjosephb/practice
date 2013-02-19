@@ -29,9 +29,9 @@ public class Country implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "COU_ID")
 	private Long id;
-	@Column(name = "COU_NAME")
+	@Column(name = "COU_NAME", nullable = false)
 	private String name;
-	@Column(name = "COU_CODE", unique = true)
+	@Column(name = "COU_CODE", unique = true, nullable = false)
 	private String code;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "country")

@@ -5,9 +5,8 @@
 package au.com.project.sample.process.impl;
 
 import au.com.project.sample.domain.Applicant;
-import au.com.project.sample.persistence.local.ApplicantDAOLocal;
+import au.com.project.sample.persistence.ApplicantDAO;
 import au.com.project.sample.process.ApplicantController;
-import javax.ejb.EJB;
 
 /**
  *
@@ -15,8 +14,7 @@ import javax.ejb.EJB;
  */
 public class ApplicantControllerImpl implements ApplicantController{
     
-    @EJB
-    private ApplicantDAOLocal applicantDAO;
+    private ApplicantDAO applicantDAO;
 
     public Applicant getApplicantById(Long applicantId) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -33,14 +31,14 @@ public class ApplicantControllerImpl implements ApplicantController{
     /**
      * @return the applicantDAO
      */
-    public ApplicantDAOLocal getApplicantDAO() {
+    public ApplicantDAO getApplicantDAO() {
         return applicantDAO;
     }
 
     /**
      * @param applicantDAO the applicantDAO to set
      */
-    public void setApplicantDAO(ApplicantDAOLocal applicantDAO) {
+    public void setApplicantDAO(ApplicantDAO applicantDAO) {
         this.applicantDAO = applicantDAO;
     }
 

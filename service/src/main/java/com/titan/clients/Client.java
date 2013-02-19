@@ -2,12 +2,6 @@ package com.titan.clients;
 
 //import com.titan.travelagent.TravelAgentRemote;
 //import com.titan.domain.Cabin;
-import au.com.project.sample.domain.Applicant;
-import au.com.project.sample.domain.Currency;
-
-
-
-import au.com.project.sample.persistence.remote.CurrencyDAORemote;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
@@ -16,12 +10,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.naming.Context;
 import javax.naming.NamingException;
+
+import au.com.project.sample.domain.Currency;
 
 public class Client {
     

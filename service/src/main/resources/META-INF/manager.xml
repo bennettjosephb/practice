@@ -10,12 +10,12 @@
 
 
 	<bean id="createCurrencyManager"
-		class="au.com.project.sample.services.account.createcurrency.CreateCurrencyManager">
+		class="au.com.project.sample.services.admin.createcurrency.CreateCurrencyManager">
 		<property name="currencyController" ref="currencyController" />
 	</bean>
 
 	<bean id="createRoleManager"
-		class="au.com.project.sample.services.account.createrole.CreateRoleManager">
+		class="au.com.project.sample.services.admin.createrole.CreateRoleManager">
 		<property name="authenticationRoleController" ref="authenticationRoleController" />
 	</bean>
 

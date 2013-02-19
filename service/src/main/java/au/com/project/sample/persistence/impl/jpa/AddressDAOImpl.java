@@ -4,18 +4,14 @@
  */
 package au.com.project.sample.persistence.impl.jpa;
 
-import au.com.project.sample.domain.Address;
-import au.com.project.sample.persistence.AbstractDAO;
-import au.com.project.sample.persistence.local.CityDAOLocal;
-import au.com.project.sample.persistence.local.AddressDAO;
-import au.com.project.sample.persistence.remote.AddressDAORemote;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 import org.hibernate.SessionFactory;
+
+import au.com.project.sample.domain.Address;
+import au.com.project.sample.persistence.AbstractDAO;
+import au.com.project.sample.persistence.AddressDAO;
+import au.com.project.sample.persistence.CityDAO;
 
 /**
  * 
@@ -26,7 +22,7 @@ public class AddressDAOImpl extends AbstractDAO<Address> implements
 
 	private SessionFactory sessionFactory;
 
-	private CityDAOLocal cityDAO;
+	private CityDAO cityDAO;
 	
 	public AddressDAOImpl() {
 		super(Address.class);

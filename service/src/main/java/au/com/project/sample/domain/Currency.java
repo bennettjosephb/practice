@@ -60,7 +60,7 @@ public class Currency implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.domain.Currency[ id=" + id + " ]";
+        return "com.mycompany.domain.Currency[ code = " + getCode() + " : name = " + getName() +" : id = " + getId() +" ]";
     }
 
     /**

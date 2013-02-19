@@ -29,10 +29,10 @@ public class City implements Serializable {
 	@Column(name = "CIT_ID")
 	private Long id;
 
-	@Column(name = "CIT_NAME")
+	@Column(name = "CIT_NAME", nullable = false)
 	private String name;
 
-	@Column(name = "CIT_CODE", unique = true)
+	@Column(name = "CIT_CODE", unique = true, nullable = false)
 	private String code;
 
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -71,7 +71,7 @@ public class City implements Serializable {
 
 	@Override
 	public String toString() {
-		return "com.mycompany.domain.City[ id=" + id + " ]";
+		return "com.mycompany.domain.City[ code = " + getCode() + " : name = " + getName() +" : id = " + getId() + "]"; 
 	}
 
 	/**

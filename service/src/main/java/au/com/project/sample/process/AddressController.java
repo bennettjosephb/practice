@@ -4,10 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.persistence.local.*;
-import au.com.project.sample.domain.Address;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.domain.Address;
 
 /**
  *

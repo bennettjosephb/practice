@@ -4,23 +4,20 @@
  */
 package au.com.project.sample.persistence.impl.jpa;
 
-import au.com.project.sample.persistence.local.AuthenticationRoleDAOLocal;
-import au.com.project.sample.domain.AuthenticationRole;
-import au.com.project.sample.persistence.AbstractDAO;
-import au.com.project.sample.persistence.remote.AuthenticationRoleDAORemote;
 import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 import org.hibernate.SessionFactory;
+
+import au.com.project.sample.domain.AuthenticationRole;
+import au.com.project.sample.persistence.AbstractDAO;
+import au.com.project.sample.persistence.AuthenticationRoleDAO;
 
 /**
  * 
  * @author SONY
  */
 public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
-		implements AuthenticationRoleDAOLocal, AuthenticationRoleDAORemote {
+		implements AuthenticationRoleDAO {
 
 	private SessionFactory sessionFactory;
 

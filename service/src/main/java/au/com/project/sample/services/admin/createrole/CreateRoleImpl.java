@@ -4,11 +4,16 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.apache.log4j.Logger;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
+import au.com.project.sample.process.impl.CountryControllerImpl;
 
 public class CreateRoleImpl implements CreateRole {
-	
+
+	private static Logger log = Logger.getLogger(CreateRoleImpl.class);
+
 	CreateRoleManager createRoleManager;
 
 	@WebResult(name = "createRoleResponse", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleResponse/v1", partName = "response")
@@ -16,8 +21,7 @@ public class CreateRoleImpl implements CreateRole {
 	public CreateRoleResponse createRole(
 			@WebParam(partName = "request", name = "createRoleRequest", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleRequest/v1") CreateRoleRequest request)
 			throws TechnicalFault, BusinessFault {
-		// TODO Auto-generated method stub
-		return null;
+		return createRoleManager.createRoleResponse(request);
 	}
 
 	public CreateRoleManager getCreateRoleManager() {
