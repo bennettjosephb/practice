@@ -19,17 +19,18 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="PROJECT_SUB_CATEGORY")
-@SequenceGenerator(name="SUB_CATEGORY_SEQUENCE",
-                   sequenceName="SUB_CATEGORY_SEQUENCE")
 public class SubCategory implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="SUB_CATEGORY_SEQUENCE")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="SUBCATEGORY_ID")
     private Long id;
 
     @Column(name="SUBCATEGORY_NAME")
     private String name;
+
+    @Column(name="SUBCATEGORY_CODE")
+    private String code;
     public Long getId() {
         return id;
     }
@@ -76,5 +77,13 @@ public class SubCategory implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
     
 }
