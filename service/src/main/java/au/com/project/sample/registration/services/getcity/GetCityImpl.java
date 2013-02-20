@@ -9,7 +9,6 @@ import au.com.project.sample.common.message.TechnicalFault;
 
 public class GetCityImpl implements GetCity {
 
-	@Override
 	@WebResult(name = "getCityResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/GetCity/GetCityResponse/v1", partName = "response")
 	@WebMethod(operationName = "GetCity", action = "http://www.sample.project.com.au/registration/services/GetCity/v1")
 	public GetCityResponse getCity(
@@ -18,5 +17,6 @@ public class GetCityImpl implements GetCity {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

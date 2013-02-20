@@ -39,8 +39,7 @@ public class Category implements Serializable {
 	@Column(name = "CAT_CODE")
 	private String code;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "CAT_ID")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
 	private List<SubCategory> subCategory = new ArrayList<SubCategory>();
 
 	public Long getId() {

@@ -4,9 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.Category;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.CategoryDTO;
 
 /**
  *
@@ -14,17 +14,17 @@ import javax.ejb.Local;
  */
 public interface CategoryController {
 
-    void createCategory(Category category);
+    void createCategory(CategoryDTO categoryDTO);
 
-    void editCategory(Category category);
+    void editCategory(CategoryDTO categoryDTO);
 
-    void removeCategory(Category category);
+    void removeCategory(CategoryDTO categoryDTO);
 
-    Category findCategory(Object id);
+    CategoryDTO findCategory(Object id);
 
-    List<Category> findAllCategory();
+    List<CategoryDTO> findAllCategory();
 
-    List<Category> findRangeCategory(int[] range);
+    List<CategoryDTO> findRangeCategory(int[] range);
 
     int countCategory();
     

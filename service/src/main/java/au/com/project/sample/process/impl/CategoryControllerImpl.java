@@ -4,28 +4,58 @@
  */
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.Category;
-import au.com.project.sample.process.CategoryController;
 import java.util.List;
 
-/**
- *
- * @author SONY
- */
-public class CategoryControllerImpl  implements CategoryController{
+import au.com.project.sample.domain.Category;
+import au.com.project.sample.persistence.CategoryDAO;
+import au.com.project.sample.process.CategoryController;
+import au.com.project.sample.process.impl.dto.CategoryDTO;
 
-    public void createCategory(Category category){}
+public class CategoryControllerImpl implements CategoryController {
 
-    public void editCategory(Category category){}
+	private CategoryDAO categoryDAO;
 
-    public void removeCategory(Category category){}
+	private Category updateCountry(CategoryDTO categoryDTO) {
+		Category category = new Category();
 
-    public Category findCategory(Object id){return null;}
+		category.setName(categoryDTO.getName());
+		category.setCode(categoryDTO.getCode());
 
-    public List<Category> findAllCategory(){return null;}
+		return category;
+	}
 
-    public List<Category> findRangeCategory(int[] range){return null;}
+	public void createCategory(CategoryDTO categoryDTO) {
+		categoryDAO.createCategory(updateCountry(categoryDTO));
+	}
 
-    public int countCategory(){return 0;}
-    
+	public void editCategory(CategoryDTO categoryDTO) {
+	}
+
+	public void removeCategory(CategoryDTO categoryDTO) {
+	}
+
+	public CategoryDTO findCategory(Object id) {
+		return null;
+	}
+
+	public List<CategoryDTO> findAllCategory() {
+		return null;
+	}
+
+	public List<CategoryDTO> findRangeCategory(int[] range) {
+		return null;
+	}
+
+	public int countCategory() {
+		return 0;
+	}
+
+	public CategoryDAO getCategoryDAO() {
+		return categoryDAO;
+	}
+
+	public void setCategoryDAO(CategoryDAO categoryDAO) {
+		this.categoryDAO = categoryDAO;
+	}
+
 }

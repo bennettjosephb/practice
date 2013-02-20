@@ -11,14 +11,13 @@ public class SaveCountryImpl implements SaveCountry {
 
 	private SaveCountryManager saveCountryManager;
 
-	@Override
-	@WebResult(name = "saveCountryResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1", partName = "response")
-	@WebMethod(operationName = "SaveCountry", action = "http://www.sample.project.com.au/registration/services/SaveCountry/v1")
-	public SaveCountryResponse saveCountry(
-			@WebParam(partName = "request", name = "saveCountryRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1") SaveCountryRequest request)
-			throws BusinessFault, TechnicalFault {
-		return saveCountryManager.saveCountryResponse(request);
-	}
+//	@WebResult(name = "saveCountryResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1", partName = "response")
+//	@WebMethod(operationName = "SaveCountry", action = "http://www.sample.project.com.au/registration/services/SaveCountry/v1")
+//	public SaveCountryResponse saveCountry(
+//			@WebParam(partName = "request", name = "saveCountryRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1") SaveCountryRequest request)
+//			throws BusinessFault, TechnicalFault {
+//		return saveCountryManager.saveCountryResponse(request);
+//	}
 
 	public SaveCountryManager getSaveCountryManager() {
 		return saveCountryManager;
@@ -26,6 +25,14 @@ public class SaveCountryImpl implements SaveCountry {
 
 	public void setSaveCountryManager(SaveCountryManager saveCountryManager) {
 		this.saveCountryManager = saveCountryManager;
+	}
+
+	@WebResult(name = "saveCountryResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1", partName = "response")
+	@WebMethod(operationName = "SaveCountry", action = "http://www.sample.project.com.au/registration/services/SaveCountry/v1")
+	public SaveCountryResponse saveCountry(
+			@WebParam(partName = "request", name = "saveCountryRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveCountry/v1") SaveCountryRequest request)
+			throws BusinessFault, TechnicalFault {
+		return saveCountryManager.saveCountryResponse(request);
 	}
 
 }

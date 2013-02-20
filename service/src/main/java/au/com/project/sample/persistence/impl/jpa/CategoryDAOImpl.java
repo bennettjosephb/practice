@@ -6,8 +6,6 @@ package au.com.project.sample.persistence.impl.jpa;
 
 import java.util.List;
 
-import javax.ejb.Stateless;
-
 import org.hibernate.SessionFactory;
 
 import au.com.project.sample.domain.Category;
@@ -18,7 +16,6 @@ import au.com.project.sample.persistence.CategoryDAO;
  *
  * @author SONY
  */
-@Stateless
 public class CategoryDAOImpl extends AbstractDAO<Category> implements CategoryDAO {
 
     private SessionFactory sessionFactory;

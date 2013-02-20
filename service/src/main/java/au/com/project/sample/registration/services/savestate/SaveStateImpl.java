@@ -11,14 +11,13 @@ public class SaveStateImpl implements SaveState {
 
 	private SaveStateManager saveStateManager;
 
-	@Override
-	@WebResult(name = "saveStateResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateResponse/v1", partName = "response")
-	@WebMethod(operationName = "SaveState", action = "http://www.sample.project.com.au/registration/services/SaveState/v1")
-	public SaveStateResponse saveState(
-			@WebParam(partName = "request", name = "saveStateRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateRequest/v1") SaveStateRequest request)
-			throws BusinessFault, TechnicalFault {
-		return saveStateManager.saveStateResponse(request);
-	}
+//	@WebResult(name = "saveStateResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateResponse/v1", partName = "response")
+//	@WebMethod(operationName = "SaveState", action = "http://www.sample.project.com.au/registration/services/SaveState/v1")
+//	public SaveStateResponse saveState(
+//			@WebParam(partName = "request", name = "saveStateRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateRequest/v1") SaveStateRequest request)
+//			throws BusinessFault, TechnicalFault {
+//		return saveStateManager.saveStateResponse(request);
+//	}
 
 	public SaveStateManager getSaveStateManager() {
 		return saveStateManager;
@@ -26,6 +25,14 @@ public class SaveStateImpl implements SaveState {
 
 	public void setSaveStateManager(SaveStateManager saveStateManager) {
 		this.saveStateManager = saveStateManager;
+	}
+
+	@WebResult(name = "saveStateResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateResponse/v1", partName = "response")
+	@WebMethod(operationName = "SaveState", action = "http://www.sample.project.com.au/registration/services/SaveState/v1")
+	public SaveStateResponse saveState(
+			@WebParam(partName = "request", name = "saveStateRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateRequest/v1") SaveStateRequest request)
+			throws BusinessFault, TechnicalFault {
+		return saveStateManager.saveStateResponse(request);
 	}
 
 }
