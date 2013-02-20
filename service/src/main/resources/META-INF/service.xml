@@ -9,6 +9,21 @@
 	<import resource="manager.xml" />
 
 
+	<bean id="createCategory"
+		class="au.com.project.sample.services.admin.createcategory.CreateCategoryImpl">
+		<property name="createCategoryManager" ref="createCategoryManager" />
+	</bean>
+
+	<bean id="createSubCategory"
+		class="au.com.project.sample.services.admin.createsubcategory.CreateSubCategoryImpl">
+		<property name="createSubCategoryManager" ref="createSubCategoryManager" />
+	</bean>	
+
+	<bean id="createDesignation"
+		class="au.com.project.sample.services.admin.createdesignation.CreateDesignationImpl">
+		<property name="createDesignationManager" ref="createDesignationManager" />
+	</bean>
+
 	<bean id="createCurrency"
 		class="au.com.project.sample.services.admin.createcurrency.CreateCurrencyImpl">
 		<property name="createCurrencyManager" ref="createCurrencyManager" />

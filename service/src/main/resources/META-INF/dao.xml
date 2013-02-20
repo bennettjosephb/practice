@@ -6,7 +6,20 @@
 	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:cxf="http://cxf.apache.org/core"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
+	<bean id="designationDAO"
+		class="au.com.project.sample.persistence.impl.jpa.DesignationDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
+	<bean id="categoryDAO"
+		class="au.com.project.sample.persistence.impl.jpa.CategoryDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="subCategoryDAO"
+		class="au.com.project.sample.persistence.impl.jpa.SubCategoryDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
 	<bean id="currencyDAO"
 		class="au.com.project.sample.persistence.impl.jpa.CurrencyDAOImpl">

@@ -4,10 +4,15 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.apache.log4j.Logger;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
+import au.com.project.sample.process.impl.CategoryControllerImpl;
 
 public class CreateDesignationImpl implements CreateDesignation {
+
+	private static Logger log = Logger.getLogger(CreateDesignationImpl.class);
 
 	private CreateDesignationManager createDesignationManager;
 

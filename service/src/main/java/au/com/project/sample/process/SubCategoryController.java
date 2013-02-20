@@ -4,28 +4,28 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.SubCategory;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.SubCategoryDTO;
 
 /**
- *
+ * 
  * @author SONY
  */
 public interface SubCategoryController {
 
-    void createSubCategory(SubCategory subCategory);
+	void createSubCategory(SubCategoryDTO subCategoryDTO);
 
-    void editSubCategory(SubCategory subCategory);
+	void editSubCategory(SubCategoryDTO subCategoryDTO);
 
-    void removeSubCategory(SubCategory subCategory);
+	void removeSubCategory(SubCategoryDTO subCategoryDTO);
 
-    SubCategory findSubCategory(Object id);
+	SubCategoryDTO findSubCategory(Object id);
 
-    List<SubCategory> findAllSubCategory();
+	List<SubCategoryDTO> findAllSubCategory();
 
-    List<SubCategory> findRangeSubCategory(int[] range);
+	List<SubCategoryDTO> findRangeSubCategory(int[] range);
 
-    int countSubCategory();
-    
+	int countSubCategory();
+
 }

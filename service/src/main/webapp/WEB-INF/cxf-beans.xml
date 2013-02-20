@@ -91,4 +91,34 @@
 		</jaxws:features>
 	</jaxws:endpoint>
 
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCategory/v1"
+		id="CreateCategoryService" address="/CreateCategoryService" endpointName="tns:CreateCategorySOAP"
+		implementor="#createCategory" serviceName="tns:CreateCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCategory/1.0/CreateCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateSubCategory/v1"
+		id="CreateSubCategoryService" address="/CreateSubCategoryService" endpointName="tns:CreateSubCategorySOAP"
+		implementor="#createSubCategory" serviceName="tns:CreateSubCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateSubCategory/1.0/CreateSubCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateDesignation/v1"
+		id="CreateDesignationService" address="/CreateDesignationService" endpointName="tns:CreateDesignationSOAP"
+		implementor="#createDesignation" serviceName="tns:CreateDesignation"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateDesignation/1.0/CreateDesignation.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
 </beans>

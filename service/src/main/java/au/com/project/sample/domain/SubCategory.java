@@ -97,4 +97,12 @@ public class SubCategory implements Serializable {
 		this.code = code;
 	}
 
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 }

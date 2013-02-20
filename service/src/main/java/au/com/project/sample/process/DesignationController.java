@@ -4,9 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.Designation;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.DesignationDTO;
 
 /**
  *
@@ -14,17 +14,17 @@ import javax.ejb.Local;
  */
 public interface DesignationController {
 
-    void createDesignation(Designation designation);
+    void createDesignation(DesignationDTO designationDTO);
 
-    void editDesignation(Designation designation);
+    void editDesignation(DesignationDTO designationDTO);
 
-    void removeDesignation(Designation designation);
+    void removeDesignation(DesignationDTO designationDTO);
 
-    Designation findDesignation(Object id);
+    DesignationDTO findDesignation(Object id);
 
-    List<Designation> findAllDesignation();
+    List<DesignationDTO> findAllDesignation();
 
-    List<Designation> findRangeDesignation(int[] range);
+    List<DesignationDTO> findRangeDesignation(int[] range);
 
     int countDesignation();
     

@@ -13,11 +13,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Transactional;
 
 import au.com.project.sample.common.HibernateFactory;
 import au.com.project.sample.common.message.DataAccessLayerException;
-import au.com.project.sample.persistence.impl.jpa.CountryDAOImpl;
 
 /**
  * 
@@ -79,6 +79,25 @@ public abstract class AbstractDAO<T> {
 			session.close();
 			log.trace("Session Closed");
 		}
+	}
+
+	public Object findByCode(String code) {
+
+		Object object = null;
+		if (code != null) {
+			log.trace("Session Creating");
+			Session session = getSession();
+			log.trace("Entity " + this.entityClass.getClass().getName()
+					+ " Retriving");
+			object = session.createCriteria(this.entityClass)
+					.add(Restrictions.eq("code", code)).uniqueResult();
+			log.trace("Entity " + this.entityClass.getClass().getName()
+					+ " Retrived");
+			session.close();
+			log.trace("Session Closed");
+		}
+
+		return object;
 	}
 
 	/*

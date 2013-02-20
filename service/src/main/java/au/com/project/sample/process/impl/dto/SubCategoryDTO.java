@@ -8,6 +8,8 @@ public class SubCategoryDTO {
     private String name;
 
     private String code;
+    
+    private CategoryDTO categoryDTO;
 
 	public Long getId() {
 		return id;
@@ -31,5 +33,13 @@ public class SubCategoryDTO {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public CategoryDTO getCategoryDTO() {
+		return categoryDTO;
+	}
+
+	public void setCategoryDTO(CategoryDTO categoryDTO) {
+		this.categoryDTO = categoryDTO;
 	}
 }

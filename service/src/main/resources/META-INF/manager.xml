@@ -8,6 +8,20 @@
 
 	<import resource="controller.xml" />
 
+	<bean id="createSubCategoryManager"
+		class="au.com.project.sample.services.admin.createsubcategory.CreateSubCategoryManager">
+		<property name="subCategoryController" ref="subCategoryController" />
+	</bean>
+
+	<bean id="createCategoryManager"
+		class="au.com.project.sample.services.admin.createcategory.CreateCategoryManager">
+		<property name="categoryController" ref="categoryController" />
+	</bean>
+
+	<bean id="createDesignationManager"
+		class="au.com.project.sample.services.admin.createdesignation.CreateDesignationManager">
+		<property name="designationController" ref="designationController" />
+	</bean>
 
 	<bean id="createCurrencyManager"
 		class="au.com.project.sample.services.admin.createcurrency.CreateCurrencyManager">

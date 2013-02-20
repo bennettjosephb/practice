@@ -6,6 +6,7 @@ package au.com.project.sample.persistence.impl.jpa;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 
 import au.com.project.sample.domain.Designation;
@@ -13,15 +14,18 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.DesignationDAO;
 
 /**
- *
+ * 
  * @author SONY
  */
 
-public class DesignationDAOImpl extends AbstractDAO<Designation> implements DesignationDAO {
+public class DesignationDAOImpl extends AbstractDAO<Designation> implements
+		DesignationDAO {
+	private static Logger log = Logger.getLogger(DesignationDAOImpl.class);
+
 	private SessionFactory sessionFactory;
 
 	@Override
-	public  SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
@@ -30,37 +34,36 @@ public class DesignationDAOImpl extends AbstractDAO<Designation> implements Desi
 		this.sessionFactory = sessionFactory;
 	}
 
+	public DesignationDAOImpl() {
+		super(Designation.class);
+	}
 
-    public DesignationDAOImpl() {
-        super(Designation.class);
-    }
+	public void createDesignation(Designation designation) {
+		saveOrUpdate(designation);
+	}
 
-    public void createDesignation(Designation designation) {
-        saveOrUpdate(designation);
-    }
+	public void editDesignation(Designation designation) {
+		// edit(designation);
+	}
 
-    public void editDesignation(Designation designation) {
-        //edit(designation);
-    }
+	public void removeDesignation(Designation designation) {
+		// remove(designation);
+	}
 
-    public void removeDesignation(Designation designation) {
-        //remove(designation);
-    }
+	public Designation findDesignation(Object id) {
+		return null;// find(id);
+	}
 
-    public Designation findDesignation(Object id) {
-        return null;//find(id);
-    }
+	public List<Designation> findAllDesignation() {
+		return null;// findAll();
+	}
 
-    public List<Designation> findAllDesignation() {
-        return null;//findAll();
-    }
+	public List<Designation> findRangeDesignation(int[] range) {
+		return null;// findRange(range);
+	}
 
-    public List<Designation> findRangeDesignation(int[] range) {
-        return null;//findRange(range);
-    }
-
-    public int countDesignation() {
-        return 0;//count();
-    }
+	public int countDesignation() {
+		return 0;// count();
+	}
 
 }

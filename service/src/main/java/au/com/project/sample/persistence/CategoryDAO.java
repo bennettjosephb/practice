@@ -22,6 +22,8 @@ public interface CategoryDAO {
 
     Category findCategory(Object id);
 
+    Category findCategoryByCode(String code);
+
     List<Category> findAllCategory();
 
     List<Category> findRangeCategory(int[] range);

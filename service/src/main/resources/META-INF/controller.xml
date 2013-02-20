@@ -9,6 +9,22 @@
 	<import resource="dao.xml" />
 
 
+	<bean id="subCategoryController"
+		class="au.com.project.sample.process.impl.SubCategoryControllerImpl">
+		<property name="subCategoryDAO" ref="subCategoryDAO" />
+		<property name="categoryDAO" ref="categoryDAO" />
+	</bean>
+
+	<bean id="categoryController"
+		class="au.com.project.sample.process.impl.CategoryControllerImpl">
+		<property name="categoryDAO" ref="categoryDAO" />
+	</bean>
+
+	<bean id="designationController"
+		class="au.com.project.sample.process.impl.DesignationControllerImpl">
+		<property name="designationDAO" ref="designationDAO" />
+	</bean>
+
 	<bean id="currencyController"
 		class="au.com.project.sample.process.impl.CurrencyControllerImpl">
 		<property name="currencyDAO" ref="currencyDAO" />

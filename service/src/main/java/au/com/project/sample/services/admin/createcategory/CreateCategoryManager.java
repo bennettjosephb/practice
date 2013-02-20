@@ -1,10 +1,14 @@
 package au.com.project.sample.services.admin.createcategory;
 
+import org.apache.log4j.Logger;
+
 import au.com.project.sample.process.CategoryController;
 import au.com.project.sample.process.impl.dto.CategoryDTO;
 import au.com.project.sample.services.model.CategoryInfo;
 
 public class CreateCategoryManager {
+
+	private static Logger log = Logger.getLogger(CreateCategoryManager.class);
 
 	private CategoryController categoryController;
 
@@ -26,7 +30,10 @@ public class CreateCategoryManager {
 
 		createCategoryResponse.setMessage(new CreateCategoryResponse.Message());
 
-		categoryController.createCategory(updateCategoryInfoDTO(createCategoryRequest));
+		categoryController
+				.createCategory(updateCategoryInfoDTO(createCategoryRequest));
+
+		createCategoryResponse.getMessage().setStatus(true);
 
 		return createCategoryResponse;
 	}
