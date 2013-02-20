@@ -39,6 +39,10 @@ public class City implements Serializable {
 	@JoinColumn(name = "STA_ID")
 	private State state;
 
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "COU_ID")
+	private Country country;
+
 	public Long getId() {
 		return id;
 	}
@@ -110,6 +114,14 @@ public class City implements Serializable {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 
 }

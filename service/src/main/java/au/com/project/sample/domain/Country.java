@@ -37,6 +37,9 @@ public class Country implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
 	private List<State> states;
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "country")
+	private List<City> cities;
+
 	public Long getId() {
 		return id;
 	}
@@ -115,5 +118,13 @@ public class Country implements Serializable {
 	 */
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public List<City> getCities() {
+		return cities;
+	}
+
+	public void setCities(List<City> cities) {
+		this.cities = cities;
 	}
 }
