@@ -3,12 +3,14 @@
 	targetNamespace="http://www.sample.project.com.au/services/model/SubCategoryInfo/v1"
 	xmlns:tns="http://www.sample.project.com.au/services/model/SubCategoryInfo/v1"
 	elementFormDefault="qualified"
-	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1">
+	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1" xmlns:pref1="http://www.sample.project.com.au/services/model/CategoryInfo/v1">
+	<import schemaLocation="../../CategoryInfo/1.0/CategoryInfo.xsd" namespace="http://www.sample.project.com.au/services/model/CategoryInfo/v1"></import>
 	<complexType name="SubCategoryInfo">
 		<sequence>
+			<element name="id" type="long"></element>
 			<element name="name" type="string" />
-			<element name="value" type="int" />
 			<element name="code" type="string" />
+			<element name="categoryInfo" type="pref1:CategoryInfo"></element>
 		</sequence>
 	</complexType>
 </schema>

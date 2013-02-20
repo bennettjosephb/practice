@@ -19,163 +19,171 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
- *
+ * 
  * @author SONY
  */
 @Entity
 @Table(name = "PROJECT_DOCUMENT")
-@SequenceGenerator(name="DOCUMENT_SEQUENCE",
-                   sequenceName="DOCUMENT_SEQUENCE")
 public class Document implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @return the serialVersionUID
-     */
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-    @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="DOCUMENT_SEQUENCE")
-    @Column(name = "DOC_ID")
-    private Long id;
-    
-    @Column(name = "DOC_FILE_TYPE", nullable=false)
-    @Enumerated(EnumType.STRING)
-    private FileType fileType;
-    
-    @Column(name = "DOC_TITLE")
-    private String title;
-    
-    @Column(name = "DOC_MIME_TYPE")
-    private String mimeType;
-    
-    @Column(name = "DOC_VISIBLE_STATUS")
-    private Boolean visibleStatus; 
-    
-    @Column(name = "DOC_FILE")
-    @Lob
-    @Basic(fetch=FetchType.EAGER) // this gets ignored anyway, but it is recommended for blobs
-    private byte[] file;
-    
-    @Column(name = "DOC_FILE_NAME")
-    private String fileName;
+	/**
+	 * @return the serialVersionUID
+	 */
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "DOC_ID")
+	private Long id;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	@Column(name = "DOC_FILE_TYPE", nullable = false)
+	@Enumerated(EnumType.STRING)
+	private FileType fileType;
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
+	@Column(name = "DOC_TITLE")
+	private String title;
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Document)) {
-            return false;
-        }
-        Document other = (Document) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
+	@Column(name = "DOC_MIME_TYPE")
+	private String mimeType;
 
-    @Override
-    public String toString() {
-        return "com.mycompany.domain.Resume[ id=" + id + " ]";
-    }
+	@Column(name = "DOC_VISIBLE_STATUS")
+	private Boolean visibleStatus;
 
-    /**
-     * @return the fileType
-     */
-    public FileType getFileType() {
-        return fileType;
-    }
+	@Column(name = "DOC_FILE")
+	@Lob
+	@Basic(fetch = FetchType.EAGER)
+	// this gets ignored anyway, but it is recommended for blobs
+	private byte[] file;
 
-    /**
-     * @param fileType the fileType to set
-     */
-    public void setFileType(FileType fileType) {
-        this.fileType = fileType;
-    }
+	@Column(name = "DOC_FILE_NAME")
+	private String fileName;
 
-    /**
-     * @return the title
-     */
-    public String getTitle() {
-        return title;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    /**
-     * @param title the title to set
-     */
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    /**
-     * @return the mimeType
-     */
-    public String getMimeType() {
-        return mimeType;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 0;
+		hash += (id != null ? id.hashCode() : 0);
+		return hash;
+	}
 
-    /**
-     * @param mimeType the mimeType to set
-     */
-    public void setMimeType(String mimeType) {
-        this.mimeType = mimeType;
-    }
+	@Override
+	public boolean equals(Object object) {
+		// TODO: Warning - this method won't work in the case the id fields are
+		// not set
+		if (!(object instanceof Document)) {
+			return false;
+		}
+		Document other = (Document) object;
+		if ((this.id == null && other.id != null)
+				|| (this.id != null && !this.id.equals(other.id))) {
+			return false;
+		}
+		return true;
+	}
 
-    /**
-     * @return the visibleStatus
-     */
-    public Boolean getVisibleStatus() {
-        return visibleStatus;
-    }
+	@Override
+	public String toString() {
+		return "com.mycompany.domain.Resume[ id=" + id + " ]";
+	}
 
-    /**
-     * @param visibleStatus the visibleStatus to set
-     */
-    public void setVisibleStatus(Boolean visibleStatus) {
-        this.visibleStatus = visibleStatus;
-    }
+	/**
+	 * @return the fileType
+	 */
+	public FileType getFileType() {
+		return fileType;
+	}
 
-    /**
-     * @return the file
-     */
-    public byte[] getFile() {
-        return file;
-    }
+	/**
+	 * @param fileType
+	 *            the fileType to set
+	 */
+	public void setFileType(FileType fileType) {
+		this.fileType = fileType;
+	}
 
-    /**
-     * @param file the file to set
-     */
-    public void setFile(byte[] file) {
-        this.file = file;
-    }
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
 
-    /**
-     * @return the fileName
-     */
-    public String getFileName() {
-        return fileName;
-    }
+	/**
+	 * @param title
+	 *            the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    /**
-     * @param fileName the fileName to set
-     */
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-    
+	/**
+	 * @return the mimeType
+	 */
+	public String getMimeType() {
+		return mimeType;
+	}
+
+	/**
+	 * @param mimeType
+	 *            the mimeType to set
+	 */
+	public void setMimeType(String mimeType) {
+		this.mimeType = mimeType;
+	}
+
+	/**
+	 * @return the visibleStatus
+	 */
+	public Boolean getVisibleStatus() {
+		return visibleStatus;
+	}
+
+	/**
+	 * @param visibleStatus
+	 *            the visibleStatus to set
+	 */
+	public void setVisibleStatus(Boolean visibleStatus) {
+		this.visibleStatus = visibleStatus;
+	}
+
+	/**
+	 * @return the file
+	 */
+	public byte[] getFile() {
+		return file;
+	}
+
+	/**
+	 * @param file
+	 *            the file to set
+	 */
+	public void setFile(byte[] file) {
+		this.file = file;
+	}
+
+	/**
+	 * @return the fileName
+	 */
+	public String getFileName() {
+		return fileName;
+	}
+
+	/**
+	 * @param fileName
+	 *            the fileName to set
+	 */
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 }

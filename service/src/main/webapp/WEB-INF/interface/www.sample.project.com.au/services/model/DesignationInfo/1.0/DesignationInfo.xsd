@@ -6,8 +6,8 @@
 	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1">
 	<complexType name="DesignationInfo">
 		<sequence>
+			<element name="id" type="long"></element>
 			<element name="name" type="string" />
-			<element name="value" type="int" />
 			<element name="code" type="string" />
 		</sequence>
 	</complexType>

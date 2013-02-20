@@ -5,8 +5,8 @@
 	elementFormDefault="qualified">
 	<complexType name="CategoryInfo">
 		<sequence>
+			<element name="id" type="long" />
 			<element name="name" type="string" />
-			<element name="value" type="int" />
 			<element name="code" type="string" />
 		</sequence>
 	</complexType>
