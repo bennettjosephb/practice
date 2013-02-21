@@ -6,6 +6,8 @@ package au.com.project.sample.process.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.domain.AuthenticationRole;
 import au.com.project.sample.persistence.AuthenticationRoleDAO;
 import au.com.project.sample.process.AuthenticationRoleController;
@@ -18,6 +20,7 @@ import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
 public class AuthenticationRoleControllerImpl implements
 		AuthenticationRoleController {
 
+	@Autowired
 	private AuthenticationRoleDAO authenticationRoleDAO;
 
 	private AuthenticationRole updateAuthenticationRole(

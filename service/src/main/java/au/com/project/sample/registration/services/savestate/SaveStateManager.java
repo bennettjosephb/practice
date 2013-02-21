@@ -1,5 +1,7 @@
 package au.com.project.sample.registration.services.savestate;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.StateController;
 import au.com.project.sample.process.impl.dto.CountryDTO;
 import au.com.project.sample.process.impl.dto.StateDTO;
@@ -8,6 +10,7 @@ import au.com.project.sample.registration.model.State;
 
 public class SaveStateManager {
 
+	@Autowired
 	private StateController stateController;
 
 	private StateDTO updateStateDTO(SaveStateRequest saveStateRequest) {

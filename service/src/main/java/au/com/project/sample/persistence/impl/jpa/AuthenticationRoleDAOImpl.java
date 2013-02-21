@@ -7,6 +7,7 @@ package au.com.project.sample.persistence.impl.jpa;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.AuthenticationRole;
 import au.com.project.sample.persistence.AbstractDAO;
@@ -19,6 +20,7 @@ import au.com.project.sample.persistence.AuthenticationRoleDAO;
 public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
 		implements AuthenticationRoleDAO {
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public AuthenticationRoleDAOImpl() {

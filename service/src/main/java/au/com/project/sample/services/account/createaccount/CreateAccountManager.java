@@ -1,5 +1,7 @@
 package au.com.project.sample.services.account.createaccount;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.CreateAccountController;
 import au.com.project.sample.process.impl.dto.StateDTO;
 import au.com.project.sample.process.impl.dto.UserInfoDTO;
@@ -8,6 +10,7 @@ import au.com.project.sample.services.model.UserInfo;
 
 public class CreateAccountManager {
 
+	@Autowired
 	private CreateAccountController createAccountController;
 
 	private UserInfoDTO updateUserInfoDTO(CreateAccountRequest createAccountRequest) {

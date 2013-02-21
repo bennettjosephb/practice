@@ -6,6 +6,8 @@ package au.com.project.sample.process.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.domain.State;
 import au.com.project.sample.persistence.CountryDAO;
@@ -19,8 +21,10 @@ import au.com.project.sample.process.impl.dto.StateDTO;
  */
 public class StateControllerImpl implements StateController {
 
+	@Autowired
 	CountryDAO countryDAO;
 
+	@Autowired
 	StateDAO stateDAO;
 
 	private State updateState(StateDTO stateDTO) {

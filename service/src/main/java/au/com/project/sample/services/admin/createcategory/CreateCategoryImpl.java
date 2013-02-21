@@ -4,11 +4,18 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
+import au.com.project.sample.persistence.impl.jpa.CategoryDAOImpl;
 
 public class CreateCategoryImpl implements CreateCategory {
 
+	private static Logger log = Logger.getLogger(CategoryDAOImpl.class);
+
+	@Autowired
 	private CreateCategoryManager createCategoryManager;
 
 	@WebResult(name = "createCategoryResponse", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateCategory/CreateCategoryResponse/v1", partName = "response")

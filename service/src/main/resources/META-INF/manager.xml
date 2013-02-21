@@ -10,52 +10,42 @@
 
 	<bean id="createSubCategoryManager"
 		class="au.com.project.sample.services.admin.createsubcategory.CreateSubCategoryManager">
-		<property name="subCategoryController" ref="subCategoryController" />
 	</bean>
 
 	<bean id="createCategoryManager"
 		class="au.com.project.sample.services.admin.createcategory.CreateCategoryManager">
-		<property name="categoryController" ref="categoryController" />
 	</bean>
 
 	<bean id="createDesignationManager"
 		class="au.com.project.sample.services.admin.createdesignation.CreateDesignationManager">
-		<property name="designationController" ref="designationController" />
 	</bean>
 
 	<bean id="createCurrencyManager"
 		class="au.com.project.sample.services.admin.createcurrency.CreateCurrencyManager">
-		<property name="currencyController" ref="currencyController" />
 	</bean>
 
 	<bean id="createRoleManager"
 		class="au.com.project.sample.services.admin.createrole.CreateRoleManager">
-		<property name="authenticationRoleController" ref="authenticationRoleController" />
 	</bean>
 
 	<bean id="createAccountManager"
 		class="au.com.project.sample.services.account.createaccount.CreateAccountManager">
-		<property name="createAccountController" ref="createAccountController" />
 	</bean>
 
 	<bean id="getCountryManager"
 		class="au.com.project.sample.registration.services.getcountry.GetCountryManager">
-		<property name="countryController" ref="countryController" />
 	</bean>
 
 	<bean id="saveCountryManager"
 		class="au.com.project.sample.registration.services.savecountry.SaveCountryManager">
-		<property name="countryController" ref="countryController" />
 	</bean>
 
 	<bean id="saveStateManager"
 		class="au.com.project.sample.registration.services.savestate.SaveStateManager">
-		<property name="stateController" ref="stateController" />
 	</bean>
 
 	<bean id="saveCityManager"
 		class="au.com.project.sample.registration.services.savecity.SaveCityManager">
-		<property name="cityController" ref="cityController" />
 	</bean>
 
 </beans>

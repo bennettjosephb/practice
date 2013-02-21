@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.persistence.CountryDAO;
@@ -18,6 +19,7 @@ public class CountryControllerImpl implements CountryController {
 
 	private static Logger log = Logger.getLogger(CountryControllerImpl.class);
 
+	@Autowired
 	private CountryDAO countryDAO;
 
 	public CountryControllerImpl() {

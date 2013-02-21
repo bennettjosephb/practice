@@ -1,6 +1,7 @@
 package au.com.project.sample.services.admin.createsubcategory;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.process.SubCategoryController;
 import au.com.project.sample.process.impl.dto.CategoryDTO;
@@ -13,6 +14,7 @@ public class CreateSubCategoryManager {
 	private static Logger log = Logger
 			.getLogger(CreateSubCategoryManager.class);
 
+	@Autowired
 	private SubCategoryController subCategoryController;
 
 	private SubCategoryDTO updateSubCategoryInfoDTO(

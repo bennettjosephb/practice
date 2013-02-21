@@ -1,5 +1,7 @@
 package au.com.project.sample.registration.services.savecity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.CityController;
 import au.com.project.sample.process.impl.dto.CityDTO;
 import au.com.project.sample.process.impl.dto.StateDTO;
@@ -8,6 +10,7 @@ import au.com.project.sample.registration.model.State;
 
 public class SaveCityManager {
 
+	@Autowired
 	private CityController cityController;
 
 	private CityDTO updateCityDTO(SaveCityRequest saveCityRequest) {

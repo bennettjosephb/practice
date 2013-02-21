@@ -9,20 +9,24 @@ import java.util.List;
 import javax.ejb.Stateless;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.SubCategory;
 import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.SubCategoryDAO;
 
 /**
- *
+ * 
  * @author SONY
  */
-public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements SubCategoryDAO {
+public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements
+		SubCategoryDAO {
+
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	public  SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
@@ -31,36 +35,36 @@ public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements SubC
 		this.sessionFactory = sessionFactory;
 	}
 
-    public SubCategoryDAOImpl() {
-        super(SubCategory.class);
-    }
+	public SubCategoryDAOImpl() {
+		super(SubCategory.class);
+	}
 
-    public void createSubCategory(SubCategory subCategory) {
-        saveOrUpdate(subCategory);
-    }
+	public void createSubCategory(SubCategory subCategory) {
+		saveOrUpdate(subCategory);
+	}
 
-    public void editSubCategory(SubCategory subCategory) {
-   //     edit(subCategory);
-    }
+	public void editSubCategory(SubCategory subCategory) {
+		// edit(subCategory);
+	}
 
-    public void removeSubCategory(SubCategory subCategory) {
-    //    remove(subCategory);
-    }
+	public void removeSubCategory(SubCategory subCategory) {
+		// remove(subCategory);
+	}
 
-    public SubCategory findSubCategory(Object id) {
-        return null;//find(id);
-    }
+	public SubCategory findSubCategory(Object id) {
+		return null;// find(id);
+	}
 
-    public List<SubCategory> findAllSubCategory() {
-        return null;//findAll();
-    }
+	public List<SubCategory> findAllSubCategory() {
+		return null;// findAll();
+	}
 
-    public List<SubCategory> findRangeSubCategory(int[] range) {
-        return null;//findRange(range);
-    }
+	public List<SubCategory> findRangeSubCategory(int[] range) {
+		return null;// findRange(range);
+	}
 
-    public int countSubCategory() {
-        return 0;//count();
-    }
+	public int countSubCategory() {
+		return 0;// count();
+	}
 
 }

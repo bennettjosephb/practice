@@ -8,53 +8,40 @@
 
 	<import resource="dao.xml" />
 
-
 	<bean id="subCategoryController"
 		class="au.com.project.sample.process.impl.SubCategoryControllerImpl">
-		<property name="subCategoryDAO" ref="subCategoryDAO" />
-		<property name="categoryDAO" ref="categoryDAO" />
 	</bean>
 
 	<bean id="categoryController"
 		class="au.com.project.sample.process.impl.CategoryControllerImpl">
-		<property name="categoryDAO" ref="categoryDAO" />
 	</bean>
 
 	<bean id="designationController"
 		class="au.com.project.sample.process.impl.DesignationControllerImpl">
-		<property name="designationDAO" ref="designationDAO" />
 	</bean>
 
 	<bean id="currencyController"
 		class="au.com.project.sample.process.impl.CurrencyControllerImpl">
-		<property name="currencyDAO" ref="currencyDAO" />
 	</bean>
 
 	<bean id="authenticationRoleController"
 		class="au.com.project.sample.process.impl.AuthenticationRoleControllerImpl">
-		<property name="authenticationRoleDAO" ref="authenticationRoleDAO" />
 	</bean>
 
 	<bean id="createAccountController"
 		class="au.com.project.sample.process.impl.CreateAccountControllerImpl">
-		<property name="applicationUserDAO" ref="applicationUserDAO" />
 	</bean>
 
 	<bean id="countryController"
 		class="au.com.project.sample.process.impl.CountryControllerImpl">
-		<property name="countryDAO" ref="countryDAO" />
 	</bean>
 
 	<bean id="stateController"
 		class="au.com.project.sample.process.impl.StateControllerImpl">
-		<property name="stateDAO" ref="stateDAO" />
-		<property name="countryDAO" ref="countryDAO" />
 	</bean>
 
 	<bean id="cityController"
 		class="au.com.project.sample.process.impl.CityControllerImpl">
-		<property name="stateDAO" ref="stateDAO" />
-		<property name="cityDAO" ref="cityDAO" />
 	</bean>
 
 </beans>

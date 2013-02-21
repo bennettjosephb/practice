@@ -4,11 +4,14 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
 
 public class SaveStateImpl implements SaveState {
 
+	@Autowired
 	private SaveStateManager saveStateManager;
 
 //	@WebResult(name = "saveStateResponse", targetNamespace = "http://www.sample.project.com.au/registration/services/SaveState/SaveStateResponse/v1", partName = "response")

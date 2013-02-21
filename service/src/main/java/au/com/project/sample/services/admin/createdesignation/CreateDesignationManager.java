@@ -1,6 +1,7 @@
 package au.com.project.sample.services.admin.createdesignation;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.process.DesignationController;
 import au.com.project.sample.process.impl.dto.DesignationDTO;
@@ -11,6 +12,7 @@ public class CreateDesignationManager {
 	private static Logger log = Logger
 			.getLogger(CreateDesignationManager.class);
 
+	@Autowired
 	private DesignationController designationController;
 
 	private DesignationDTO updateDesignationInfoDTO(

@@ -7,17 +7,18 @@ package au.com.project.sample.process.impl;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Category;
 import au.com.project.sample.persistence.CategoryDAO;
 import au.com.project.sample.process.CategoryController;
 import au.com.project.sample.process.impl.dto.CategoryDTO;
-import au.com.project.sample.services.admin.createcategory.CreateCategoryManager;
 
 public class CategoryControllerImpl implements CategoryController {
 
 	private static Logger log = Logger.getLogger(CategoryControllerImpl.class);
 
+	@Autowired
 	private CategoryDAO categoryDAO;
 
 	private Category updateCountry(CategoryDTO categoryDTO) {

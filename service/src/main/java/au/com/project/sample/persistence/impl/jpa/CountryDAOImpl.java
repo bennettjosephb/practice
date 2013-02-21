@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.persistence.AbstractDAO;
@@ -20,6 +21,7 @@ public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 
 	private static Logger log = Logger.getLogger(CountryDAOImpl.class);
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public CountryDAOImpl() {

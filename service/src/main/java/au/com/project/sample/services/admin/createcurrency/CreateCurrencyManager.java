@@ -1,11 +1,14 @@
 package au.com.project.sample.services.admin.createcurrency;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.CurrencyController;
 import au.com.project.sample.process.impl.dto.CurrencyDTO;
 import au.com.project.sample.services.model.CurrencyInfo;
 
 public class CreateCurrencyManager {
 
+	@Autowired
 	private CurrencyController currencyController;
 
 	public CreateCurrencyResponse createCurrencyResponse(

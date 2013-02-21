@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Designation;
 import au.com.project.sample.persistence.AbstractDAO;
@@ -22,6 +23,7 @@ public class DesignationDAOImpl extends AbstractDAO<Designation> implements
 		DesignationDAO {
 	private static Logger log = Logger.getLogger(DesignationDAOImpl.class);
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override

@@ -1,11 +1,14 @@
 package au.com.project.sample.registration.services.savecountry;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.CountryController;
 import au.com.project.sample.process.impl.dto.CountryDTO;
 import au.com.project.sample.registration.model.Country;
 
 public class SaveCountryManager {
 
+	@Autowired
 	private CountryController countryController;
 
 	private CountryDTO updateCountryDTO(SaveCountryRequest saveCountryRequest) {

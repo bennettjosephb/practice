@@ -3,6 +3,7 @@ package au.com.project.sample.process.impl;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Currency;
 import au.com.project.sample.persistence.CurrencyDAO;
@@ -13,6 +14,7 @@ public class CurrencyControllerImpl implements CurrencyController {
 
 	private static Logger log = Logger.getLogger(CurrencyControllerImpl.class);
 
+	@Autowired
 	private CurrencyDAO currencyDAO;
 
 	private Currency updateCurrency(CurrencyDTO currencyDTO) {

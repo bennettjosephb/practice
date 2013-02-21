@@ -5,6 +5,7 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
@@ -14,6 +15,7 @@ public class CreateRoleImpl implements CreateRole {
 
 	private static Logger log = Logger.getLogger(CreateRoleImpl.class);
 
+	@Autowired
 	CreateRoleManager createRoleManager;
 
 	@WebResult(name = "createRoleResponse", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateRole/CreateRoleResponse/v1", partName = "response")

@@ -1,0 +1,29 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import au.com.project.sample.domain.Person;
+import au.com.project.sample.persistence.PersonDAO;
+
+public class PersonDAOTest extends AbstractDAOTest {
+
+	@Autowired
+	private PersonDAO personDAO = null;
+
+	public PersonDAOTest() {
+	}
+
+	@Test
+	public void testStoreRetrieve() {
+		Person person = new Person();
+		System.out.println(person +":"+ personDAO);
+//		person.setFirstName("A");
+//		person.setLastName("B");
+//		personDAO.createPerson(person);
+		long id = personDAO.countPerson();
+		assertEquals(id, 0);
+//		assertEquals("A", personDAO.findPerson(id));
+	}
+
+}

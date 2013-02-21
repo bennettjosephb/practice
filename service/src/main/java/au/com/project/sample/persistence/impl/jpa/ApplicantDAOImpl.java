@@ -1,6 +1,7 @@
 package au.com.project.sample.persistence.impl.jpa;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Applicant;
 import au.com.project.sample.domain.Location;
@@ -9,6 +10,7 @@ import au.com.project.sample.persistence.ApplicantDAO;
 
 public class ApplicantDAOImpl  extends AbstractDAO<Applicant> implements ApplicantDAO {
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public ApplicantDAOImpl(){

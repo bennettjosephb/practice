@@ -1,6 +1,7 @@
 package au.com.project.sample.services.admin.createrole;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.process.AuthenticationRoleController;
 import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
@@ -10,6 +11,7 @@ public class CreateRoleManager {
 	
 	private static Logger log = Logger.getLogger(CreateRoleManager.class);
 
+	@Autowired
 	private AuthenticationRoleController authenticationRoleController;
 
 	public CreateRoleResponse createRoleResponse(

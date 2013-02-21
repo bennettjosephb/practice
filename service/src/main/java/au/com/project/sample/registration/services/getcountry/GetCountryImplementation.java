@@ -1,10 +1,13 @@
 package au.com.project.sample.registration.services.getcountry;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
 
 public class GetCountryImplementation implements GetCountry {
 	
+	@Autowired
 	private GetCountryManager getCountryManager;
 
 	public GetCountryResponse getCountry(GetCountryRequest request)

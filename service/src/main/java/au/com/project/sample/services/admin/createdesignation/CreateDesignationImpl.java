@@ -5,6 +5,7 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
@@ -14,6 +15,7 @@ public class CreateDesignationImpl implements CreateDesignation {
 
 	private static Logger log = Logger.getLogger(CreateDesignationImpl.class);
 
+	@Autowired
 	private CreateDesignationManager createDesignationManager;
 
 	@WebResult(name = "createDesignationResponse", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationResponse/v1", partName = "response")

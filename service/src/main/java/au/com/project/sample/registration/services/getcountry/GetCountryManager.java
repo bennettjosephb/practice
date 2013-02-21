@@ -3,12 +3,15 @@ package au.com.project.sample.registration.services.getcountry;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.process.CountryController;
 import au.com.project.sample.process.impl.dto.CountryDTO;
 import au.com.project.sample.registration.model.Country;
 
 public class GetCountryManager {
 
+	@Autowired
 	private CountryController countryController;
 
 	private List<Country> updateCountryDTO(List<CountryDTO> countryList) {

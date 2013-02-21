@@ -7,6 +7,7 @@ package au.com.project.sample.process.impl;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Designation;
 import au.com.project.sample.persistence.DesignationDAO;
@@ -22,6 +23,7 @@ public class DesignationControllerImpl  implements DesignationController{
 	private static Logger log = Logger
 			.getLogger(DesignationControllerImpl.class);
 	
+	@Autowired
 	private DesignationDAO designationDAO;
 	
 	private Designation updateCountry(DesignationDTO designationDTO) {

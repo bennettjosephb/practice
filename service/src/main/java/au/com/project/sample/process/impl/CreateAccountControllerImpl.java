@@ -6,6 +6,8 @@ package au.com.project.sample.process.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.domain.Applicant;
 import au.com.project.sample.domain.ApplicationUser;
 import au.com.project.sample.persistence.ApplicationUserDAO;
@@ -19,6 +21,7 @@ import au.com.project.sample.services.model.Gender;
  */
 public class CreateAccountControllerImpl implements CreateAccountController {
 
+	@Autowired
 	private ApplicationUserDAO applicationUserDAO;
 
 	public void createAccount(UserInfoDTO userInfoDTO) {

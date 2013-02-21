@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Currency;
 import au.com.project.sample.domain.Location;
@@ -14,6 +15,7 @@ public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDA
 
 	private static Logger log = Logger.getLogger(CurrencyDAOImpl.class);
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override

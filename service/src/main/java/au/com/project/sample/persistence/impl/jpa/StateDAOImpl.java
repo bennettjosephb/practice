@@ -9,6 +9,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.State;
 import au.com.project.sample.persistence.AbstractDAO;
@@ -16,6 +17,7 @@ import au.com.project.sample.persistence.StateDAO;
 
 public class StateDAOImpl extends AbstractDAO<State> implements StateDAO {
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public StateDAOImpl() {

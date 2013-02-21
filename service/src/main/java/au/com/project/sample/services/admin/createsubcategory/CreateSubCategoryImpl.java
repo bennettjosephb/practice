@@ -5,6 +5,7 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
@@ -15,6 +16,7 @@ public class CreateSubCategoryImpl implements CreateSubCategory {
 	private static Logger log = Logger
 			.getLogger(CreateSubCategoryImpl.class);
 	
+	@Autowired
 	private CreateSubCategoryManager createSubCategoryManager;
 
 	@WebResult(name = "createSubCategoryResponse", targetNamespace = "http://www.sample.project.com.au/services/admin/CreateSubCategory/CreateSubCategoryResponse/v1", partName = "response")

@@ -6,6 +6,8 @@ package au.com.project.sample.process.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.domain.Category;
 import au.com.project.sample.domain.SubCategory;
 import au.com.project.sample.persistence.CategoryDAO;
@@ -19,8 +21,10 @@ import au.com.project.sample.process.impl.dto.SubCategoryDTO;
  */
 public class SubCategoryControllerImpl implements SubCategoryController {
 
+	@Autowired
 	private SubCategoryDAO subCategoryDAO;
 
+	@Autowired
 	private CategoryDAO categoryDAO;
 
 	private SubCategory updateCountry(SubCategoryDTO subCategoryDTO) {
