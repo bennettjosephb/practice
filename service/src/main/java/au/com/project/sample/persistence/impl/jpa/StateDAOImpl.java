@@ -68,9 +68,9 @@ public class StateDAOImpl extends AbstractDAO<State> implements StateDAO {
 		return null;
 	}
 
-	public int count() {
+	public Long count() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0l;
 	}
 
 	public State findStateByCode(String code) {

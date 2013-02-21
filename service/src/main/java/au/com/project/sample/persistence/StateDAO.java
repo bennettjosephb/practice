@@ -30,6 +30,6 @@ public interface StateDAO {
 
     List<State> findRange(int[] range);
 
-    int count();
+    Long count();
 
 }

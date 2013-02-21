@@ -17,13 +17,12 @@ import au.com.project.sample.persistence.CityDAO;
  * 
  * @author SONY
  */
-public class AddressDAOImpl extends AbstractDAO<Address> implements
-		AddressDAO {
+public class AddressDAOImpl extends AbstractDAO<Address> implements AddressDAO {
 
 	private SessionFactory sessionFactory;
 
 	private CityDAO cityDAO;
-	
+
 	public AddressDAOImpl() {
 		super(Address.class);
 	}
@@ -36,24 +35,24 @@ public class AddressDAOImpl extends AbstractDAO<Address> implements
 	}
 
 	public void editAddress(Address address) {
-		//edit(address);
+		// edit(address);
 	}
 
 	public void removeAddress(Address address) {
-		//remove(address);
+		// remove(address);
 	}
 
 	public Address findAddress(Object id) {
-		return null;//find(id);
+		return null;// find(id);
 	}
 
 	public List<Address> findAllAddress() {
-		return null;//findAll();
+		return null;// findAll();
 	}
 
 	@Override
 	public SessionFactory getSessionFactory() {
-		return sessionFactory ;
+		return sessionFactory;
 	}
 
 	@Override
@@ -66,9 +65,9 @@ public class AddressDAOImpl extends AbstractDAO<Address> implements
 		return null;
 	}
 
-	public int count() {
+	public Long count() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0l;
 	}
 
 }

@@ -26,6 +26,6 @@ public interface PersonDAO {
 
     List<Person> findRangePerson(int[] range);
 
-    int countPerson();
+    Long countPerson();
 
 }

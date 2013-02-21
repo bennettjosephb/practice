@@ -26,6 +26,6 @@ public interface AddressDAO {
 
     List<Address> findRange(int[] range);
 
-    int count();
+    Long count();
 
 }

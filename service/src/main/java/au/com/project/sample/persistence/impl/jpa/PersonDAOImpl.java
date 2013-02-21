@@ -7,20 +7,23 @@ package au.com.project.sample.persistence.impl.jpa;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.Person;
 import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.PersonDAO;
 
 /**
- *
+ * 
  * @author SONY
  */
 public class PersonDAOImpl extends AbstractDAO<Person> implements PersonDAO {
+
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	public  SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
@@ -29,36 +32,36 @@ public class PersonDAOImpl extends AbstractDAO<Person> implements PersonDAO {
 		this.sessionFactory = sessionFactory;
 	}
 
-    public PersonDAOImpl() {
-        super(Person.class);
-    }
+	public PersonDAOImpl() {
+		super(Person.class);
+	}
 
-    public void createPerson(Person person) {
-        saveOrUpdate(person);
-    }
+	public void createPerson(Person person) {
+		saveOrUpdate(person);
+	}
 
-    public void editPerson(Person person) {
-        //edit(person);
-    }
+	public void editPerson(Person person) {
+		// edit(person);
+	}
 
-    public void removePerson(Person person) {
-        //remove(person);
-    }
+	public void removePerson(Person person) {
+		// remove(person);
+	}
 
-    public Person findPerson(Object id) {
-        return null;//find(id);
-    }
+	public Person findPerson(Object id) {
+		return null;// find(id);
+	}
 
-    public List<Person> findAllPerson() {
-        return null;//findAll();
-    }
+	public List<Person> findAllPerson() {
+		return null;// findAll();
+	}
 
-    public List<Person> findRangePerson(int[] range) {
-        return null;//findRange(range);
-    }
+	public List<Person> findRangePerson(int[] range) {
+		return null;// findRange(range);
+	}
 
-    public int countPerson() {
-        return 0;//count();
-    }
+	public Long countPerson() {
+		return count();
+	}
 
 }
