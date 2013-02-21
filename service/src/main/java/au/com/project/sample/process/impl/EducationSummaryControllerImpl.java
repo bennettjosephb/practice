@@ -4,9 +4,10 @@
  */
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.EducationSummary;
-import au.com.project.sample.process.EducationSummaryController;
 import java.util.List;
+
+import au.com.project.sample.process.EducationSummaryController;
+import au.com.project.sample.process.impl.dto.EducationSummaryDTO;
 
 /**
  *
@@ -14,17 +15,17 @@ import java.util.List;
  */
 public class EducationSummaryControllerImpl  implements EducationSummaryController{
 
-    public void createEducationSummary(EducationSummary educationSummary){}
+    public void createEducationSummary(EducationSummaryDTO educationSummaryDTO){}
 
-    public void editEducationSummary(EducationSummary educationSummary){}
+    public void editEducationSummary(EducationSummaryDTO educationSummaryDTO){}
 
-    public void removeEducationSummary(EducationSummary educationSummary){}
+    public void removeEducationSummary(EducationSummaryDTO educationSummaryDTO){}
 
-    public EducationSummary findEducationSummary(Object id){return null;}
+    public EducationSummaryDTO findEducationSummary(Object id){return null;}
 
-    public List<EducationSummary> findAllEducationSummary(){return null;}
+    public List<EducationSummaryDTO> findAllEducationSummary(){return null;}
 
-    public List<EducationSummary> findRangeEducationSummary(int[] range){return null;}
+    public List<EducationSummaryDTO> findRangeEducationSummary(int[] range){return null;}
 
     public int countEducationSummary(){return 0;}
     

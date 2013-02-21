@@ -4,9 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.EducationSummary;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.EducationSummaryDTO;
 
 /**
  *
@@ -14,17 +14,17 @@ import javax.ejb.Local;
  */
 public interface EducationSummaryController {
 
-    void createEducationSummary(EducationSummary educationSummary);
+    void createEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
-    void editEducationSummary(EducationSummary educationSummary);
+    void editEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
-    void removeEducationSummary(EducationSummary educationSummary);
+    void removeEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
-    EducationSummary findEducationSummary(Object id);
+    EducationSummaryDTO findEducationSummary(Object id);
 
-    List<EducationSummary> findAllEducationSummary();
+    List<EducationSummaryDTO> findAllEducationSummary();
 
-    List<EducationSummary> findRangeEducationSummary(int[] range);
+    List<EducationSummaryDTO> findRangeEducationSummary(int[] range);
 
     int countEducationSummary();
     

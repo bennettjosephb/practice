@@ -4,9 +4,10 @@
  */
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.EmploymentSummary;
-import au.com.project.sample.process.EmploymentSummaryController;
 import java.util.List;
+
+import au.com.project.sample.process.EmploymentSummaryController;
+import au.com.project.sample.process.impl.dto.EmploymentSummaryDTO;
 
 /**
  *
@@ -14,17 +15,17 @@ import java.util.List;
  */
 public class EmploymentSummaryControllerImpl  implements EmploymentSummaryController{
 
-    public void createEmploymentSummary(EmploymentSummary employmentSummary){}
+    public void createEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO){}
 
-    public void editEmploymentSummary(EmploymentSummary employmentSummary){}
+    public void editEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO){}
 
-    public void removeEmploymentSummary(EmploymentSummary employmentSummary){}
+    public void removeEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO){}
 
-    public EmploymentSummary findEmploymentSummary(Object id){return null;}
+    public EmploymentSummaryDTO findEmploymentSummary(Object id){return null;}
 
-    public List<EmploymentSummary> findAllEmploymentSummary(){return null;}
+    public List<EmploymentSummaryDTO> findAllEmploymentSummary(){return null;}
 
-    public List<EmploymentSummary> findRangeEmploymentSummary(int[] range){return null;}
+    public List<EmploymentSummaryDTO> findRangeEmploymentSummary(int[] range){return null;}
 
     public int countEmploymentSummary(){return 0;}
     

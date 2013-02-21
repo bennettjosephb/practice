@@ -4,9 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.EmploymentSummary;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.EmploymentSummaryDTO;
 
 /**
  *
@@ -14,17 +14,17 @@ import javax.ejb.Local;
  */
 public interface EmploymentSummaryController {
 
-    void createEmploymentSummary(EmploymentSummary employmentSummary);
+    void createEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO);
 
-    void editEmploymentSummary(EmploymentSummary employmentSummary);
+    void editEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO);
 
-    void removeEmploymentSummary(EmploymentSummary employmentSummary);
+    void removeEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO);
 
-    EmploymentSummary findEmploymentSummary(Object id);
+    EmploymentSummaryDTO findEmploymentSummary(Object id);
 
-    List<EmploymentSummary> findAllEmploymentSummary();
+    List<EmploymentSummaryDTO> findAllEmploymentSummary();
 
-    List<EmploymentSummary> findRangeEmploymentSummary(int[] range);
+    List<EmploymentSummaryDTO> findRangeEmploymentSummary(int[] range);
 
     int countEmploymentSummary();
     
