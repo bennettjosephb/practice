@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/account/DeleteEmploymentSummary/DeleteEmploymentSummaryRequest/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/account/DeleteEmploymentSummary/DeleteEmploymentSummaryRequest/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Request/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/model/EmploymentSummaryInfo/v1" xmlns:pref2="http://www.sample.project.com.au/services/model/EducationType/v1">
+
+
+	<import schemaLocation="../../../../common/messages/1.0/Request.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Request/v1">
+	</import>
+	<import
+		schemaLocation="../../../model/EmploymentSummaryInfo/1.0/EmploymentSummaryInfo.xsd"
+		namespace="http://www.sample.project.com.au/services/model/EmploymentSummaryInfo/v1">
+	</import>
+	<import schemaLocation="../../../model/EducationType/1.0/EducationType.xsd" namespace="http://www.sample.project.com.au/services/model/EducationType/v1"></import>
+	<complexType name="DeleteEmploymentSummaryRequest">
+		<complexContent>
+			<extension base="pref:Request">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<sequence>
+								<element name="employmentSummaryInfo"
+									type="pref1:EmploymentSummaryInfo">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="deleteEmploymentSummaryRequest"
+		type="tns:DeleteEmploymentSummaryRequest">
+	</element>
+
+</schema>

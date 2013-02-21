@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/services/account/UpdateEducationSummary/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryResponse/v1"
+	name="UpdateEducationSummary"
+	targetNamespace="http://www.sample.project.com.au/services/account/UpdateEducationSummary/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/services/account/UpdateEducationSummary/v1"
+			xmlns:pref="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="UpdateEducationSummaryRequest.xsd"
+				namespace="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="UpdateEducationSummaryResponse.xsd"
+				namespace="http://www.sample.project.com.au/services/account/UpdateEducationSummary/UpdateEducationSummaryResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="updateEducationSummaryRequest">
+		<wsdl:part element="pref:updateEducationSummaryRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="updateEducationSummaryResponse">
+		<wsdl:part element="pref1:updateEducationSummaryResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="UpdateEducationSummary">
+		<wsdl:operation name="UpdateEducationSummary">
+			<wsdl:input message="tns:updateEducationSummaryRequest" />
+			<wsdl:output message="tns:updateEducationSummaryResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="UpdateEducationSummarySOAP" type="tns:UpdateEducationSummary">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="UpdateEducationSummary">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/services/account/UpdateEducationSummary/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="UpdateEducationSummary">
+		<wsdl:port binding="tns:UpdateEducationSummarySOAP" name="UpdateEducationSummarySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
