@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryResponse/v1"
+	name="CreateEmploymentSummary"
+	targetNamespace="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1"
+			xmlns:pref="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="CreateEmploymentSummaryRequest.xsd"
+				namespace="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="CreateEmploymentSummaryResponse.xsd"
+				namespace="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="createEmploymentSummaryRequest">
+		<wsdl:part element="pref:createEmploymentSummaryRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="createEmploymentSummaryResponse">
+		<wsdl:part element="pref1:createEmploymentSummaryResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="CreateEmploymentSummary">
+		<wsdl:operation name="CreateEmploymentSummary">
+			<wsdl:input message="tns:createEmploymentSummaryRequest" />
+			<wsdl:output message="tns:createEmploymentSummaryResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CreateEmploymentSummarySOAP" type="tns:CreateEmploymentSummary">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateEmploymentSummary">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CreateEmploymentSummary">
+		<wsdl:port binding="tns:CreateEmploymentSummarySOAP" name="CreateEmploymentSummarySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

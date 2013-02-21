@@ -7,9 +7,6 @@ import java.util.Calendar;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.Assert.*;
-
-
 import au.com.project.sample.domain.Gender;
 import au.com.project.sample.domain.Person;
 import au.com.project.sample.persistence.PersonDAO;

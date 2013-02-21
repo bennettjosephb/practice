@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/EducationType/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/EducationType/v1"
+	elementFormDefault="qualified">
+	<simpleType name="EducationType">
+		<restriction base="string">
+			<enumeration value="FULL_TIME"/>
+			<enumeration value="PART_TIME"/>
+			<enumeration value="DISTANCE_EDUCATION"/>
+			<enumeration value="OTHER"/>
+		</restriction>
+	</simpleType>
+</schema>
