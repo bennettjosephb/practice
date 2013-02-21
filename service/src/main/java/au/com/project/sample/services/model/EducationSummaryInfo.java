@@ -1,6 +1,8 @@
 
 package au.com.project.sample.services.model;
 
+import java.util.Calendar;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,10 +53,10 @@ public class EducationSummaryInfo {
     protected long id;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar fromDate;
+    protected Calendar fromDate;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar todate;
+    protected Calendar todate;
     @XmlElement(required = true)
     protected String courseName;
     protected int passingYear;
@@ -89,7 +91,7 @@ public class EducationSummaryInfo {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getFromDate() {
+    public Calendar getFromDate() {
         return fromDate;
     }
 
@@ -101,7 +103,7 @@ public class EducationSummaryInfo {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setFromDate(XMLGregorianCalendar value) {
+    public void setFromDate(Calendar value) {
         this.fromDate = value;
     }
 
@@ -113,7 +115,7 @@ public class EducationSummaryInfo {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getTodate() {
+    public Calendar getTodate() {
         return todate;
     }
 
@@ -125,7 +127,7 @@ public class EducationSummaryInfo {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setTodate(XMLGregorianCalendar value) {
+    public void setTodate(Calendar value) {
         this.todate = value;
     }
 

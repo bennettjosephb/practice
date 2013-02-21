@@ -11,7 +11,7 @@
 			<element name="fromDate" type="date" />
 			<element name="todate" type="date" />
 			<element name="entityName" type="string" />
-			<element name="designation" type="int" />
+			<element name="designation" type="string" />
 			<element name="joiningDesignation" type="string" />
 			<element name="leavingDesignation" type="string" />
 			<element name="salary" type="int" />
