@@ -13,14 +13,14 @@ public class CreateEmploymentSummaryImpl implements CreateEmploymentSummary {
 
 	@Autowired
 	private CreateEmploymentSummaryManager createEmploymentSummaryManager;
-	
+
 	@WebResult(name = "createEmploymentSummaryResponse", targetNamespace = "http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryResponse/v1", partName = "response")
 	@WebMethod(operationName = "CreateEmploymentSummary", action = "http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1")
 	public CreateEmploymentSummaryResponse createEmploymentSummary(
 			@WebParam(partName = "request", name = "createEmploymentSummaryRequest", targetNamespace = "http://www.sample.project.com.au/services/account/CreateEmploymentSummary/CreateEmploymentSummaryRequest/v1") CreateEmploymentSummaryRequest request)
 			throws BusinessFault, TechnicalFault {
-		// TODO Auto-generated method stub
-		return null;
+		return createEmploymentSummaryManager
+				.createEmploymentSummaryResponse(request);
 	}
 
 	public CreateEmploymentSummaryManager getCreateEmploymentSummaryManager() {

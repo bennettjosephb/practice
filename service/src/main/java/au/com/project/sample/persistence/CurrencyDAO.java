@@ -24,6 +24,8 @@ public interface CurrencyDAO {
 
     Currency findCurrency(Object id);
 
+    Currency findCurrencyByCode(String code);
+
     List<Currency> findAllCurrency();
 
     List<Currency> findRangeCurrency(int[] range);

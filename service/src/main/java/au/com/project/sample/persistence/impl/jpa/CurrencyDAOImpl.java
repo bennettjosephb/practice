@@ -132,6 +132,10 @@ public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDA
         return null;//find(id);
     }
 
+    public Currency findCurrencyByCode(String code) {
+        return (Currency)findByCode(code);
+    }
+
     public List<Currency> findAllCurrency() {
         return null;//findAll();
     }

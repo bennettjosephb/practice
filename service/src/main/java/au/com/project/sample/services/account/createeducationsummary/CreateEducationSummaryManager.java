@@ -12,6 +12,7 @@ import au.com.project.sample.services.model.EducationSummaryInfo;
  * 
  */
 public class CreateEducationSummaryManager {
+	
 	@Autowired
 	EducationSummaryController educationSummaryController;
 

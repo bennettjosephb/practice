@@ -2,8 +2,6 @@ package au.com.project.sample.process.impl.dto;
 
 import java.util.Calendar;
 
-import au.com.project.sample.services.model.SalaryInfo;
-
 public class EmploymentSummaryDTO {
 
 	private long id;
@@ -13,9 +11,9 @@ public class EmploymentSummaryDTO {
 	private String designation;
 	private String joiningDesignation;
 	private String leavingDesignation;
-    private SalaryInfo salary;
-    private SalaryInfo joiningSalary;
-    private SalaryInfo leavingSalary;
+	private SalaryDTO salary;
+	private SalaryDTO joiningSalary;
+	private SalaryDTO leavingSalary;
 
 	public long getId() {
 		return id;
@@ -73,27 +71,27 @@ public class EmploymentSummaryDTO {
 		this.leavingDesignation = leavingDesignation;
 	}
 
-	public SalaryInfo getSalary() {
+	public SalaryDTO getSalary() {
 		return salary;
 	}
 
-	public void setSalary(SalaryInfo salary) {
+	public void setSalary(SalaryDTO salary) {
 		this.salary = salary;
 	}
 
-	public SalaryInfo getJoiningSalary() {
+	public SalaryDTO getJoiningSalary() {
 		return joiningSalary;
 	}
 
-	public void setJoiningSalary(SalaryInfo joiningSalary) {
+	public void setJoiningSalary(SalaryDTO joiningSalary) {
 		this.joiningSalary = joiningSalary;
 	}
 
-	public SalaryInfo getLeavingSalary() {
+	public SalaryDTO getLeavingSalary() {
 		return leavingSalary;
 	}
 
-	public void setLeavingSalary(SalaryInfo leavingSalary) {
+	public void setLeavingSalary(SalaryDTO leavingSalary) {
 		this.leavingSalary = leavingSalary;
 	}
 
