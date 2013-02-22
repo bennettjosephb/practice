@@ -8,6 +8,22 @@
 
 	<import resource="controller.xml" />
 
+	<bean id="createEducationSummaryManager"
+		class="au.com.project.sample.services.account.createeducationsummary.CreateEducationSummaryManager">
+	</bean>
+
+	<bean id="createEmploymentSummaryManager"
+		class="au.com.project.sample.services.account.createemploymentsummary.CreateEmploymentSummaryManager">
+	</bean>
+
+	<bean id="updateEmploymentSummaryManager"
+		class="au.com.project.sample.services.account.updateemploymentsummary.UpdateEmploymentSummaryManager">
+	</bean>
+
+	<bean id="deleteEmploymentSummaryManager"
+		class="au.com.project.sample.services.account.deleteemploymentsummary.DeleteEmploymentSummaryManager">
+	</bean>
+
 	<bean id="createSubCategoryManager"
 		class="au.com.project.sample.services.admin.createsubcategory.CreateSubCategoryManager">
 	</bean>

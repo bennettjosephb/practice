@@ -8,6 +8,14 @@
 
 	<import resource="dao.xml" />
 
+	<bean id="educationSummaryController"
+		class="au.com.project.sample.process.impl.EducationSummaryControllerImpl">
+	</bean>
+	
+	<bean id="employmentSummaryController"
+		class="au.com.project.sample.process.impl.EmploymentSummaryControllerImpl">
+	</bean>
+
 	<bean id="subCategoryController"
 		class="au.com.project.sample.process.impl.SubCategoryControllerImpl">
 	</bean>

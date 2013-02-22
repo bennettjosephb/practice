@@ -8,6 +8,21 @@
 
 	<import resource="manager.xml" />
 
+	<bean id="createEducationSummary"
+		class="au.com.project.sample.services.account.createeducationsummary.CreateEducationSummaryImpl">
+	</bean>
+
+	<bean id="createEmploymentSummary"
+		class="au.com.project.sample.services.account.createemploymentsummary.CreateEmploymentSummaryImpl">
+	</bean>
+
+	<bean id="updateEmploymentSummary"
+		class="au.com.project.sample.services.account.updateemploymentsummary.UpdateEmploymentSummaryImpl">
+	</bean>
+
+	<bean id="deleteEmploymentSummary"
+		class="au.com.project.sample.services.account.deleteemploymentsummary.DeleteEmploymentSummaryImpl">
+	</bean>
 
 	<bean id="createCategory"
 		class="au.com.project.sample.services.admin.createcategory.CreateCategoryImpl">

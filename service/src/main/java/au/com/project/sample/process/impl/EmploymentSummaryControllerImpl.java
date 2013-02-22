@@ -39,11 +39,11 @@ public class EmploymentSummaryControllerImpl implements
 			employmentSummary.setDesignation(employmentSummaryDTO
 					.getDesignation());
 		}
-		
+
 		employmentSummary.setEntityName(employmentSummaryDTO.getEntityName());
 		employmentSummary.setFromDate(employmentSummaryDTO.getFromDate());
 		employmentSummary.setToDate(employmentSummaryDTO.getTodate());
-		
+
 		if (employmentSummaryDTO.getJoiningDesignation() != null) {
 			employmentSummary.setJoiningDesignation(employmentSummaryDTO
 					.getJoiningDesignation());
@@ -95,6 +95,8 @@ public class EmploymentSummaryControllerImpl implements
 
 	public void removeEmploymentSummary(
 			EmploymentSummaryDTO employmentSummaryDTO) {
+		employmentSummaryDAO
+				.removeEmploymentSummary(updateEmploymentSummary(employmentSummaryDTO));
 	}
 
 	public EmploymentSummaryDTO findEmploymentSummary(Object id) {

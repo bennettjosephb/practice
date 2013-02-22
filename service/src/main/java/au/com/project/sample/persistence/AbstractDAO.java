@@ -100,6 +100,18 @@ public abstract class AbstractDAO<T> {
 
 		return object;
 	}
+	
+	protected void remove(T entity){
+		if (entity != null) {
+			log.trace("Session Creating");
+			Session session = getSession();
+			log.trace("Entity " + entity.getClass().getName() + " Updating");
+			session.delete(entity);
+			log.trace("Entity " + entity.getClass().getName() + " Updated");
+			session.close();
+			log.trace("Session Closed");
+		}
+	}
 
 	/*
 	 * public void remove(T entity) { getSession().delete(entity); }

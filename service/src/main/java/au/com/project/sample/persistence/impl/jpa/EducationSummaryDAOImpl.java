@@ -7,6 +7,7 @@ package au.com.project.sample.persistence.impl.jpa;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.domain.EducationSummary;
 import au.com.project.sample.persistence.AbstractDAO;
@@ -17,6 +18,8 @@ import au.com.project.sample.persistence.EducationSummaryDAO;
  * @author SONY
  */
 public class EducationSummaryDAOImpl extends AbstractDAO<EducationSummary> implements EducationSummaryDAO {
+
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override

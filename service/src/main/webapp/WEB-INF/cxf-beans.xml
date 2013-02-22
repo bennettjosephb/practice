@@ -119,4 +119,44 @@
 		</jaxws:features>
 	</jaxws:endpoint>
 
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/account/CreateEducationSummary/v1"
+		id="CreateEducationSummaryService" address="/CreateEducationSummaryService" endpointName="tns:CreateEducationSummarySOAP"
+		implementor="#createEducationSummary" serviceName="tns:CreateEducationSummary"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateEducationSummary/1.0/CreateEducationSummary.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1"
+		id="CreateEmploymentSummaryService" address="/CreateEmploymentSummaryService" endpointName="tns:CreateEmploymentSummarySOAP"
+		implementor="#createEmploymentSummary" serviceName="tns:CreateEmploymentSummary"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateEmploymentSummary/1.0/CreateEmploymentSummary.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/account/UpdateEmploymentSummary/v1"
+		id="UpdateEmploymentSummaryService" address="/UpdateEmploymentSummaryService" endpointName="tns:UpdateEmploymentSummarySOAP"
+		implementor="#updateEmploymentSummary" serviceName="tns:UpdateEmploymentSummary"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/UpdateEmploymentSummary/1.0/UpdateEmploymentSummary.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/account/DeleteEmploymentSummary/v1"
+		id="DeleteEmploymentSummaryService" address="/DeleteEmploymentSummaryService" endpointName="tns:DeleteEmploymentSummarySOAP"
+		implementor="#deleteEmploymentSummary" serviceName="tns:DeleteEmploymentSummary"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/DeleteEmploymentSummary/1.0/DeleteEmploymentSummary.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
 </beans>
