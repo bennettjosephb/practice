@@ -7,7 +7,9 @@ public class CurrencyDTO {
 
 	private String code;
 
-	public String getName() {
+	private long id;
+
+    public String getName() {
 		return name;
 	}
 
@@ -21,6 +23,14 @@ public class CurrencyDTO {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 }

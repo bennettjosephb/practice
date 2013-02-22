@@ -1,6 +1,5 @@
 package au.com.project.sample.process.impl.dto;
 
-import au.com.project.sample.domain.Country;
 
 public class StateDTO {
 

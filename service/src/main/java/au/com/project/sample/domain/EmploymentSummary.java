@@ -6,11 +6,15 @@ package au.com.project.sample.domain;
 
 import java.io.Serializable;
 import java.util.Calendar;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -51,14 +55,17 @@ public class EmploymentSummary implements Serializable {
     @Column(name="EMP_SUM_LEAVING_DESIGNATION")
     private String leavingDesignation;
 
-    @Column(name="EMP_SUM_SALARY")
-    private Integer salary;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "SAL_ID")
+    private Salary salary;
 
-    @Column(name="EMP_SUM_JOI_SALARY")
-    private Integer joiningSalary;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "JOI_SAL_ID")
+    private Salary joiningSalary;
 
-    @Column(name="EMP_SUM_LEA_SALARY")
-    private Integer leavingSalary;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "LEA_SAL_ID")
+    private Salary leavingSalary;
 
     public Long getId() {
         return id;
@@ -180,41 +187,41 @@ public class EmploymentSummary implements Serializable {
     /**
      * @return the salary
      */
-    public Integer getSalary() {
+    public Salary getSalary() {
         return salary;
     }
 
     /**
      * @param salary the salary to set
      */
-    public void setSalary(Integer salary) {
+    public void setSalary(Salary salary) {
         this.salary = salary;
     }
     /**
      * @return the salary
      */
-    public Integer getJoiningSalary() {
+    public Salary getJoiningSalary() {
         return joiningSalary;
     }
 
     /**
      * @param salary the salary to set
      */
-    public void setJoiningSalary(Integer joiningSalary) {
+    public void setJoiningSalary(Salary joiningSalary) {
         this.joiningSalary = joiningSalary;
     }
     /**
      * @return the salary
      */
-    public Integer getLeavingSalary() {
+    public Salary getLeavingSalary() {
         return leavingSalary;
     }
 
     /**
      * @param salary the salary to set
      */
-    public void setLeavingSalary(Integer leavingSalary) {
-        this.leavingSalary = leavingSalary;;
+    public void setLeavingSalary(Salary leavingSalary) {
+        this.leavingSalary = leavingSalary;
     }
 
 }

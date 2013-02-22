@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="code" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,7 +31,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CurrencyInfo", propOrder = {
     "name",
-    "code"
+    "code",
+    "id"
 })
 public class CurrencyInfo {
 
@@ -38,6 +40,7 @@ public class CurrencyInfo {
     protected String name;
     @XmlElement(required = true)
     protected String code;
+    protected long id;
 
     /**
      * Gets the value of the name property.
@@ -85,6 +88,22 @@ public class CurrencyInfo {
      */
     public void setCode(String value) {
         this.code = value;
+    }
+
+    /**
+     * Gets the value of the id property.
+     * 
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * Sets the value of the id property.
+     * 
+     */
+    public void setId(long value) {
+        this.id = value;
     }
 
 }

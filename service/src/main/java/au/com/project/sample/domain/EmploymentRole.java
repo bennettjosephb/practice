@@ -31,6 +31,9 @@ public class EmploymentRole implements Serializable {
     @Column(name = "EMP_ROL_NAME")
     private String name;
 
+    @Column(name = "EMP_ROL_CODE")
+    private String code;
+
     public Long getId() {
         return id;
     }
@@ -77,5 +80,13 @@ public class EmploymentRole implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
     
 }

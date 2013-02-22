@@ -3,8 +3,12 @@
 	targetNamespace="http://www.sample.project.com.au/services/model/EmploymentSummaryInfo/v1"
 	xmlns:tns="http://www.sample.project.com.au/services/model/EmploymentSummaryInfo/v1"
 	elementFormDefault="qualified"
-	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1" xmlns:pref1="http://www.sample.project.com.au/services/model/EducationType/v1">
-	<import schemaLocation="../../EducationType/1.0/EducationType.xsd" namespace="http://www.sample.project.com.au/services/model/EducationType/v1"></import>
+	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/model/EducationType/v1" xmlns:pref2="http://www.sample.project.com.au/services/model/SalaryInfo/v1">
+	<import schemaLocation="../../EducationType/1.0/EducationType.xsd"
+		namespace="http://www.sample.project.com.au/services/model/EducationType/v1">
+	</import>
+	<import schemaLocation="../../SalaryInfo/1.0/SalaryInfo.xsd" namespace="http://www.sample.project.com.au/services/model/SalaryInfo/v1"></import>
 	<complexType name="EmploymentSummaryInfo">
 		<sequence>
 			<element name="id" type="long"></element>
@@ -14,9 +18,9 @@
 			<element name="designation" type="string" />
 			<element name="joiningDesignation" type="string" />
 			<element name="leavingDesignation" type="string" />
-			<element name="salary" type="int" />
-			<element name="joiningSalary" type="int" />
-			<element name="leavingSalary" type="int" />
+			<element name="salary" type="pref2:SalaryInfo" />
+			<element name="joiningSalary" type="pref2:SalaryInfo" />
+			<element name="leavingSalary" type="pref2:SalaryInfo" />
 		</sequence>
 	</complexType>
 </schema>

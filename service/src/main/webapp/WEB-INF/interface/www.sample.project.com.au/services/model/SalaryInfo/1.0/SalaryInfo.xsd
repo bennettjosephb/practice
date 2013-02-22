@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/SalaryInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/SalaryInfo/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1" xmlns:pref1="http://www.sample.project.com.au/services/model/CurrencyInfo/v1">
+	<import schemaLocation="../../CurrencyInfo/1.0/CurrencyInfo.xsd" namespace="http://www.sample.project.com.au/services/model/CurrencyInfo/v1"></import>
+	<complexType name="SalaryInfo">
+		<sequence>
+			<element name="id" type="long" />
+			<element name="value" type="long" />
+			<element name="currency" type="pref1:CurrencyInfo"></element>
+		</sequence>
+	</complexType>
+</schema>

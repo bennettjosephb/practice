@@ -7,6 +7,7 @@
 		<sequence>
 			<element name="name" type="string" />
 			<element name="code" type="string" />
+			<element name="id" type="long"></element>
 		</sequence>
 	</complexType>
 </schema>
