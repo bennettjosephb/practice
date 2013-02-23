@@ -21,8 +21,7 @@
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/registration/services/GetCountry/v1"
 		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
-		implementor="#getCountry"
-		serviceName="tns:GetCountry"
+		implementor="#getCountry" serviceName="tns:GetCountry"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/registration/services/GetCountry/1.0/GetCountry.wsdl">
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />

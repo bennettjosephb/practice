@@ -45,50 +45,60 @@ public abstract class AbstractDAO<T> {
 	}
 
 	@Transactional(readOnly = false)
-	public void saveOrUpdate(T entity) {
+	protected T saveOrUpdate(T entity) {
 		if (entity != null) {
 			log.trace("Session Creating");
 			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " Saving");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Saving");
 			session.saveOrUpdate(entity);
-			log.trace("Entity " + entity.getClass().getName() + " Saved");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Saved");
 			session.close();
+
 			log.trace("Session Closed");
 		}
+		return entity;
 	}
 
 	@Transactional(readOnly = false)
-	public void save(T entity) {
+	protected T save(T entity) {
 		if (entity != null) {
 			log.trace("Session Creating");
 			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " Saving");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Saving");
 			session.save(entity);
-			log.trace("Entity " + entity.getClass().getName() + " Saved");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Saved");
 			session.close();
 			log.trace("Session Closed");
 		}
+		return entity;
 	}
 
-	public void update(T entity) {
+	protected T update(T entity) {
 		if (entity != null) {
 			log.trace("Session Creating");
 			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " Updating");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Updating");
 			session.update(entity);
-			log.trace("Entity " + entity.getClass().getName() + " Updated");
+			log.trace("Entity " + entity.getClass().getName() + " : " + entity
+					+ " Updated");
 			session.close();
 			log.trace("Session Closed");
 		}
+		return entity;
 	}
 
-	public Object findByCode(String code) {
-
+	@SuppressWarnings("unchecked")
+	protected T findByCode(String code) {
 		Object object = null;
 		if (code != null) {
 			log.trace("Session Creating");
 			Session session = getSession();
-			log.trace("Entity " + this.entityClass.getClass().getName()
+			log.trace("Entity " + this.entityClass.getClass().getName() 
 					+ " Retriving");
 			object = session.createCriteria(this.entityClass)
 					.add(Restrictions.eq("code", code)).uniqueResult();
@@ -97,17 +107,16 @@ public abstract class AbstractDAO<T> {
 			session.close();
 			log.trace("Session Closed");
 		}
-
-		return object;
+		return (T) object;
 	}
-	
-	protected void remove(T entity){
+
+	protected void remove(T entity) {
 		if (entity != null) {
 			log.trace("Session Creating");
 			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " Updating");
+			log.trace("Entity " + entity.getClass().getName() + " Removing");
 			session.delete(entity);
-			log.trace("Entity " + entity.getClass().getName() + " Updated");
+			log.trace("Entity " + entity.getClass().getName() + " Removed");
 			session.close();
 			log.trace("Session Closed");
 		}

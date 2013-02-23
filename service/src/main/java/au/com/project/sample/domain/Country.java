@@ -72,7 +72,8 @@ public class Country implements Serializable {
 
 	@Override
 	public String toString() {
-		return "com.mycompany.domain.Country[ id=" + id + name + code + " ]";
+		return "com.mycompany.domain.Country[ id = " + getId() + ": name = "
+				+ getName() + " : code " + getCode() + " ]";
 	}
 
 	/**
