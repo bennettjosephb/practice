@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface AddressController {
 
     void createAddress(Address address);
 
-    void editAddress(Address address);
+    void updateAddress(Address address);
 
-    void removeAddress(Address address);
+    void deleteAddress(Address address);
 
     Address findAddress(Object id);
 
@@ -27,5 +27,5 @@ public interface AddressController {
     List<Address> findRange(int[] range);
 
     int count();
-    
+
 }

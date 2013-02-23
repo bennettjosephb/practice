@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -14,7 +14,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.PersonDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class PersonDAOImpl extends AbstractDAO<Person> implements PersonDAO {
@@ -40,12 +40,12 @@ public class PersonDAOImpl extends AbstractDAO<Person> implements PersonDAO {
 		return saveOrUpdate(person);
 	}
 
-	public void editPerson(Person person) {
-		// edit(person);
+	public void updatePerson(Person person) {
+		// update(person);
 	}
 
-	public void removePerson(Person person) {
-		// remove(person);
+	public void deletePerson(Person person) {
+		// delete(person);
 	}
 
 	public Person findPerson(Object id) {

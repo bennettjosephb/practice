@@ -8,9 +8,9 @@ public interface CurrencyController {
 
     public void createCurrency(CurrencyDTO currencyDTO);
 
-    public void editCurrency(CurrencyDTO currencyDTO);
+    public void updateCurrency(CurrencyDTO currencyDTO);
 
-    public void removeCurrency(CurrencyDTO currencyDTO);
+    public void deleteCurrency(CurrencyDTO currencyDTO);
 
 //    public void updateSalary(Long salary, CurrencyDTO currencyDTO);
 //

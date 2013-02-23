@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -17,10 +17,10 @@ import au.com.project.sample.persistence.ITSkillDAO;
  * @author SONY
  */
 public class ITSkillDAOImpl extends AbstractDAO<ITSkill> implements ITSkillDAO {
- 	private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	@Override
-	public  SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
@@ -29,36 +29,36 @@ public class ITSkillDAOImpl extends AbstractDAO<ITSkill> implements ITSkillDAO {
 		this.sessionFactory = sessionFactory;
 	}
 
-    public ITSkillDAOImpl() {
-        super(ITSkill.class);
-    }
+	public ITSkillDAOImpl() {
+		super(ITSkill.class);
+	}
 
-    public ITSkill createITSkill(ITSkill iTSkill) {
-        return saveOrUpdate(iTSkill);
-    }
+	public ITSkill createITSkill(ITSkill iTSkill) {
+		return saveOrUpdate(iTSkill);
+	}
 
-    public void editITSkill(ITSkill iTSkill) {
-//        edit(iTSkill);
-    }
+	public ITSkill updateITSkill(ITSkill iTSkill) {
+		return update(iTSkill);
+	}
 
-    public void removeITSkill(ITSkill iTSkill) {
-  //      remove(iTSkill);
-    }
+	public void deleteITSkill(ITSkill iTSkill) {
+		 delete(iTSkill);
+	}
 
-    public ITSkill findITSkill(Object id) {
-        return null;//find(id);
-    }
+	public ITSkill findITSkill(Object id) {
+		return null;// find(id);
+	}
 
-    public List<ITSkill> findAllITSkill() {
-        return null;//findAll();
-    }
+	public List<ITSkill> findAllITSkill() {
+		return null;// findAll();
+	}
 
-    public List<ITSkill> findRangeITSkill(int[] range) {
-        return null;//findRange(range);
-    }
+	public List<ITSkill> findRangeITSkill(int[] range) {
+		return null;// findRange(range);
+	}
 
-    public int countITSkill() {
-        return 0;//count();
-    }
+	public int countITSkill() {
+		return 0;// count();
+	}
 
 }

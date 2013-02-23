@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface ContactNumberController {
 
     void createContactNumber(ContactNumber contactNumber);
 
-    void editContactNumber(ContactNumber contactNumber);
+    void updateContactNumber(ContactNumber contactNumber);
 
-    void removeContactNumber(ContactNumber contactNumber);
+    void deleteContactNumber(ContactNumber contactNumber);
 
     ContactNumber findContactNumber(Object id);
 
@@ -27,5 +27,5 @@ public interface ContactNumberController {
     List<ContactNumber> findRangeContactNumber(int[] range);
 
     int countContactNumber();
-    
+
 }

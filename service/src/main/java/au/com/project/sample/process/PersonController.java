@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface PersonController {
 
     void createPerson(Person person);
 
-    void editPerson(Person person);
+    void updatePerson(Person person);
 
-    void removePerson(Person person);
+    void deletePerson(Person person);
 
     Person findPerson(Object id);
 
@@ -27,5 +27,5 @@ public interface PersonController {
     List<Person> findRangePerson(int[] range);
 
     int countPerson();
-    
+
 }

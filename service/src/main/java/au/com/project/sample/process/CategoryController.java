@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface CategoryController {
 
     void createCategory(CategoryDTO categoryDTO);
 
-    void editCategory(CategoryDTO categoryDTO);
+    void updateCategory(CategoryDTO categoryDTO);
 
-    void removeCategory(CategoryDTO categoryDTO);
+    void deleteCategory(CategoryDTO categoryDTO);
 
     CategoryDTO findCategory(Object id);
 
@@ -27,5 +27,5 @@ public interface CategoryController {
     List<CategoryDTO> findRangeCategory(int[] range);
 
     int countCategory();
-    
+
 }

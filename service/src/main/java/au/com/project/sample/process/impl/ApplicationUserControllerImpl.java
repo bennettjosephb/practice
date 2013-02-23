@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class ApplicationUserControllerImpl implements ApplicationUserController{
 
     public void createApplicationUser(ApplicationUser applicationUser){}
 
-    public void editApplicationUser(ApplicationUser applicationUser){}
+    public void updateApplicationUser(ApplicationUser applicationUser){}
 
-    public void removeApplicationUser(ApplicationUser applicationUser){}
+    public void deleteApplicationUser(ApplicationUser applicationUser){}
 
     public ApplicationUser findApplicationUser(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class ApplicationUserControllerImpl implements ApplicationUserController{
     public List<ApplicationUser> findRangeApplicationUser(int[] range){return null;}
 
     public int countApplicationUser(){return 0;}
-    
+
 }

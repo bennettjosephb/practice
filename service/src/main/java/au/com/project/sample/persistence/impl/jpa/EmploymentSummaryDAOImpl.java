@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -14,7 +14,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.EmploymentSummaryDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class EmploymentSummaryDAOImpl extends AbstractDAO<EmploymentSummary>
@@ -40,12 +40,12 @@ public class EmploymentSummaryDAOImpl extends AbstractDAO<EmploymentSummary>
 		return saveOrUpdate(employmentSummary);
 	}
 
-	public void editEmploymentSummary(EmploymentSummary employmentSummary) {
-		// edit(employmentSummary);
+	public void updateEmploymentSummary(EmploymentSummary employmentSummary) {
+		// update(employmentSummary);
 	}
 
-	public void removeEmploymentSummary(EmploymentSummary employmentSummary) {
-		remove(employmentSummary);
+	public void deleteEmploymentSummary(EmploymentSummary employmentSummary) {
+		delete(employmentSummary);
 	}
 
 	public EmploymentSummary findEmploymentSummary(Object id) {

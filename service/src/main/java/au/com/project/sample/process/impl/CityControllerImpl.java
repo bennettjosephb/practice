@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -24,14 +24,14 @@ public class CityControllerImpl implements CityController {
 	@Autowired
 	private StateDAO stateDAO;
 
-	private State updateState(StateDTO stateDTO) {
+	private State populateState(StateDTO stateDTO) {
 		State state = stateDAO.findState(stateDTO.getId());
 		return state;
 	}
 
-	private City updateCity(CityDTO cityDTO) {
+	private City populateCity(CityDTO cityDTO) {
 		State state = stateDAO.findStateByCode(cityDTO.getStateDTO().getCode());
-		
+
 		City city = new City();
 
 		city.setName(cityDTO.getName());
@@ -41,28 +41,50 @@ public class CityControllerImpl implements CityController {
 		return city;
 	}
 
+	private CityDTO populateCityDTO(City city) {
+		CityDTO cityDTO = new CityDTO();
+
+		cityDTO.setName(city.getName());
+		cityDTO.setCode(city.getCode());
+		cityDTO.setId(city.getId());
+		// cityDTO.setStateDTO(populateStateDTO(city.getState()));
+
+		return cityDTO;
+	}
+
+	private StateDTO populateStateDTO(State state) {
+		StateDTO stateDTO = new StateDTO();
+
+		stateDTO.setName(state.getName());
+		stateDTO.setCode(state.getCode());
+		stateDTO.setId(state.getId());
+
+		return stateDTO;
+	}
+
 	public CityControllerImpl() {
 	}
 
-	public void createCity(CityDTO cityDTO) {
-		cityDAO.createCity(updateCity(cityDTO));
+	public CityDTO createCity(CityDTO cityDTO) {
+		return populateCityDTO(cityDAO.createCity(populateCity(cityDTO)));
 	}
 
-	public void editCity(CityDTO cityDTO) {
-	}
-
-	public void removeCity(CityDTO cityDTO) {
-	}
-
-	public City findCity(Object id) {
+	public CityDTO updateCity(CityDTO cityDTO) {
 		return null;
 	}
 
-	public List<City> findAllCity() {
+	public void deleteCity(CityDTO cityDTO) {
+	}
+
+	public CityDTO findCity(Object id) {
 		return null;
 	}
 
-	public List<City> findRangeCity(int[] range) {
+	public List<CityDTO> findAllCity() {
+		return null;
+	}
+
+	public List<CityDTO> findRangeCity(int[] range) {
 		return null;
 	}
 

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class EmploymentRoleControllerImpl  implements EmploymentRoleController{
 
     public void createEmploymentRole(EmploymentRole employmentRole){}
 
-    public void editEmploymentRole(EmploymentRole employmentRole){}
+    public void updateEmploymentRole(EmploymentRole employmentRole){}
 
-    public void removeEmploymentRole(EmploymentRole employmentRole){}
+    public void deleteEmploymentRole(EmploymentRole employmentRole){}
 
     public EmploymentRole findEmploymentRole(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class EmploymentRoleControllerImpl  implements EmploymentRoleController{
     public List<EmploymentRole> findRangeEmploymentRole(int[] range){return null;}
 
     public int countEmploymentRole(){return 0;}
-    
+
 }

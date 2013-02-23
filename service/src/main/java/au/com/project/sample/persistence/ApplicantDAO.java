@@ -7,8 +7,8 @@ import au.com.project.sample.domain.Location;
 public interface ApplicantDAO
 {
     public Applicant createApplicant(Applicant applicant);
-    public void editApplicant(Applicant applicant);
-    public void removeApplicant(Applicant applicant);
+    public void updateApplicant(Applicant applicant);
+    public void deleteApplicant(Applicant applicant);
     public void updateSalary(Long salary, Applicant applicant);
     public Applicant findApplicant(Long pKey);
     public void updateLocation(String location, Applicant applicant);

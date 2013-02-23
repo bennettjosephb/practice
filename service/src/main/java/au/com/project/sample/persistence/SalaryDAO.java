@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface SalaryDAO {
 
     void createSalary(Salary salary);
 
-    void editSalary(Salary salary);
+    void updateSalary(Salary salary);
 
-    void removeSalary(Salary salary);
+    void deleteSalary(Salary salary);
 
     Salary findSalary(Object id);
 

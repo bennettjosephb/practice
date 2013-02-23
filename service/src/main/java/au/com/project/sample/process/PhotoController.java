@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface PhotoController {
 
     void createPhoto(Photo photo);
 
-    void editPhoto(Photo photo);
+    void updatePhoto(Photo photo);
 
-    void removePhoto(Photo photo);
+    void deletePhoto(Photo photo);
 
     Photo findPhoto(Object id);
 
@@ -27,5 +27,5 @@ public interface PhotoController {
     List<Photo> findRangePhoto(int[] range);
 
     int countPhoto();
-    
+
 }

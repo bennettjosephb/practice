@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -17,7 +17,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.CityDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class CityDAOImpl extends AbstractDAO<City> implements CityDAO {
@@ -34,12 +34,12 @@ public class CityDAOImpl extends AbstractDAO<City> implements CityDAO {
 		return saveOrUpdate(city);
 	}
 
-	public void editCity(City city) {
-		// edit(city);
+	public void updateCity(City city) {
+		// update(city);
 	}
 
-	public void removeCity(City city) {
-		// remove(city);
+	public void deleteCity(City city) {
+		// delete(city);
 	}
 
 	public City findCity(Object id) {

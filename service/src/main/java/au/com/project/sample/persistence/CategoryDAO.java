@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface CategoryDAO {
 
 	Category createCategory(Category category);
 
-    void editCategory(Category category);
+    void updateCategory(Category category);
 
-    void removeCategory(Category category);
+    void deleteCategory(Category category);
 
     Category findCategory(Object id);
 

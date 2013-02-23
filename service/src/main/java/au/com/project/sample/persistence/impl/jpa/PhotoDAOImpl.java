@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class PhotoDAOImpl extends AbstractDAO<Photo> implements PhotoDAO {
         saveOrUpdate(photo);
     }
 
-    public void editPhoto(Photo photo) {
- //       edit(photo);
+    public void updatePhoto(Photo photo) {
+ //       update(photo);
     }
 
-    public void removePhoto(Photo photo) {
- //       remove(photo);
+    public void deletePhoto(Photo photo) {
+ //       delete(photo);
     }
 
     public Photo findPhoto(Object id) {

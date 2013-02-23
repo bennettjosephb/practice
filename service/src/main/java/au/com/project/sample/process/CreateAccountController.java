@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -17,9 +17,9 @@ public interface CreateAccountController {
 
     void createAccount(UserInfoDTO userInfoDTO);
 
-    void editAccount(UserInfoDTO userInfoDTO);
+    void updateAccount(UserInfoDTO userInfoDTO);
 
-    void removeAccount(UserInfoDTO userInfoDTO);
+    void deleteAccount(UserInfoDTO userInfoDTO);
 
     UserInfoDTO findAccount(Object id);
 

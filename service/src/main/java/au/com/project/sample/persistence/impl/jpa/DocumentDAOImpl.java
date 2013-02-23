@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class DocumentDAOImpl extends AbstractDAO<Document> implements DocumentDA
         saveOrUpdate(document);
     }
 
-    public void editDocument(Document document) {
-        //edit(document);
+    public void updateDocument(Document document) {
+        //update(document);
     }
 
-    public void removeDocument(Document document) {
-        //remove(document);
+    public void deleteDocument(Document document) {
+        //delete(document);
     }
 
     public Document findDocument(Object id) {

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface EducationSummaryDAO {
 
 	EducationSummary createEducationSummary(EducationSummary educationSummary);
 
-    void editEducationSummary(EducationSummary educationSummary);
+    void updateEducationSummary(EducationSummary educationSummary);
 
-    void removeEducationSummary(EducationSummary educationSummary);
+    void deleteEducationSummary(EducationSummary educationSummary);
 
     EducationSummary findEducationSummary(Object id);
 

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface ProjectDAO {
 
     void createProject(Project project);
 
-    void editProject(Project project);
+    void updateProject(Project project);
 
-    void removeProject(Project project);
+    void deleteProject(Project project);
 
     Project findProject(Object id);
 

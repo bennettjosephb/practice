@@ -8,9 +8,9 @@ public interface CurrencyDAO {
 
     public Currency createCurrency(Currency currency);
 
-    public void editCurrency(Currency currency);
+    public void updateCurrency(Currency currency);
 
-    public void removeCurrency(Currency currency);
+    public void deleteCurrency(Currency currency);
 
 //    public void updateSalary(Long salary, Currency currency);
 //

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class DocumentControllerImpl  implements DocumentController{
 
     public void createDocument(Document document){}
 
-    public void editDocument(Document document){}
+    public void updateDocument(Document document){}
 
-    public void removeDocument(Document document){}
+    public void deleteDocument(Document document){}
 
     public Document findDocument(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class DocumentControllerImpl  implements DocumentController{
     public List<Document> findRangeDocument(int[] range){return null;}
 
     public int countDocument(){return 0;}
-    
+
 }

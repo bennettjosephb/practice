@@ -61,19 +61,19 @@ public class LocationBean implements LocationDAO {
 //		a.setCurrentLocation(location);
 	}
 
-	public void editApplicant(Applicant applicant) {
+	public void updateApplicant(Applicant applicant) {
 //		manager.merge(applicant);
 	}
 
-	public void removeApplicant(Applicant applicant) {
-	//	manager.remove(applicant);
+	public void deleteApplicant(Applicant applicant) {
+	//	manager.delete(applicant);
 	}
 
-	public void editLocation(Location applicant) {
+	public void updateLocation(Location applicant) {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	public void removeLocation(Location applicant) {
+	public void deleteLocation(Location applicant) {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 

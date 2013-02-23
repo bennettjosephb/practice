@@ -67,7 +67,7 @@ public class DeleteEmploymentSummaryManager {
 				.setMessage(new DeleteEmploymentSummaryResponse.Message());
 
 		employmentSummaryController
-				.removeEmploymentSummary(updateEmploymentSummaryDTO(deleteEmploymentSummaryRequest));
+				.deleteEmploymentSummary(updateEmploymentSummaryDTO(deleteEmploymentSummaryRequest));
 
 		deleteEmploymentSummaryResponse.getMessage().setStatus(true);
 

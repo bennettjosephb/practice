@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface StateDAO {
 
 	State createState(State state);
 
-    void editState(State state);
+    void updateState(State state);
 
-    void removeState(State state);
+    void deleteState(State state);
 
     State findState(Object id);
 

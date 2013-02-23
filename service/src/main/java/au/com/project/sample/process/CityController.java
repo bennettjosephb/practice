@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -15,18 +15,18 @@ import au.com.project.sample.process.impl.dto.CityDTO;
  */
 public interface CityController {
 
-    void createCity(CityDTO cityDTO);
+	CityDTO createCity(CityDTO cityDTO);
 
-    void editCity(CityDTO cityDTO);
+	CityDTO updateCity(CityDTO cityDTO);
 
-    void removeCity(CityDTO cityDTO);
+    void deleteCity(CityDTO cityDTO);
 
-    City findCity(Object id);
+    CityDTO findCity(Object id);
 
-    List<City> findAllCity();
+    List<CityDTO> findAllCity();
 
-    List<City> findRangeCity(int[] range);
+    List<CityDTO> findRangeCity(int[] range);
 
     int countCity();
-    
+
 }

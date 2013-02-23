@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class ProjectControllerImpl  implements ProjectController{
 
     public void createProject(Project project){}
 
-    public void editProject(Project project){}
+    public void updateProject(Project project){}
 
-    public void removeProject(Project project){}
+    public void deleteProject(Project project){}
 
     public Project findProject(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class ProjectControllerImpl  implements ProjectController{
     public List<Project> findRangeProject(int[] range){return null;}
 
     public int countProject(){return 0;}
-    
+
 }

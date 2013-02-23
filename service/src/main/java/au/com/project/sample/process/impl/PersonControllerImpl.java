@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class PersonControllerImpl implements  PersonController{
 
     public void createPerson(Person person){}
 
-    public void editPerson(Person person){}
+    public void updatePerson(Person person){}
 
-    public void removePerson(Person person){}
+    public void deletePerson(Person person){}
 
     public Person findPerson(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class PersonControllerImpl implements  PersonController{
     public List<Person> findRangePerson(int[] range){return null;}
 
     public int countPerson(){return 0;}
-    
+
 }

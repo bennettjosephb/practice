@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -38,12 +38,12 @@ public class ContactNumberDAOImpl extends AbstractDAO<ContactNumber> implements 
         saveOrUpdate(contactNumber);
     }
 
-    public void editContactNumber(ContactNumber contactNumber) {
-        //edit(contactNumber);
+    public void updateContactNumber(ContactNumber contactNumber) {
+        //update(contactNumber);
     }
 
-    public void removeContactNumber(ContactNumber contactNumber) {
-        //remove(contactNumber);
+    public void deleteContactNumber(ContactNumber contactNumber) {
+        //delete(contactNumber);
     }
 
     public ContactNumber findContactNumber(Object id) {

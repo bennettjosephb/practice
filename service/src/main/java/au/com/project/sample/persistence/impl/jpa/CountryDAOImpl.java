@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -34,16 +34,16 @@ public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 		return saveOrUpdate(country);
 	}
 
-	public void editCountry(Country country) {
-		// edit(country);
+	public void updateCountry(Country country) {
+		// update(country);
 	}
 
-	public void removeCountry(Country country) {
-		// remove(country);
+	public void deleteCountry(Country country) {
+		// delete(country);
 	}
 
 	public Country findCountry(Long id) {
-		return (Country) find(id);
+		return (Country) findById(id);
 	}
 
 	public List<Country> findAllCountry() {

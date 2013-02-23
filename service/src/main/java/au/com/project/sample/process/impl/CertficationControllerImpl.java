@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class CertficationControllerImpl  implements CertficationController{
 
     public void createCertfication(Certification certfication){}
 
-    public void editCertfication(Certification certfication){}
+    public void updateCertfication(Certification certfication){}
 
-    public void removeCertfication(Certification certfication){}
+    public void deleteCertfication(Certification certfication){}
 
     public Certification findCertfication(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class CertficationControllerImpl  implements CertficationController{
     public List<Certification> findRangeCertfication(int[] range){return null;}
 
     public int countCertfication(){return 0;}
-    
+
 }

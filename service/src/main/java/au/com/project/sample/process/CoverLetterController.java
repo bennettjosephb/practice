@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface CoverLetterController {
 
     void createCoverLetter(CoverLetter coverLetter);
 
-    void editCoverLetter(CoverLetter coverLetter);
+    void updateCoverLetter(CoverLetter coverLetter);
 
-    void removeCoverLetter(CoverLetter coverLetter);
+    void deleteCoverLetter(CoverLetter coverLetter);
 
     CoverLetter findCoverLetter(Object id);
 
@@ -27,5 +27,5 @@ public interface CoverLetterController {
     List<CoverLetter> findRangeCoverLetter(int[] range);
 
     int countCoverLetter();
-        
+
 }

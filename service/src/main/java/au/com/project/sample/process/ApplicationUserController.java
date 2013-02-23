@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface ApplicationUserController {
 
     void createApplicationUser(ApplicationUser applicationUser);
 
-    void editApplicationUser(ApplicationUser applicationUser);
+    void updateApplicationUser(ApplicationUser applicationUser);
 
-    void removeApplicationUser(ApplicationUser applicationUser);
+    void deleteApplicationUser(ApplicationUser applicationUser);
 
     ApplicationUser findApplicationUser(Object id);
 
@@ -27,5 +27,5 @@ public interface ApplicationUserController {
     List<ApplicationUser> findRangeApplicationUser(int[] range);
 
     int countApplicationUser();
-    
+
 }

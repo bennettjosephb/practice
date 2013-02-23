@@ -1,11 +1,14 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import au.com.project.sample.domain.Applicant;
 import au.com.project.sample.domain.ITSkill;
 import au.com.project.sample.persistence.ApplicantDAO;
 import au.com.project.sample.persistence.ITSkillDAO;
@@ -13,13 +16,15 @@ import au.com.project.sample.process.ITSkillController;
 import au.com.project.sample.process.impl.dto.ITSkillDTO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class ITSkillControllerImpl implements ITSkillController {
 
+	@Autowired
 	private ITSkillDAO itSkillDAO;
 
+	@Autowired
 	private ApplicantDAO applicantDAO;
 
 	private ITSkillDTO populateITSkillDTO(ITSkill iTSkill) {
@@ -34,7 +39,9 @@ public class ITSkillControllerImpl implements ITSkillController {
 		return itSkillDTO;
 	}
 
-	private ITSkill populateITSkillDTO(ITSkillDTO iTSkillDTO) {
+	private ITSkill populateITSkill(ITSkillDTO iTSkillDTO) {
+		Applicant applicant = applicantDAO.findApplicant(iTSkillDTO
+				.getApplicantId());
 		ITSkill itSkill = new ITSkill();
 		itSkill.setExperienceMonth(iTSkillDTO.getExperienceMonth());
 		itSkill.setExperienceYear(iTSkillDTO.getExperienceYear());
@@ -42,18 +49,21 @@ public class ITSkillControllerImpl implements ITSkillController {
 		itSkill.setLastUsed(iTSkillDTO.getLastUsed());
 		itSkill.setName(iTSkillDTO.getName());
 		itSkill.setVersion(iTSkillDTO.getVersion());
+		itSkill.setApplicant(applicant);
 		return itSkill;
 	}
 
 	public ITSkillDTO createITSkill(ITSkillDTO iTSkillDTO) {
 		return populateITSkillDTO(itSkillDAO
-				.createITSkill(populateITSkillDTO(iTSkillDTO)));
+				.createITSkill(populateITSkill(iTSkillDTO)));
 	}
 
-	public void editITSkill(ITSkillDTO iTSkillDTO) {
+	public ITSkillDTO updateITSkill(ITSkillDTO iTSkillDTO) {
+		return populateITSkillDTO(itSkillDAO
+				.updateITSkill(populateITSkill(iTSkillDTO)));
 	}
 
-	public void removeITSkill(ITSkillDTO iTSkillDTO) {
+	public void deleteITSkill(ITSkillDTO iTSkillDTO) {
 	}
 
 	public ITSkillDTO findITSkill(Object id) {

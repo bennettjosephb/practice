@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -29,12 +29,12 @@ public class StateDAOImpl extends AbstractDAO<State> implements StateDAO {
 		return saveOrUpdate(state);
 	}
 
-	public void editState(State state) {
-		// edit(state);
+	public void updateState(State state) {
+		// update(state);
 	}
 
-	public void removeState(State state) {
-		// remove(state);
+	public void deleteState(State state) {
+		// delete(state);
 	}
 
 	public State findState(Object id) {

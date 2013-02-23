@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -25,7 +25,7 @@ public class CountryControllerImpl implements CountryController {
 	public CountryControllerImpl() {
 	}
 
-	private Country updateCountry(CountryDTO countryDTO) {
+	private Country populateCountry(CountryDTO countryDTO) {
 		Country country = new Country();
 
 		country.setName(countryDTO.getName());
@@ -36,14 +36,14 @@ public class CountryControllerImpl implements CountryController {
 
 	public void createCountry(CountryDTO countryDTO) {
 		log.trace("Creating Country Entity");
-		countryDAO.createCountry(updateCountry(countryDTO));
+		countryDAO.createCountry(populateCountry(countryDTO));
 		log.trace("Created Country Entity");
 	}
 
-	public void editCountry(CountryDTO countryDTO) {
+	public void updateCountry(CountryDTO countryDTO) {
 	}
 
-	public void removeCountry(CountryDTO countryDTO) {
+	public void deleteCountry(CountryDTO countryDTO) {
 	}
 
 	public CountryDTO findCountry(Object id) {

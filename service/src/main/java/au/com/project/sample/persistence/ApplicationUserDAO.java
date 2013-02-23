@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface ApplicationUserDAO {
 
 	ApplicationUser createApplicationUser(ApplicationUser applicationUser);
 
-    void editApplicationUser(ApplicationUser applicationUser);
+    void updateApplicationUser(ApplicationUser applicationUser);
 
-    void removeApplicationUser(ApplicationUser applicationUser);
+    void deleteApplicationUser(ApplicationUser applicationUser);
 
     ApplicationUser findApplicationUser(Object id);
 

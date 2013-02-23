@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface ITSkillController {
 
 	ITSkillDTO createITSkill(ITSkillDTO iTSkillDTO);
 
-    void editITSkill(ITSkillDTO iTSkillDTO);
+	ITSkillDTO updateITSkill(ITSkillDTO iTSkillDTO);
 
-    void removeITSkill(ITSkillDTO iTSkillDTO);
+    void deleteITSkill(ITSkillDTO iTSkillDTO);
 
     ITSkillDTO findITSkill(Object id);
 
@@ -27,5 +27,5 @@ public interface ITSkillController {
     List<ITSkillDTO> findRangeITSkill(int[] range);
 
     int countITSkill();
-    
+
 }

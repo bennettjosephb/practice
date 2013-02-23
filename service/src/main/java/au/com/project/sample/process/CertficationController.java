@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface CertficationController {
 
     void createCertfication(Certification certfication);
 
-    void editCertfication(Certification certfication);
+    void updateCertfication(Certification certfication);
 
-    void removeCertfication(Certification certfication);
+    void deleteCertfication(Certification certfication);
 
     Certification findCertfication(Object id);
 
@@ -27,5 +27,5 @@ public interface CertficationController {
     List<Certification> findRangeCertfication(int[] range);
 
     int countCertfication();
-    
+
 }

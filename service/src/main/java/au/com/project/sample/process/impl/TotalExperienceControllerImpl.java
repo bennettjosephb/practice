@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class TotalExperienceControllerImpl implements  TotalExperienceController
 
     public void createTotalExperience(TotalExperience totalExperience){}
 
-    public void editTotalExperience(TotalExperience totalExperience){}
+    public void updateTotalExperience(TotalExperience totalExperience){}
 
-    public void removeTotalExperience(TotalExperience totalExperience){}
+    public void deleteTotalExperience(TotalExperience totalExperience){}
 
     public TotalExperience findTotalExperience(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class TotalExperienceControllerImpl implements  TotalExperienceController
     public List<TotalExperience> findRangeTotalExperience(int[] range){return null;}
 
     public int countTotalExperience(){return 0;}
-    
+
 }

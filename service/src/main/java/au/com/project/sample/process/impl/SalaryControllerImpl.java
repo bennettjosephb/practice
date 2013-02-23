@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class SalaryControllerImpl  implements SalaryController{
 
     public void createSalary(Salary salary){}
 
-    public void editSalary(Salary salary){}
+    public void updateSalary(Salary salary){}
 
-    public void removeSalary(Salary salary){}
+    public void deleteSalary(Salary salary){}
 
     public Salary findSalary(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class SalaryControllerImpl  implements SalaryController{
     public List<Salary> findRangeSalary(int[] range){return null;}
 
     public int countSalary(){return 0;}
-    
+
 }

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class MaritalStatusControllerImpl  implements MaritalStatusController{
 
     public void createMaritalStatus(MaritalStatus maritalStatus){}
 
-    public void editMaritalStatus(MaritalStatus maritalStatus){}
+    public void updateMaritalStatus(MaritalStatus maritalStatus){}
 
-    public void removeMaritalStatus(MaritalStatus maritalStatus){}
+    public void deleteMaritalStatus(MaritalStatus maritalStatus){}
 
     public MaritalStatus findMaritalStatus(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class MaritalStatusControllerImpl  implements MaritalStatusController{
     public List<MaritalStatus> findRangeMaritalStatus(int[] range){return null;}
 
     public int countMaritalStatus(){return 0;}
-    
+
 }

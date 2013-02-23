@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface CountryController {
 
     void createCountry(CountryDTO countryDTO);
 
-    void editCountry(CountryDTO countryDTO);
+    void updateCountry(CountryDTO countryDTO);
 
-    void removeCountry(CountryDTO countryDTO);
+    void deleteCountry(CountryDTO countryDTO);
 
     CountryDTO findCountry(Object id);
 
@@ -27,5 +27,5 @@ public interface CountryController {
     List<CountryDTO> findRangeCountry(int[] range);
 
     int countCountry();
-    
+
 }

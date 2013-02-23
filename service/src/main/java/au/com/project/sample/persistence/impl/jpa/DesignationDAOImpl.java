@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -15,7 +15,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.DesignationDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 
@@ -44,12 +44,12 @@ public class DesignationDAOImpl extends AbstractDAO<Designation> implements
 		return saveOrUpdate(designation);
 	}
 
-	public void editDesignation(Designation designation) {
-		// edit(designation);
+	public void updateDesignation(Designation designation) {
+		// update(designation);
 	}
 
-	public void removeDesignation(Designation designation) {
-		// remove(designation);
+	public void deleteDesignation(Designation designation) {
+		// delete(designation);
 	}
 
 	public Designation findDesignation(Object id) {

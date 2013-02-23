@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -39,12 +39,12 @@ public class SalaryDAOImpl extends AbstractDAO<Salary> implements SalaryDAO {
         saveOrUpdate(salary);
     }
 
-    public void editSalary(Salary salary) {
-//        edit(salary);
+    public void updateSalary(Salary salary) {
+//        update(salary);
     }
 
-    public void removeSalary(Salary salary) {
- //       remove(salary);
+    public void deleteSalary(Salary salary) {
+ //       delete(salary);
     }
 
     public Salary findSalary(Object id) {

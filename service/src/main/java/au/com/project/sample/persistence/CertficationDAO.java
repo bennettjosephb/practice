@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface CertficationDAO {
 
     void createCertfication(Certification certfication);
 
-    void editCertfication(Certification certfication);
+    void updateCertfication(Certification certfication);
 
-    void removeCertfication(Certification certfication);
+    void deleteCertfication(Certification certfication);
 
     Certification findCertfication(Object id);
 

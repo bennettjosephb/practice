@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class EmploymentRoleDAOImpl extends AbstractDAO<EmploymentRole> implement
         return saveOrUpdate(employmentRole);
     }
 
-    public void editEmploymentRole(EmploymentRole employmentRole) {
-        //edit(employmentRole);
+    public void updateEmploymentRole(EmploymentRole employmentRole) {
+        //update(employmentRole);
     }
 
-    public void removeEmploymentRole(EmploymentRole employmentRole) {
-        //remove(employmentRole);
+    public void deleteEmploymentRole(EmploymentRole employmentRole) {
+        //delete(employmentRole);
     }
 
     public EmploymentRole findEmploymentRole(Object id) {

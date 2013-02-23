@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface DocumentDAO {
 
     void createDocument(Document document);
 
-    void editDocument(Document document);
+    void updateDocument(Document document);
 
-    void removeDocument(Document document);
+    void deleteDocument(Document document);
 
     Document findDocument(Object id);
 

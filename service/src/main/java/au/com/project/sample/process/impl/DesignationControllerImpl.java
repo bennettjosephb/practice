@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -19,13 +19,13 @@ import au.com.project.sample.process.impl.dto.DesignationDTO;
  * @author SONY
  */
 public class DesignationControllerImpl  implements DesignationController{
-	
+
 	private static Logger log = Logger
 			.getLogger(DesignationControllerImpl.class);
-	
+
 	@Autowired
 	private DesignationDAO designationDAO;
-	
+
 	private Designation updateCountry(DesignationDTO designationDTO) {
 		Designation designation = new Designation();
 
@@ -41,9 +41,9 @@ public class DesignationControllerImpl  implements DesignationController{
     	designationDAO.createDesignation(updateCountry(designationDTO));
     }
 
-    public void editDesignation(DesignationDTO designationDTO){}
+    public void updateDesignation(DesignationDTO designationDTO){}
 
-    public void removeDesignation(DesignationDTO designationDTO){}
+    public void deleteDesignation(DesignationDTO designationDTO){}
 
     public DesignationDTO findDesignation(Object id){return null;}
 
@@ -60,5 +60,5 @@ public class DesignationControllerImpl  implements DesignationController{
 	public void setDesignationDAO(DesignationDAO designationDAO) {
 		this.designationDAO = designationDAO;
 	}
-    
+
 }

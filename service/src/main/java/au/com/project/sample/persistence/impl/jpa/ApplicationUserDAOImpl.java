@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -15,7 +15,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.ApplicationUserDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class ApplicationUserDAOImpl extends AbstractDAO<ApplicationUser>
@@ -36,12 +36,12 @@ public class ApplicationUserDAOImpl extends AbstractDAO<ApplicationUser>
 		// log.info("Application User Created");
 	}
 
-	public void editApplicationUser(ApplicationUser applicationUser) {
-		// edit(applicationUser);
+	public void updateApplicationUser(ApplicationUser applicationUser) {
+		// update(applicationUser);
 	}
 
-	public void removeApplicationUser(ApplicationUser applicationUser) {
-		// remove(applicationUser);
+	public void deleteApplicationUser(ApplicationUser applicationUser) {
+		// delete(applicationUser);
 	}
 
 	public ApplicationUser findApplicationUser(Object id) {

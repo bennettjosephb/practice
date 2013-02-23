@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -14,7 +14,7 @@ import au.com.project.sample.process.AuthenticationRoleController;
 import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class AuthenticationRoleControllerImpl implements
@@ -23,7 +23,7 @@ public class AuthenticationRoleControllerImpl implements
 	@Autowired
 	private AuthenticationRoleDAO authenticationRoleDAO;
 
-	private AuthenticationRole updateAuthenticationRole(
+	private AuthenticationRole populateAuthenticationRole(
 			AuthenticationRoleDTO authenticationRoleDTO) {
 		AuthenticationRole authenticationRole = new AuthenticationRole();
 
@@ -38,15 +38,15 @@ public class AuthenticationRoleControllerImpl implements
 			AuthenticationRoleDTO authenticationRoleDTO) {
 
 		authenticationRoleDAO
-				.createAuthenticationRole(updateAuthenticationRole(authenticationRoleDTO));
+				.createAuthenticationRole(populateAuthenticationRole(authenticationRoleDTO));
 
 	}
 
-	public void editAuthenticationRole(
+	public void updateAuthenticationRole(
 			AuthenticationRoleDTO authenticationRoleDTO) {
 	}
 
-	public void removeAuthenticationRole(
+	public void deleteAuthenticationRole(
 			AuthenticationRoleDTO authenticationRoleDTO) {
 	}
 

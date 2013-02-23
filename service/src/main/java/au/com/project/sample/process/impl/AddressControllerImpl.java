@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -13,14 +13,14 @@ import java.util.List;
  * @author SONY
  */
 public class AddressControllerImpl implements AddressController{
-	
-	
+
+
 
     public void createAddress(Address address){}
 
-    public void editAddress(Address address){}
+    public void updateAddress(Address address){}
 
-    public void removeAddress(Address address){}
+    public void deleteAddress(Address address){}
 
     public Address findAddress(Object id){return null;}
 
@@ -29,5 +29,5 @@ public class AddressControllerImpl implements AddressController{
     public List<Address> findRange(int[] range){return null;}
 
     public int count(){return 0;}
-    
+
 }

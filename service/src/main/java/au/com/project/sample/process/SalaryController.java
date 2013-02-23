@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface SalaryController {
 
     void createSalary(Salary salary);
 
-    void editSalary(Salary salary);
+    void updateSalary(Salary salary);
 
-    void removeSalary(Salary salary);
+    void deleteSalary(Salary salary);
 
     Salary findSalary(Object id);
 
@@ -27,5 +27,5 @@ public interface SalaryController {
     List<Salary> findRangeSalary(int[] range);
 
     int countSalary();
-    
+
 }

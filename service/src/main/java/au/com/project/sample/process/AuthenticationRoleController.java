@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -9,16 +9,16 @@ import java.util.List;
 import au.com.project.sample.process.impl.dto.AuthenticationRoleDTO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public interface AuthenticationRoleController {
 
 	void createAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
-	void editAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
+	void updateAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
-	void removeAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
+	void deleteAuthenticationRole(AuthenticationRoleDTO authenticationRoleDTO);
 
 	AuthenticationRoleDTO findAuthenticationRole(Object id);
 

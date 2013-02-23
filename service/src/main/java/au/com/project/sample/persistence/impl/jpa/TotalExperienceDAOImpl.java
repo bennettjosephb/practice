@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -13,7 +13,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.TotalExperienceDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class TotalExperienceDAOImpl extends AbstractDAO<TotalExperience>
@@ -38,12 +38,12 @@ public class TotalExperienceDAOImpl extends AbstractDAO<TotalExperience>
 		saveOrUpdate(totalExperience);
 	}
 
-	public void editTotalExperience(TotalExperience totalExperience) {
-		// edit(totalExperience);
+	public void updateTotalExperience(TotalExperience totalExperience) {
+		// update(totalExperience);
 	}
 
-	public void removeTotalExperience(TotalExperience totalExperience) {
-		// remove(totalExperience);
+	public void deleteTotalExperience(TotalExperience totalExperience) {
+		// delete(totalExperience);
 	}
 
 	public TotalExperience findTotalExperience(Object id) {

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -27,26 +27,9 @@ public class StateControllerImpl implements StateController {
 	@Autowired
 	StateDAO stateDAO;
 
-	private State updateState(StateDTO stateDTO) {
-		System.out.println(stateDTO.getCountryDTO()
-				.getId());
-		System.out.println(stateDTO.getCountryDTO()
-				.getId());
-		System.out.println(stateDTO.getCountryDTO()
-				.getId());
-		System.out.println(stateDTO.getCountryDTO()
-				.getId());
-		System.out.println(stateDTO.getCountryDTO()
-				.getId());
+	private State populateState(StateDTO stateDTO) {
 		Country country = countryDAO.findCountryByCode(stateDTO.getCountryDTO()
 				.getCode());
-
-		System.out.println(country);
-		System.out.println(country);
-		System.out.println(country);
-		System.out.println(country);
-		System.out.println(country);
-		System.out.println(country);
 
 		State state = new State();
 
@@ -58,13 +41,13 @@ public class StateControllerImpl implements StateController {
 	}
 
 	public void createState(StateDTO stateDTO) {
-		stateDAO.createState(updateState(stateDTO));
+		stateDAO.createState(populateState(stateDTO));
 	}
 
-	public void editState(StateDTO stateDTO) {
+	public void updateState(StateDTO stateDTO) {
 	}
 
-	public void removeState(StateDTO stateDTO) {
+	public void deleteState(StateDTO stateDTO) {
 	}
 
 	public StateDTO findState(Object id) {

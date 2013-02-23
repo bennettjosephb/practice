@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -15,7 +15,7 @@ import au.com.project.sample.process.impl.dto.EducationSummaryDTO;
 import au.com.project.sample.services.model.EducationType;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class EducationSummaryControllerImpl implements
@@ -24,7 +24,7 @@ public class EducationSummaryControllerImpl implements
 	@Autowired
 	private EducationSummaryDAO educationSummaryDAO;
 
-	private EducationSummary updateEducationSummary(
+	private EducationSummary populateEducationSummary(
 			EducationSummaryDTO educationSummaryDTO) {
 		EducationSummary educationSummary = new EducationSummary();
 
@@ -61,14 +61,14 @@ public class EducationSummaryControllerImpl implements
 	public void createEducationSummary(EducationSummaryDTO educationSummaryDTO) {
 
 		educationSummaryDAO
-				.createEducationSummary(updateEducationSummary(educationSummaryDTO));
+				.createEducationSummary(populateEducationSummary(educationSummaryDTO));
 
 	}
 
-	public void editEducationSummary(EducationSummaryDTO educationSummaryDTO) {
+	public void updateEducationSummary(EducationSummaryDTO educationSummaryDTO) {
 	}
 
-	public void removeEducationSummary(EducationSummaryDTO educationSummaryDTO) {
+	public void deleteEducationSummary(EducationSummaryDTO educationSummaryDTO) {
 	}
 
 	public EducationSummaryDTO findEducationSummary(Object id) {

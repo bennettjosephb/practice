@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class LocationDAOImpl extends AbstractDAO<Location> implements LocationDA
         saveOrUpdate(location);
     }
 
-    public void editLocation(Location location) {
-        //edit(location);
+    public void updateLocation(Location location) {
+        //update(location);
     }
 
-    public void removeLocation(Location location) {
-        //remove(location);
+    public void deleteLocation(Location location) {
+        //delete(location);
     }
 
     public Location findLocation(Object id) {

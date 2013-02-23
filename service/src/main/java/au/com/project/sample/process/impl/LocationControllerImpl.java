@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class LocationControllerImpl implements  LocationController{
 
     public void createLocation(Location location){}
 
-    public void editLocation(Location location){}
+    public void updateLocation(Location location){}
 
-    public void removeLocation(Location location){}
+    public void deleteLocation(Location location){}
 
     public Location findLocation(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class LocationControllerImpl implements  LocationController{
     public List<Location> findRangeLocation(int[] range){return null;}
 
     public int countLocation(){return 0;}
-    
+
 }

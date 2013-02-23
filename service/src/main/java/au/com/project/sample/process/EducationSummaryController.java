@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface EducationSummaryController {
 
     void createEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
-    void editEducationSummary(EducationSummaryDTO educationSummaryDTO);
+    void updateEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
-    void removeEducationSummary(EducationSummaryDTO educationSummaryDTO);
+    void deleteEducationSummary(EducationSummaryDTO educationSummaryDTO);
 
     EducationSummaryDTO findEducationSummary(Object id);
 
@@ -27,5 +27,5 @@ public interface EducationSummaryController {
     List<EducationSummaryDTO> findRangeEducationSummary(int[] range);
 
     int countEducationSummary();
-    
+
 }

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -19,7 +19,7 @@ import au.com.project.sample.process.impl.dto.EmploymentSummaryDTO;
 import au.com.project.sample.process.impl.dto.SalaryDTO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class EmploymentSummaryControllerImpl implements
@@ -31,7 +31,7 @@ public class EmploymentSummaryControllerImpl implements
 	@Autowired
 	private CurrencyDAO currencyDAO;
 
-	private EmploymentSummary updateEmploymentSummary(
+	private EmploymentSummary populateEmploymentSummary(
 			EmploymentSummaryDTO employmentSummaryDTO) {
 		EmploymentSummary employmentSummary = new EmploymentSummary();
 
@@ -55,48 +55,48 @@ public class EmploymentSummaryControllerImpl implements
 
 		if (employmentSummaryDTO.getLeavingSalary() != null) {
 			employmentSummary
-					.setLeavingSalary(updateSalary(employmentSummaryDTO
+					.setLeavingSalary(populateSalary(employmentSummaryDTO
 							.getLeavingSalary()));
 		}
 		if (employmentSummaryDTO.getJoiningSalary() != null) {
 			employmentSummary
-					.setJoiningSalary(updateSalary(employmentSummaryDTO
+					.setJoiningSalary(populateSalary(employmentSummaryDTO
 							.getJoiningSalary()));
 		}
 		if (employmentSummaryDTO.getSalary() != null) {
-			employmentSummary.setSalary(updateSalary(employmentSummaryDTO
+			employmentSummary.setSalary(populateSalary(employmentSummaryDTO
 					.getSalary()));
 		}
 
 		return employmentSummary;
 	}
 
-	private Salary updateSalary(SalaryDTO salaryDTO) {
+	private Salary populateSalary(SalaryDTO salaryDTO) {
 		Salary salary = new Salary();
 
-		salary.setCurrency(updateCurrency(salaryDTO.getCurrency()));
+		salary.setCurrency(populateCurrency(salaryDTO.getCurrency()));
 		salary.setValue(salary.getValue());
 
 		return salary;
 	}
 
-	private Currency updateCurrency(CurrencyDTO currencyDTO) {
+	private Currency populateCurrency(CurrencyDTO currencyDTO) {
 		return currencyDAO.findCurrencyByCode(currencyDTO.getCode());
 	}
 
 	public void createEmploymentSummary(
 			EmploymentSummaryDTO employmentSummaryDTO) {
 		employmentSummaryDAO
-				.createEmploymentSummary(updateEmploymentSummary(employmentSummaryDTO));
+				.createEmploymentSummary(populateEmploymentSummary(employmentSummaryDTO));
 	}
 
-	public void editEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO) {
+	public void updateEmploymentSummary(EmploymentSummaryDTO employmentSummaryDTO) {
 	}
 
-	public void removeEmploymentSummary(
+	public void deleteEmploymentSummary(
 			EmploymentSummaryDTO employmentSummaryDTO) {
 		employmentSummaryDAO
-				.removeEmploymentSummary(updateEmploymentSummary(employmentSummaryDTO));
+				.deleteEmploymentSummary(populateEmploymentSummary(employmentSummaryDTO));
 	}
 
 	public EmploymentSummaryDTO findEmploymentSummary(Object id) {

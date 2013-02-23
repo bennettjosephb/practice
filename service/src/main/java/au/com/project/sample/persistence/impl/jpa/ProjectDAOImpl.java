@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class ProjectDAOImpl extends AbstractDAO<Project> implements ProjectDAO {
         saveOrUpdate(project);
     }
 
-    public void editProject(Project project) {
- //       edit(project);
+    public void updateProject(Project project) {
+ //       update(project);
     }
 
-    public void removeProject(Project project) {
-  //      remove(project);
+    public void deleteProject(Project project) {
+  //      delete(project);
     }
 
     public Project findProject(Object id) {

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -17,9 +17,9 @@ public interface CityDAO {
 
 	City createCity(City city);
 
-    void editCity(City city);
+    void updateCity(City city);
 
-    void removeCity(City city);
+    void deleteCity(City city);
 
     City findCity(Object id);
 
@@ -32,5 +32,5 @@ public interface CityDAO {
     public City findCityByCode(String code);
 
 	public List<City> findStateByName(String name);
-	
+
 }

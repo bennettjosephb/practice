@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -40,12 +40,12 @@ public class EducationSummaryDAOImpl extends AbstractDAO<EducationSummary> imple
         return saveOrUpdate(educationSummary);
     }
 
-    public void editEducationSummary(EducationSummary educationSummary) {
-        //edit(educationSummary);
+    public void updateEducationSummary(EducationSummary educationSummary) {
+        //update(educationSummary);
     }
 
-    public void removeEducationSummary(EducationSummary educationSummary) {
-        //remove(educationSummary);
+    public void deleteEducationSummary(EducationSummary educationSummary) {
+        //delete(educationSummary);
     }
 
     public EducationSummary findEducationSummary(Object id) {

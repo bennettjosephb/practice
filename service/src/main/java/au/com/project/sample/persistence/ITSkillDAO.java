@@ -16,9 +16,9 @@ public interface ITSkillDAO {
 
 	ITSkill createITSkill(ITSkill iTSkill);
 
-    void editITSkill(ITSkill iTSkill);
+	ITSkill updateITSkill(ITSkill iTSkill);
 
-    void removeITSkill(ITSkill iTSkill);
+    void deleteITSkill(ITSkill iTSkill);
 
     ITSkill findITSkill(Object id);
 

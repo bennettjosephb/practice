@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,7 +16,7 @@ import au.com.project.sample.process.SubCategoryController;
 import au.com.project.sample.process.impl.dto.SubCategoryDTO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class SubCategoryControllerImpl implements SubCategoryController {
@@ -28,9 +28,9 @@ public class SubCategoryControllerImpl implements SubCategoryController {
 	private CategoryDAO categoryDAO;
 
 	private SubCategory updateCountry(SubCategoryDTO subCategoryDTO) {
-		
+
 		Category category = categoryDAO.findCategoryByCode(subCategoryDTO.getCategoryDTO().getCode());
-		
+
 		SubCategory subCategory = new SubCategory();
 
 		subCategory.setName(subCategoryDTO.getName());
@@ -45,10 +45,10 @@ public class SubCategoryControllerImpl implements SubCategoryController {
 		subCategoryDAO.createSubCategory(updateCountry(subCategoryDTO));
 	}
 
-	public void editSubCategory(SubCategoryDTO subCategoryDTO) {
+	public void updateSubCategory(SubCategoryDTO subCategoryDTO) {
 	}
 
-	public void removeSubCategory(SubCategoryDTO subCategoryDTO) {
+	public void deleteSubCategory(SubCategoryDTO subCategoryDTO) {
 	}
 
 	public SubCategoryDTO findSubCategory(Object id) {

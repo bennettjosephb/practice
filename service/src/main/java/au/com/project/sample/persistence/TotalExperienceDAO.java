@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface TotalExperienceDAO {
 
     void createTotalExperience(TotalExperience totalExperience);
 
-    void editTotalExperience(TotalExperience totalExperience);
+    void updateTotalExperience(TotalExperience totalExperience);
 
-    void removeTotalExperience(TotalExperience totalExperience);
+    void deleteTotalExperience(TotalExperience totalExperience);
 
     TotalExperience findTotalExperience(Object id);
 

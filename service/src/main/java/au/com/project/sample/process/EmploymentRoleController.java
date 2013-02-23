@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface EmploymentRoleController {
 
     void createEmploymentRole(EmploymentRole employmentRole);
 
-    void editEmploymentRole(EmploymentRole employmentRole);
+    void updateEmploymentRole(EmploymentRole employmentRole);
 
-    void removeEmploymentRole(EmploymentRole employmentRole);
+    void deleteEmploymentRole(EmploymentRole employmentRole);
 
     EmploymentRole findEmploymentRole(Object id);
 
@@ -27,5 +27,5 @@ public interface EmploymentRoleController {
     List<EmploymentRole> findRangeEmploymentRole(int[] range);
 
     int countEmploymentRole();
-    
+
 }

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -14,7 +14,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.AuthenticationRoleDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
@@ -32,8 +32,8 @@ public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
 		return saveOrUpdate(authenticationRole);
 	}
 
-	public void editAuthenticationRole(AuthenticationRole authenticationRole) {
-		// edit(authenticationRole);
+	public void updateAuthenticationRole(AuthenticationRole authenticationRole) {
+		// update(authenticationRole);
 	}
 
 	public void removeAuthenticationRole(AuthenticationRole authenticationRole) {
@@ -64,5 +64,9 @@ public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
 	@Override
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
+	}
+
+	public void deleteAuthenticationRole(AuthenticationRole authenticationRole) {
+		
 	}
 }

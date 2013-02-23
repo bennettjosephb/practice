@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -37,12 +37,12 @@ public class MaritalStatusDAOImpl extends AbstractDAO<MaritalStatus> implements 
         return saveOrUpdate(maritalStatus);
     }
 
-    public void editMaritalStatus(MaritalStatus maritalStatus) {
-        //edit(maritalStatus);
+    public void updateMaritalStatus(MaritalStatus maritalStatus) {
+        //update(maritalStatus);
     }
 
-    public void removeMaritalStatus(MaritalStatus maritalStatus) {
-        //remove(maritalStatus);
+    public void deleteMaritalStatus(MaritalStatus maritalStatus) {
+        //delete(maritalStatus);
     }
 
     public MaritalStatus findMaritalStatus(Object id) {

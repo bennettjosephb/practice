@@ -17,7 +17,7 @@ public class CurrencyControllerImpl implements CurrencyController {
 	@Autowired
 	private CurrencyDAO currencyDAO;
 
-	private Currency updateCurrency(CurrencyDTO currencyDTO) {
+	private Currency populateCurrency(CurrencyDTO currencyDTO) {
 		Currency currency = new Currency();
 
 		currency.setName(currencyDTO.getName());
@@ -28,14 +28,14 @@ public class CurrencyControllerImpl implements CurrencyController {
 
 	public void createCurrency(CurrencyDTO currencyDTO) {
 		log.info("Creating Currency");
-		currencyDAO.createCurrency(updateCurrency(currencyDTO));
+		currencyDAO.createCurrency(populateCurrency(currencyDTO));
 		log.info("Currency Created");
 	}
 
-	public void editCurrency(CurrencyDTO currencyDTO) {
+	public void updateCurrency(CurrencyDTO currencyDTO) {
 	}
 
-	public void removeCurrency(CurrencyDTO currencyDTO) {
+	public void deleteCurrency(CurrencyDTO currencyDTO) {
 	}
 
 	// public void updateSalary(Long salary, CurrencyDTO currencyDTO){}

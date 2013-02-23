@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface TotalExperienceController {
 
     void createTotalExperience(TotalExperience totalExperience);
 
-    void editTotalExperience(TotalExperience totalExperience);
+    void updateTotalExperience(TotalExperience totalExperience);
 
-    void removeTotalExperience(TotalExperience totalExperience);
+    void deleteTotalExperience(TotalExperience totalExperience);
 
     TotalExperience findTotalExperience(Object id);
 
@@ -27,5 +27,5 @@ public interface TotalExperienceController {
     List<TotalExperience> findRangeTotalExperience(int[] range);
 
     int countTotalExperience();
-    
+
 }

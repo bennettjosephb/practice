@@ -7,6 +7,7 @@ package au.com.project.sample.domain;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,7 +53,7 @@ public class ITSkill implements Serializable {
 	@Column(name = "IT_SKI_EXP_MONTH")
 	private Integer experienceMonth;
 
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "APP_ID")
 	private Applicant applicant;
 

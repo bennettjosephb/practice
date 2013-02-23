@@ -69,18 +69,18 @@ public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDA
 //        a.setCurrentLocation(location);
 //    }
 //
-//    public void editApplicant(Applicant applicant) {
+//    public void updateApplicant(Applicant applicant) {
 //        manager.merge(applicant);
 //    }
 //
-//    public void removeApplicant(Applicant applicant) {
-//        manager.remove(applicant);
+//    public void deleteApplicant(Applicant applicant) {
+//        manager.delete(applicant);
 //    }
-    public void editLocation(Location applicant) {
-        editCurrency(null);
+    public void updateLocation(Location applicant) {
+        updateCurrency(null);
     }
 
-    public void removeLocation(Location applicant) {
+    public void deleteLocation(Location applicant) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -92,12 +92,12 @@ public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDA
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public void editCurrency(Currency currency) {
-     //   edit(currency);
+    public void updateCurrency(Currency currency) {
+     //   update(currency);
     }
 
-    public void removeCurrency(Currency currency) {
-     //   remove(currency);
+    public void deleteCurrency(Currency currency) {
+     //   delete(currency);
     }
 
     public void updateSalary(Long salary, Currency applicant) {

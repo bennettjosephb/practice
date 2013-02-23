@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -34,10 +34,10 @@ public class CategoryControllerImpl implements CategoryController {
 		categoryDAO.createCategory(updateCountry(categoryDTO));
 	}
 
-	public void editCategory(CategoryDTO categoryDTO) {
+	public void updateCategory(CategoryDTO categoryDTO) {
 	}
 
-	public void removeCategory(CategoryDTO categoryDTO) {
+	public void deleteCategory(CategoryDTO categoryDTO) {
 	}
 
 	public CategoryDTO findCategory(Object id) {

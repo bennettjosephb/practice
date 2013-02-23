@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -18,12 +18,12 @@ public interface CountryDAO {
 
 	Country createCountry(Country country);
 
-    void editCountry(Country country);
+    void updateCountry(Country country);
 
-    void removeCountry(Country country);
+    void deleteCountry(Country country);
 
     Country findCountry(Long id);
-    
+
     Country findCountryByCode(String c);
 
     List<Country> findCountryByName(String name);

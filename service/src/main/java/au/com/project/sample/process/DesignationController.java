@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface DesignationController {
 
     void createDesignation(DesignationDTO designationDTO);
 
-    void editDesignation(DesignationDTO designationDTO);
+    void updateDesignation(DesignationDTO designationDTO);
 
-    void removeDesignation(DesignationDTO designationDTO);
+    void deleteDesignation(DesignationDTO designationDTO);
 
     DesignationDTO findDesignation(Object id);
 
@@ -27,5 +27,5 @@ public interface DesignationController {
     List<DesignationDTO> findRangeDesignation(int[] range);
 
     int countDesignation();
-    
+
 }

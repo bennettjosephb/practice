@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -28,12 +28,12 @@ public class CertficationDAOImpl extends AbstractDAO<Certification> implements C
         saveOrUpdate(certfication);
     }
 
-    public void editCertfication(Certification certfication) {
-//        edit(certfication);
+    public void updateCertfication(Certification certfication) {
+//        update(certfication);
     }
 
-    public void removeCertfication(Certification certfication) {
-//        remove(certfication);
+    public void deleteCertfication(Certification certfication) {
+//        delete(certfication);
     }
 
     public Certification findCertfication(Object id) {

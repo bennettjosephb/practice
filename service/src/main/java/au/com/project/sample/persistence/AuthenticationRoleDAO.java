@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -17,9 +17,9 @@ public interface AuthenticationRoleDAO {
 
 	AuthenticationRole createAuthenticationRole(AuthenticationRole authenticationRole);
 
-    void editAuthenticationRole(AuthenticationRole authenticationRole);
+    void updateAuthenticationRole(AuthenticationRole authenticationRole);
 
-    void removeAuthenticationRole(AuthenticationRole authenticationRole);
+    void deleteAuthenticationRole(AuthenticationRole authenticationRole);
 
     AuthenticationRole findAuthenticationRole(Object id);
 

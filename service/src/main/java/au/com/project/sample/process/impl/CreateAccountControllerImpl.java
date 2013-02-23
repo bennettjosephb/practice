@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,7 +16,7 @@ import au.com.project.sample.process.impl.dto.UserInfoDTO;
 import au.com.project.sample.services.model.Gender;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class CreateAccountControllerImpl implements CreateAccountController {
@@ -51,10 +51,10 @@ public class CreateAccountControllerImpl implements CreateAccountController {
 
 	}
 
-	public void editAccount(UserInfoDTO userInfoDTO) {
+	public void updateAccount(UserInfoDTO userInfoDTO) {
 	}
 
-	public void removeAccount(UserInfoDTO userInfoDTO) {
+	public void deleteAccount(UserInfoDTO userInfoDTO) {
 	}
 
 	public UserInfoDTO findAccount(Object id) {

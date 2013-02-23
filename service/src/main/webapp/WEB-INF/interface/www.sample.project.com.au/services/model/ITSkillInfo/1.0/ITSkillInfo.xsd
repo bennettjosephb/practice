@@ -5,7 +5,12 @@
 	elementFormDefault="qualified">
 	<complexType name="ITSkillInfo">
 		<sequence>
-			<element name="id" type="long" nillable="true"></element>
+			<element name="id" type="long" nillable="true">
+				<annotation>
+					<documentation>Never Use Id attribute for Creating Functionality. Only Used to Retrieve, Update and Delete.
+					</documentation>
+				</annotation>
+			</element>
 			<element name="name" type="string" />
 			<element name="version" type="string" />
 			<element name="lastUsed" type="int" nillable="true" />

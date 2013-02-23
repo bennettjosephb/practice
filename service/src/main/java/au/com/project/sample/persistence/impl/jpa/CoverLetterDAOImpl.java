@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -38,12 +38,12 @@ public class CoverLetterDAOImpl extends AbstractDAO<CoverLetter> implements Cove
         saveOrUpdate(coverLetter);
     }
 
-    public void editCoverLetter(CoverLetter coverLetter) {
-        //edit(coverLetter);
+    public void updateCoverLetter(CoverLetter coverLetter) {
+        //update(coverLetter);
     }
 
-    public void removeCoverLetter(CoverLetter coverLetter) {
-        //remove(coverLetter);
+    public void deleteCoverLetter(CoverLetter coverLetter) {
+        //delete(coverLetter);
     }
 
     public CoverLetter findCoverLetter(Object id) {

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process;
 
@@ -16,9 +16,9 @@ public interface MaritalStatusController {
 
     void createMaritalStatus(MaritalStatus maritalStatus);
 
-    void editMaritalStatus(MaritalStatus maritalStatus);
+    void updateMaritalStatus(MaritalStatus maritalStatus);
 
-    void removeMaritalStatus(MaritalStatus maritalStatus);
+    void deleteMaritalStatus(MaritalStatus maritalStatus);
 
     MaritalStatus findMaritalStatus(Object id);
 
@@ -27,5 +27,5 @@ public interface MaritalStatusController {
     List<MaritalStatus> findRangeMaritalStatus(int[] range);
 
     int countMaritalStatus();
-    
+
 }

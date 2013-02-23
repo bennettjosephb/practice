@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.process.impl;
 
@@ -16,9 +16,9 @@ public class PhotoControllerImpl  implements PhotoController{
 
     public void createPhoto(Photo photo){}
 
-    public void editPhoto(Photo photo){}
+    public void updatePhoto(Photo photo){}
 
-    public void removePhoto(Photo photo){}
+    public void deletePhoto(Photo photo){}
 
     public Photo findPhoto(Object id){return null;}
 
@@ -27,5 +27,5 @@ public class PhotoControllerImpl  implements PhotoController{
     public List<Photo> findRangePhoto(int[] range){return null;}
 
     public int countPhoto(){return 0;}
-    
+
 }

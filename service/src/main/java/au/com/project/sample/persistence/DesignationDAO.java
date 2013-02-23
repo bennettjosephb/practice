@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence;
 
@@ -16,9 +16,9 @@ public interface DesignationDAO {
 
 	Designation createDesignation(Designation designation);
 
-    void editDesignation(Designation designation);
+    void updateDesignation(Designation designation);
 
-    void removeDesignation(Designation designation);
+    void deleteDesignation(Designation designation);
 
     Designation findDesignation(Object id);
 

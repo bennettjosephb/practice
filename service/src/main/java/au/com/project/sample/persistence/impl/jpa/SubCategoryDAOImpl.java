@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the updateor.
  */
 package au.com.project.sample.persistence.impl.jpa;
 
@@ -16,7 +16,7 @@ import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.SubCategoryDAO;
 
 /**
- * 
+ *
  * @author SONY
  */
 public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements
@@ -43,12 +43,12 @@ public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements
 		return saveOrUpdate(subCategory);
 	}
 
-	public void editSubCategory(SubCategory subCategory) {
-		// edit(subCategory);
+	public void updateSubCategory(SubCategory subCategory) {
+		// update(subCategory);
 	}
 
-	public void removeSubCategory(SubCategory subCategory) {
-		// remove(subCategory);
+	public void deleteSubCategory(SubCategory subCategory) {
+		// delete(subCategory);
 	}
 
 	public SubCategory findSubCategory(Object id) {
