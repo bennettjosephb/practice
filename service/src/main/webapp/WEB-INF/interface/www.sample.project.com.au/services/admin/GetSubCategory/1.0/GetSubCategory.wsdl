@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/services/admin/GetSubCategory/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryResponse/v1"
+	name="GetSubCategory"
+	targetNamespace="http://www.sample.project.com.au/services/admin/GetSubCategory/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/services/admin/GetSubCategory/v1"
+			xmlns:pref="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="GetSubCategoryRequest.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="GetSubCategoryResponse.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/GetSubCategory/GetSubCategoryResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getSubCategoryRequest">
+		<wsdl:part element="pref:getSubCategoryRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="getSubCategoryResponse">
+		<wsdl:part element="pref1:getSubCategoryResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="GetSubCategory">
+		<wsdl:operation name="GetSubCategory">
+			<wsdl:input message="tns:getSubCategoryRequest" />
+			<wsdl:output message="tns:getSubCategoryResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="GetSubCategorySOAP" type="tns:GetSubCategory">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GetSubCategory">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/services/admin/GetSubCategory/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="GetSubCategory">
+		<wsdl:port binding="tns:GetSubCategorySOAP" name="GetSubCategorySOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

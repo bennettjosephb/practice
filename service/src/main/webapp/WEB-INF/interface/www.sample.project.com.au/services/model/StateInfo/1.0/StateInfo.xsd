@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/StateInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/service/model/StateInfo/v1"
+	elementFormDefault="qualified" xmlns:pref="http://www.sample.project.com.au/services/model/CountryInfo/v1">
+	<import schemaLocation="../../CountryInfo/1.0/CountryInfo.xsd" namespace="http://www.sample.project.com.au/services/model/CountryInfo/v1"></import>
+	<complexType name="StateInfo">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="id" type="string"></element>
+			<element name="code" type="string"></element>
+			<element name="countryInfo" type="pref:CountryInfo"></element>
+		</sequence>
+	</complexType>
+</schema>

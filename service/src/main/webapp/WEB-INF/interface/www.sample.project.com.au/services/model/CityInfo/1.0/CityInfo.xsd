@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/CityInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/CityInfo/v1"
+	elementFormDefault="qualified" xmlns:Q1="http://www.sample.project.com.au/services/model/StateInfo/v1">
+    <import schemaLocation="../../StateInfo/1.0/StateInfo.xsd" namespace="http://www.sample.project.com.au/services/model/StateInfo/v1"></import>
+	<complexType name="CityInfo">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="id" type="string"></element>
+			<element name="code" type="string"></element>
+			<element name="stateInfo" type="Q1:StateInfo"></element>
+		</sequence>
+	</complexType>
+</schema>

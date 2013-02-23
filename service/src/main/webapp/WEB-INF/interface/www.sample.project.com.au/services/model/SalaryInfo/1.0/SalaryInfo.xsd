@@ -2,8 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.sample.project.com.au/services/model/SalaryInfo/v1"
 	xmlns:tns="http://www.sample.project.com.au/services/model/SalaryInfo/v1"
-	elementFormDefault="qualified"
-	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1" xmlns:pref1="http://www.sample.project.com.au/services/model/CurrencyInfo/v1">
+	elementFormDefault="qualified" xmlns:pref1="http://www.sample.project.com.au/services/model/CurrencyInfo/v1">
 	<import schemaLocation="../../CurrencyInfo/1.0/CurrencyInfo.xsd" namespace="http://www.sample.project.com.au/services/model/CurrencyInfo/v1"></import>
 	<complexType name="SalaryInfo">
 		<sequence>
