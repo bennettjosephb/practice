@@ -33,8 +33,8 @@ public class ITSkillDAOImpl extends AbstractDAO<ITSkill> implements ITSkillDAO {
         super(ITSkill.class);
     }
 
-    public void createITSkill(ITSkill iTSkill) {
-        saveOrUpdate(iTSkill);
+    public ITSkill createITSkill(ITSkill iTSkill) {
+        return saveOrUpdate(iTSkill);
     }
 
     public void editITSkill(ITSkill iTSkill) {

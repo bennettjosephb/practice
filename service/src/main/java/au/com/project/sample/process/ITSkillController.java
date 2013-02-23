@@ -4,9 +4,9 @@
  */
 package au.com.project.sample.process;
 
-import au.com.project.sample.domain.ITSkill;
 import java.util.List;
-import javax.ejb.Local;
+
+import au.com.project.sample.process.impl.dto.ITSkillDTO;
 
 /**
  *
@@ -14,17 +14,17 @@ import javax.ejb.Local;
  */
 public interface ITSkillController {
 
-    void createITSkill(ITSkill iTSkill);
+	ITSkillDTO createITSkill(ITSkillDTO iTSkillDTO);
 
-    void editITSkill(ITSkill iTSkill);
+    void editITSkill(ITSkillDTO iTSkillDTO);
 
-    void removeITSkill(ITSkill iTSkill);
+    void removeITSkill(ITSkillDTO iTSkillDTO);
 
-    ITSkill findITSkill(Object id);
+    ITSkillDTO findITSkill(Object id);
 
-    List<ITSkill> findAllITSkill();
+    List<ITSkillDTO> findAllITSkill();
 
-    List<ITSkill> findRangeITSkill(int[] range);
+    List<ITSkillDTO> findRangeITSkill(int[] range);
 
     int countITSkill();
     

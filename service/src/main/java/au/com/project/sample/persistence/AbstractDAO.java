@@ -36,6 +36,10 @@ public abstract class AbstractDAO<T> {
 		this.entityClass = entityClass;
 	}
 
+	/*
+	 * Implement getSessionFactory and setSessionFactory method in DAO
+	 * Implementation class with public access specifier
+	 */
 	protected abstract SessionFactory getSessionFactory();
 
 	protected abstract void setSessionFactory(SessionFactory sessionFactory);
@@ -46,48 +50,84 @@ public abstract class AbstractDAO<T> {
 
 	@Transactional(readOnly = false)
 	protected T saveOrUpdate(T entity) {
-		if (entity != null) {
-			log.trace("Session Creating");
-			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Saving");
-			session.saveOrUpdate(entity);
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Saved");
-			session.close();
+		Session session = null;
+		try {
+			if (entity != null) {
+				log.trace("Session Creating");
+				session = getSession();
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Saving");
+				session.saveOrUpdate(entity);
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Saved");
+				session.close();
 
-			log.trace("Session Closed");
+				log.trace("Session Closed");
+			}
+		} catch (HibernateException hibernateException) {
+			log.error("Problem While Persisting Entity "
+					+ entityClass.getName());
+			throw hibernateException;
+		} finally {
+			closeSession(session);
 		}
 		return entity;
 	}
 
 	@Transactional(readOnly = false)
 	protected T save(T entity) {
-		if (entity != null) {
-			log.trace("Session Creating");
-			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Saving");
-			session.save(entity);
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Saved");
-			session.close();
-			log.trace("Session Closed");
+		Session session = null;
+		try {
+			if (entity != null) {
+				log.trace("Session Creating");
+				session = getSession();
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Saving");
+				session.save(entity);
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Saved");
+				session.close();
+				log.trace("Session Closed");
+			}
+		} catch (HibernateException hibernateException) {
+			log.error("Problem While Persisting Entity "
+					+ entityClass.getName());
+			throw hibernateException;
+		} finally {
+			closeSession(session);
 		}
 		return entity;
 	}
 
+	protected void closeSession(Session session) {
+		if (session != null) {
+			try {
+				session.close();
+			} catch (HibernateException ignored) {
+				log.error("Couldn't close Session", ignored);
+			}
+		}
+	}
+
 	protected T update(T entity) {
-		if (entity != null) {
-			log.trace("Session Creating");
-			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Updating");
-			session.update(entity);
-			log.trace("Entity " + entity.getClass().getName() + " : " + entity
-					+ " Updated");
-			session.close();
-			log.trace("Session Closed");
+		Session session = null;
+		try {
+			if (entity != null) {
+				log.trace("Session Creating");
+				session = getSession();
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Updating");
+				session.update(entity);
+				log.trace("Entity " + entity.getClass().getName() + " : "
+						+ entity + " Updated");
+				session.close();
+				log.trace("Session Closed");
+			}
+		} catch (HibernateException hibernateException) {
+			log.error("Problem While Updating Entity " + entityClass.getName());
+			throw hibernateException;
+		} finally {
+			closeSession(session);
 		}
 		return entity;
 	}
@@ -95,30 +135,46 @@ public abstract class AbstractDAO<T> {
 	@SuppressWarnings("unchecked")
 	protected T findByCode(String code) {
 		Object object = null;
-		if (code != null) {
-			log.trace("Session Creating");
-			Session session = getSession();
-			log.trace("Entity " + this.entityClass.getClass().getName() 
-					+ " Retriving");
-			object = session.createCriteria(this.entityClass)
-					.add(Restrictions.eq("code", code)).uniqueResult();
-			log.trace("Entity " + this.entityClass.getClass().getName()
-					+ " Retrived");
-			session.close();
-			log.trace("Session Closed");
+		Session session = null;
+		try {
+			if (code != null) {
+				log.trace("Session Creating");
+				session = getSession();
+				log.trace("Entity " + this.entityClass.getClass().getName()
+						+ " Retriving");
+				object = session.createCriteria(this.entityClass)
+						.add(Restrictions.eq("code", code)).uniqueResult();
+				log.trace("Entity " + this.entityClass.getClass().getName()
+						+ " Retrived");
+				session.close();
+				log.trace("Session Closed");
+			}
+		} catch (HibernateException hibernateException) {
+			log.error("Problem While Updating Entity " + entityClass.getName());
+			throw hibernateException;
+		} finally {
+			closeSession(session);
 		}
 		return (T) object;
 	}
 
 	protected void remove(T entity) {
-		if (entity != null) {
-			log.trace("Session Creating");
-			Session session = getSession();
-			log.trace("Entity " + entity.getClass().getName() + " Removing");
-			session.delete(entity);
-			log.trace("Entity " + entity.getClass().getName() + " Removed");
-			session.close();
-			log.trace("Session Closed");
+		Session session = null;
+		try {
+			if (entity != null) {
+				log.trace("Session Creating");
+				session = getSession();
+				log.trace("Entity " + entity.getClass().getName() + " Removing");
+				session.delete(entity);
+				log.trace("Entity " + entity.getClass().getName() + " Removed");
+				session.close();
+				log.trace("Session Closed");
+			}
+		} catch (HibernateException hibernateException) {
+			log.error("Problem While Updating Entity " + entityClass.getName());
+			throw hibernateException;
+		} finally {
+			closeSession(session);
 		}
 	}
 
@@ -153,32 +209,47 @@ public abstract class AbstractDAO<T> {
 		 * { handleException(e); } finally {
 		 * HibernateFactory.close(getSession()); } }
 		 */
-	protected Object find(Serializable id) {
+	@SuppressWarnings("unchecked")
+	protected T findById(Serializable id) {
 		Object obj = null;
+		Session session = null;
 		try {
-			Session session = getSession();
+			log.trace("Session Creating");
+			session = getSession();
+			log.trace("Entity " + this.entityClass.getClass().getName()
+					+ " Retriving");
 			obj = session.load(this.entityClass, id);
+			log.trace("Entity " + this.entityClass.getClass().getName()
+					+ " Retrived");
 			session.close();
+			log.trace("Session Closed");
 		} catch (HibernateException e) {
 			handleException(e);
 		} finally {
-			// HibernateFactory.close(getSession());
+			closeSession(session);
 		}
-		return obj;
+		return (T) obj;
 	}
 
 	protected List<T> findAll() {
 		List objects = null;
-		log.trace("Session Creating");
-		Session session = getSession();
-		log.trace("Query Creating for Execution");
-		Query query = session.createQuery("from "
-				+ (this.entityClass.getName()));
-		log.trace("Query Created for Execution");
-		objects = query.list();
-		log.trace("Entites Retrieved Successfully");
-		session.close();
-		log.trace("Session Closed");
+		Session session = null;
+		try {
+			log.trace("Session Creating");
+			session = getSession();
+			log.trace("Query Creating for Execution");
+			Query query = session.createQuery("from "
+					+ (this.entityClass.getName()));
+			log.trace("Query Created for Execution");
+			objects = query.list();
+			log.trace("Entites Retrieved Successfully");
+			session.close();
+			log.trace("Session Closed");
+		} catch (HibernateException e) {
+			handleException(e);
+		} finally {
+			closeSession(session);
+		}
 		return (List<T>) objects;
 	}
 

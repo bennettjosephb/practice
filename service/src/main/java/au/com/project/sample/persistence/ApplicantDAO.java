@@ -10,7 +10,7 @@ public interface ApplicantDAO
     public void editApplicant(Applicant applicant);
     public void removeApplicant(Applicant applicant);
     public void updateSalary(Long salary, Applicant applicant);
-    public Applicant findCabin(Long pKey);
+    public Applicant findApplicant(Long pKey);
     public void updateLocation(String location, Applicant applicant);
     public void updateLocation(String location, Long applicantId);
     public void addLocation(String location, Long applicantId);

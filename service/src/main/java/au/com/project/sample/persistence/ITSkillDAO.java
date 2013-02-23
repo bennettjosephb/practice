@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface ITSkillDAO {
 
-    void createITSkill(ITSkill iTSkill);
+	ITSkill createITSkill(ITSkill iTSkill);
 
     void editITSkill(ITSkill iTSkill);
 

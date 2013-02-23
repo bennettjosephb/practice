@@ -4,28 +4,80 @@
  */
 package au.com.project.sample.process.impl;
 
-import au.com.project.sample.domain.ITSkill;
-import au.com.project.sample.process.ITSkillController;
 import java.util.List;
 
+import au.com.project.sample.domain.ITSkill;
+import au.com.project.sample.persistence.ApplicantDAO;
+import au.com.project.sample.persistence.ITSkillDAO;
+import au.com.project.sample.process.ITSkillController;
+import au.com.project.sample.process.impl.dto.ITSkillDTO;
+
 /**
- *
+ * 
  * @author SONY
  */
-public class ITSkillControllerImpl  implements ITSkillController{
+public class ITSkillControllerImpl implements ITSkillController {
 
-    public void createITSkill(ITSkill iTSkill){}
+	private ITSkillDAO itSkillDAO;
 
-    public void editITSkill(ITSkill iTSkill){}
+	private ApplicantDAO applicantDAO;
 
-    public void removeITSkill(ITSkill iTSkill){}
+	private ITSkillDTO populateITSkillDTO(ITSkill iTSkill) {
+		ITSkillDTO itSkillDTO = new ITSkillDTO();
+		itSkillDTO.setApplicantId(iTSkill.getApplicant().getId());
+		itSkillDTO.setExperienceMonth(iTSkill.getExperienceMonth());
+		itSkillDTO.setExperienceYear(iTSkill.getExperienceYear());
+		itSkillDTO.setId(iTSkill.getId());
+		itSkillDTO.setLastUsed(iTSkill.getLastUsed());
+		itSkillDTO.setName(iTSkill.getName());
+		itSkillDTO.setVersion(iTSkill.getVersion());
+		return itSkillDTO;
+	}
 
-    public ITSkill findITSkill(Object id){return null;}
+	private ITSkill populateITSkillDTO(ITSkillDTO iTSkillDTO) {
+		ITSkill itSkill = new ITSkill();
+		itSkill.setExperienceMonth(iTSkillDTO.getExperienceMonth());
+		itSkill.setExperienceYear(iTSkillDTO.getExperienceYear());
+		itSkill.setId(iTSkillDTO.getId());
+		itSkill.setLastUsed(iTSkillDTO.getLastUsed());
+		itSkill.setName(iTSkillDTO.getName());
+		itSkill.setVersion(iTSkillDTO.getVersion());
+		return itSkill;
+	}
 
-    public List<ITSkill> findAllITSkill(){return null;}
+	public ITSkillDTO createITSkill(ITSkillDTO iTSkillDTO) {
+		return populateITSkillDTO(itSkillDAO
+				.createITSkill(populateITSkillDTO(iTSkillDTO)));
+	}
 
-    public List<ITSkill> findRangeITSkill(int[] range){return null;}
+	public void editITSkill(ITSkillDTO iTSkillDTO) {
+	}
 
-    public int countITSkill(){return 0;}
-    
+	public void removeITSkill(ITSkillDTO iTSkillDTO) {
+	}
+
+	public ITSkillDTO findITSkill(Object id) {
+		return null;
+	}
+
+	public List<ITSkillDTO> findAllITSkill() {
+		return null;
+	}
+
+	public List<ITSkillDTO> findRangeITSkill(int[] range) {
+		return null;
+	}
+
+	public int countITSkill() {
+		return 0;
+	}
+
+	public ITSkillDAO getItSkillDAO() {
+		return itSkillDAO;
+	}
+
+	public void setItSkillDAO(ITSkillDAO itSkillDAO) {
+		this.itSkillDAO = itSkillDAO;
+	}
+
 }

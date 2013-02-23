@@ -21,8 +21,8 @@ public class ApplicantDAOImpl  extends AbstractDAO<Applicant> implements Applica
 		return saveOrUpdate(applicant);
 	}
 
-	public Applicant findCabin(Long pKey) {
-		return null;
+	public Applicant findApplicant(Long pKey) {
+		return find(pKey);
 	}
 
 	public void updateSalary(Long salary, Applicant applicant) {
