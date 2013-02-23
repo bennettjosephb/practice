@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface MaritalStatusDAO {
 
-    void createMaritalStatus(MaritalStatus maritalStatus);
+	MaritalStatus createMaritalStatus(MaritalStatus maritalStatus);
 
     void editMaritalStatus(MaritalStatus maritalStatus);
 

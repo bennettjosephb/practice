@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface ApplicationUserDAO {
 
-    void createApplicationUser(ApplicationUser applicationUser);
+	ApplicationUser createApplicationUser(ApplicationUser applicationUser);
 
     void editApplicationUser(ApplicationUser applicationUser);
 

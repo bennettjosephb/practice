@@ -36,8 +36,8 @@ public class EducationSummaryDAOImpl extends AbstractDAO<EducationSummary> imple
         super(EducationSummary.class);
     }
 
-    public void createEducationSummary(EducationSummary educationSummary) {
-        saveOrUpdate(educationSummary);
+    public EducationSummary createEducationSummary(EducationSummary educationSummary) {
+        return saveOrUpdate(educationSummary);
     }
 
     public void editEducationSummary(EducationSummary educationSummary) {

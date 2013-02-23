@@ -30,10 +30,10 @@ public class ApplicationUserDAOImpl extends AbstractDAO<ApplicationUser>
 		super(ApplicationUser.class);
 	}
 
-	public void createApplicationUser(ApplicationUser applicationUser) {
+	public ApplicationUser createApplicationUser(ApplicationUser applicationUser) {
 		log.info("Creating Application User");
-		saveOrUpdate(applicationUser);
-		log.info("Application User Created");
+		return saveOrUpdate(applicationUser);
+		// log.info("Application User Created");
 	}
 
 	public void editApplicationUser(ApplicationUser applicationUser) {

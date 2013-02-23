@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import au.com.project.sample.domain.Country;
 import au.com.project.sample.persistence.AbstractDAO;
 import au.com.project.sample.persistence.CountryDAO;
-import au.com.project.sample.process.impl.CountryControllerImpl;
 
 public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 
@@ -28,11 +27,11 @@ public class CountryDAOImpl extends AbstractDAO<Country> implements CountryDAO {
 		super(Country.class);
 	}
 
-	public void createCountry(Country country) {
+	public Country createCountry(Country country) {
 		log.trace("Converting the code to Upper Case");
 		country.setCode(country.getCode().toUpperCase());
 		log.trace("Persisting Country Entity");
-		saveOrUpdate(country);
+		return saveOrUpdate(country);
 	}
 
 	public void editCountry(Country country) {

@@ -15,7 +15,7 @@ import au.com.project.sample.domain.AuthenticationRole;
 
 public interface AuthenticationRoleDAO {
 
-    void createAuthenticationRole(AuthenticationRole authenticationRole);
+	AuthenticationRole createAuthenticationRole(AuthenticationRole authenticationRole);
 
     void editAuthenticationRole(AuthenticationRole authenticationRole);
 

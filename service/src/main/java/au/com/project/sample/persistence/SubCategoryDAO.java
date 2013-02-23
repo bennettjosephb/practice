@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface SubCategoryDAO {
 
-    void createSubCategory(SubCategory subCategory);
+	SubCategory createSubCategory(SubCategory subCategory);
 
     void editSubCategory(SubCategory subCategory);
 

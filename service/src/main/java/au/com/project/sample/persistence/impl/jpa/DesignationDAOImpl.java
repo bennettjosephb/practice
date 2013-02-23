@@ -40,8 +40,8 @@ public class DesignationDAOImpl extends AbstractDAO<Designation> implements
 		super(Designation.class);
 	}
 
-	public void createDesignation(Designation designation) {
-		saveOrUpdate(designation);
+	public Designation createDesignation(Designation designation) {
+		return saveOrUpdate(designation);
 	}
 
 	public void editDesignation(Designation designation) {

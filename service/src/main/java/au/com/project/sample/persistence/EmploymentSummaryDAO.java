@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface EmploymentSummaryDAO {
 
-    void createEmploymentSummary(EmploymentSummary employmentSummary);
+	EmploymentSummary createEmploymentSummary(EmploymentSummary employmentSummary);
 
     void editEmploymentSummary(EmploymentSummary employmentSummary);
 

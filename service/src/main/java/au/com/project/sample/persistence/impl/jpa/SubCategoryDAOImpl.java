@@ -39,8 +39,8 @@ public class SubCategoryDAOImpl extends AbstractDAO<SubCategory> implements
 		super(SubCategory.class);
 	}
 
-	public void createSubCategory(SubCategory subCategory) {
-		saveOrUpdate(subCategory);
+	public SubCategory createSubCategory(SubCategory subCategory) {
+		return saveOrUpdate(subCategory);
 	}
 
 	public void editSubCategory(SubCategory subCategory) {

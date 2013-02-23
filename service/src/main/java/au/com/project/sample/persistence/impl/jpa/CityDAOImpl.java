@@ -29,9 +29,9 @@ public class CityDAOImpl extends AbstractDAO<City> implements CityDAO {
 		super(City.class);
 	}
 
-	public void createCity(City city) {
+	public City createCity(City city) {
 		city.setCode(city.getCode().toUpperCase());
-		saveOrUpdate(city);
+		return saveOrUpdate(city);
 	}
 
 	public void editCity(City city) {

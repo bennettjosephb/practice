@@ -32,8 +32,8 @@ public class CurrencyDAOImpl extends AbstractDAO<Currency> implements CurrencyDA
         super(Currency.class);
     }
 
-    public void createCurrency(Currency currency) {
-        saveOrUpdate(currency);
+    public Currency createCurrency(Currency currency) {
+        return saveOrUpdate(currency);
     }
 
 //    public Location findLocation(Long pKey)

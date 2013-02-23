@@ -33,8 +33,8 @@ public class EmploymentRoleDAOImpl extends AbstractDAO<EmploymentRole> implement
         super(EmploymentRole.class);
     }
 
-    public void createEmploymentRole(EmploymentRole employmentRole) {
-        saveOrUpdate(employmentRole);
+    public EmploymentRole createEmploymentRole(EmploymentRole employmentRole) {
+        return saveOrUpdate(employmentRole);
     }
 
     public void editEmploymentRole(EmploymentRole employmentRole) {

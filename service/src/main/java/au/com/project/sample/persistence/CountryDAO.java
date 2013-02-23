@@ -16,7 +16,7 @@ import java.util.List;
 
 public interface CountryDAO {
 
-    void createCountry(Country country);
+	Country createCountry(Country country);
 
     void editCountry(Country country);
 

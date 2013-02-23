@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface CategoryDAO {
 
-    void createCategory(Category category);
+	Category createCategory(Category category);
 
     void editCategory(Category category);
 

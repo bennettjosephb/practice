@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface PersonDAO {
 
-    void createPerson(Person person);
+	Person createPerson(Person person);
 
     void editPerson(Person person);
 

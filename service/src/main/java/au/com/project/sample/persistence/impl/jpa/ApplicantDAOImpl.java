@@ -17,8 +17,8 @@ public class ApplicantDAOImpl  extends AbstractDAO<Applicant> implements Applica
 		super(Applicant.class);
 	}
 
-	public void createApplicant(Applicant applicant) {
-		saveOrUpdate(applicant);
+	public Applicant createApplicant(Applicant applicant) {
+		return saveOrUpdate(applicant);
 	}
 
 	public Applicant findCabin(Long pKey) {

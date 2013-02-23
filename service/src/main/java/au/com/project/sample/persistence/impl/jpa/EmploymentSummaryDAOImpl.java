@@ -36,8 +36,8 @@ public class EmploymentSummaryDAOImpl extends AbstractDAO<EmploymentSummary>
 		super(EmploymentSummary.class);
 	}
 
-	public void createEmploymentSummary(EmploymentSummary employmentSummary) {
-		saveOrUpdate(employmentSummary);
+	public EmploymentSummary createEmploymentSummary(EmploymentSummary employmentSummary) {
+		return saveOrUpdate(employmentSummary);
 	}
 
 	public void editEmploymentSummary(EmploymentSummary employmentSummary) {

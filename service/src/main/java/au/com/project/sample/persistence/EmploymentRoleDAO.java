@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface EmploymentRoleDAO {
 
-    void createEmploymentRole(EmploymentRole employmentRole);
+	EmploymentRole createEmploymentRole(EmploymentRole employmentRole);
 
     void editEmploymentRole(EmploymentRole employmentRole);
 

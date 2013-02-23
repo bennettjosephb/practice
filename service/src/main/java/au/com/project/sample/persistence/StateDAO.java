@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface StateDAO {
 
-    void createState(State state);
+	State createState(State state);
 
     void editState(State state);
 

@@ -15,7 +15,7 @@ import au.com.project.sample.domain.City;
 
 public interface CityDAO {
 
-    void createCity(City city);
+	City createCity(City city);
 
     void editCity(City city);
 

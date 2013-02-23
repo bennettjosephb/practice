@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CurrencyDAO {
 
-    public void createCurrency(Currency currency);
+    public Currency createCurrency(Currency currency);
 
     public void editCurrency(Currency currency);
 

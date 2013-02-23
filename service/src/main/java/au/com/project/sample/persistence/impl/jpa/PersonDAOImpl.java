@@ -36,8 +36,8 @@ public class PersonDAOImpl extends AbstractDAO<Person> implements PersonDAO {
 		super(Person.class);
 	}
 
-	public void createPerson(Person person) {
-		saveOrUpdate(person);
+	public Person createPerson(Person person) {
+		return saveOrUpdate(person);
 	}
 
 	public void editPerson(Person person) {

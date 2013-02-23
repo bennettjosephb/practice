@@ -27,8 +27,9 @@ public class AuthenticationRoleDAOImpl extends AbstractDAO<AuthenticationRole>
 		super(AuthenticationRole.class);
 	}
 
-	public void createAuthenticationRole(AuthenticationRole authenticationRole) {
-		saveOrUpdate(authenticationRole);
+	public AuthenticationRole createAuthenticationRole(
+			AuthenticationRole authenticationRole) {
+		return saveOrUpdate(authenticationRole);
 	}
 
 	public void editAuthenticationRole(AuthenticationRole authenticationRole) {

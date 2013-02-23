@@ -24,9 +24,9 @@ public class StateDAOImpl extends AbstractDAO<State> implements StateDAO {
 		super(State.class);
 	}
 
-	public void createState(State state) {
+	public State createState(State state) {
 		state.setCode(state.getCode().toUpperCase());
-		saveOrUpdate(state);
+		return saveOrUpdate(state);
 	}
 
 	public void editState(State state) {

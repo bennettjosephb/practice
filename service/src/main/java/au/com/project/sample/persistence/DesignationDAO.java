@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface DesignationDAO {
 
-    void createDesignation(Designation designation);
+	Designation createDesignation(Designation designation);
 
     void editDesignation(Designation designation);
 

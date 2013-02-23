@@ -30,8 +30,8 @@ public class CategoryDAOImpl extends AbstractDAO<Category> implements
 		super(Category.class);
 	}
 
-	public void createCategory(Category category) {
-		saveOrUpdate(category);
+	public Category createCategory(Category category) {
+		return saveOrUpdate(category);
 	}
 
 	public void editCategory(Category category) {

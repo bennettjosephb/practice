@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface EducationSummaryDAO {
 
-    void createEducationSummary(EducationSummary educationSummary);
+	EducationSummary createEducationSummary(EducationSummary educationSummary);
 
     void editEducationSummary(EducationSummary educationSummary);
 

@@ -33,8 +33,8 @@ public class MaritalStatusDAOImpl extends AbstractDAO<MaritalStatus> implements 
         super(MaritalStatus.class);
     }
 
-    public void createMaritalStatus(MaritalStatus maritalStatus) {
-        saveOrUpdate(maritalStatus);
+    public MaritalStatus createMaritalStatus(MaritalStatus maritalStatus) {
+        return saveOrUpdate(maritalStatus);
     }
 
     public void editMaritalStatus(MaritalStatus maritalStatus) {

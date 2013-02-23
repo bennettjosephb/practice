@@ -6,7 +6,7 @@ import au.com.project.sample.domain.Location;
 
 public interface ApplicantDAO
 {
-    public void createApplicant(Applicant applicant);
+    public Applicant createApplicant(Applicant applicant);
     public void editApplicant(Applicant applicant);
     public void removeApplicant(Applicant applicant);
     public void updateSalary(Long salary, Applicant applicant);
