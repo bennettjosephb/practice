@@ -103,6 +103,8 @@ public class Applicant extends Person implements Serializable {
 	private TotalExperience totalExperience = new TotalExperience();
 	@OneToOne(mappedBy = "applicant")
 	private ApplicationUser applicationUser;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "applicant")
+	private List<ITSkill> iTSkill = new ArrayList<ITSkill>();
 
 	@Override
 	public int hashCode() {

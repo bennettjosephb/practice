@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/account/UpdateITSkill/UpdateITSkillResponse/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/account/UpdateITSkill/UpdateITSkillResponse/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Response/v1"
+	xmlns:pref1="http://www.sample.project.com.au/common/message/ResponseMessage/v1"
+	xmlns:pref2="http://www.sample.project.com.au/registration/model/City/v1" xmlns:pref3="http://www.sample.project.com.au/services/model/ITSkillInfo/v1">
+
+	<import
+		schemaLocation="../../../../common/messages/1.0/Response.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Response/v1">
+	</import>
+	<import
+		schemaLocation="../../../../common/messages/1.0/ResponseMessage.xsd"
+		namespace="http://www.sample.project.com.au/common/message/ResponseMessage/v1">
+	</import>
+	<import schemaLocation="../../../model/ITSkillInfo/1.0/ITSkillInfo.xsd" namespace="http://www.sample.project.com.au/services/model/ITSkillInfo/v1"></import>
+	<complexType name="UpdateITSkillResponse">
+		<complexContent>
+			<extension base="pref1:ResponseMessage">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<sequence>
+								<element name="status" type="boolean"></element>
+								<element name="description"
+									type="string">
+								</element>
+								<element name="iTSkillInfo"
+									type="pref3:ITSkillInfo">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+
+	<element name="updateITSkillResponse"
+		type="tns:UpdateITSkillResponse">
+	</element>
+
+</schema>

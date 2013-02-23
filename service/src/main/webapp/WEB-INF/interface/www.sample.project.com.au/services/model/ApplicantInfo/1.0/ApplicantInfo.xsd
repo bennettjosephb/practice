@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/ITSkillInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/ITSkillInfo/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/services/model/Gender/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/model/EducationType/v1" xmlns:pref2="http://www.sample.project.com.au/services/model/SalaryInfo/v1">
+	<import schemaLocation="../../EducationType/1.0/EducationType.xsd"
+		namespace="http://www.sample.project.com.au/services/model/EducationType/v1">
+	</import>
+	<import schemaLocation="../../SalaryInfo/1.0/SalaryInfo.xsd" namespace="http://www.sample.project.com.au/services/model/SalaryInfo/v1"></import>
+	<complexType name="ITSkillInfo">
+		<sequence>
+			<element name="id" type="long"></element>
+			<element name="name" type="string" />
+			<element name="version" type="string" />
+			<element name="lastUsed" type="int" nillable="true"/>
+			<element name="experienceYear" type="int" nillable="true"/>
+			<element name="experienceMonth" type="int" nillable="true"/>
+		</sequence>
+	</complexType>
+</schema>

@@ -10,147 +10,168 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
- *
+ * 
  * @author SONY
  */
 @Entity
 @Table(name = "PROJECT_IT_SKILL")
-@SequenceGenerator(name="IT_SKILL_SEQUENCE",
-                   sequenceName="IT_SKILL_SEQUENCE")
+@SequenceGenerator(name = "IT_SKILL_SEQUENCE", sequenceName = "IT_SKILL_SEQUENCE")
 public class ITSkill implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @return the serialVersionUID
-     */
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-    @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="IT_SKILL_SEQUENCE")
-    @Column(name = "IT_SKI_ID")
-    private Long id;
-    
-    @Column(name = "IT_SKI_NAME")
-    private String name;
-    
-    @Column(name = "IT_SKI_VERSION")
-    private String version;
-    
-    @Column(name = "IT_SKI_LAST_USED")
-    private Integer lastUsed;
-    
-    @Column(name = "IT_SKI_EXP_YEAR")
-    private Integer experienceYear;
-    
-    @Column(name = "IT_SKI_EXP_MONTH")
-    private Integer experienceMonth;
-    
-    public Long getId() {
-        return id;
-    }
+	/**
+	 * @return the serialVersionUID
+	 */
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "IT_SKILL_SEQUENCE")
+	@Column(name = "IT_SKI_ID")
+	private Long id;
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
+	@Column(name = "IT_SKI_NAME")
+	private String name;
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Certification)) {
-            return false;
-        }
-        ITSkill other = (ITSkill) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
+	@Column(name = "IT_SKI_VERSION")
+	private String version;
 
-    @Override
-    public String toString() {
-        return "com.mycompany.domain.Certfication[ id=" + id + " ]";
-    }
+	@Column(name = "IT_SKI_LAST_USED")
+	private Integer lastUsed;
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
+	@Column(name = "IT_SKI_EXP_YEAR")
+	private Integer experienceYear;
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
+	@Column(name = "IT_SKI_EXP_MONTH")
+	private Integer experienceMonth;
 
-    /**
-     * @return the version
-     */
-    public String getVersion() {
-        return version;
-    }
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "APP_ID")
+	private Applicant applicant;
 
-    /**
-     * @param version the version to set
-     */
-    public void setVersion(String version) {
-        this.version = version;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    /**
-     * @return the lastUsed
-     */
-    public Integer getLastUsed() {
-        return lastUsed;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    /**
-     * @param lastUsed the lastUsed to set
-     */
-    public void setLastUsed(Integer lastUsed) {
-        this.lastUsed = lastUsed;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 0;
+		hash += (id != null ? id.hashCode() : 0);
+		return hash;
+	}
 
-    /**
-     * @return the experienceYear
-     */
-    public Integer getExperienceYear() {
-        return experienceYear;
-    }
+	@Override
+	public boolean equals(Object object) {
+		// TODO: Warning - this method won't work in the case the id fields are
+		// not set
+		if (!(object instanceof Certification)) {
+			return false;
+		}
+		ITSkill other = (ITSkill) object;
+		if ((this.id == null && other.id != null)
+				|| (this.id != null && !this.id.equals(other.id))) {
+			return false;
+		}
+		return true;
+	}
 
-    /**
-     * @param experienceYear the experienceYear to set
-     */
-    public void setExperienceYear(Integer experienceYear) {
-        this.experienceYear = experienceYear;
-    }
+	@Override
+	public String toString() {
+		return "com.mycompany.domain.Certfication[ id=" + id + " ]";
+	}
 
-    /**
-     * @return the experienceMonth
-     */
-    public Integer getExperienceMonth() {
-        return experienceMonth;
-    }
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * @param experienceMonth the experienceMonth to set
-     */
-    public void setExperienceMonth(Integer experienceMonth) {
-        this.experienceMonth = experienceMonth;
-    }
-    
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the version
+	 */
+	public String getVersion() {
+		return version;
+	}
+
+	/**
+	 * @param version
+	 *            the version to set
+	 */
+	public void setVersion(String version) {
+		this.version = version;
+	}
+
+	/**
+	 * @return the lastUsed
+	 */
+	public Integer getLastUsed() {
+		return lastUsed;
+	}
+
+	/**
+	 * @param lastUsed
+	 *            the lastUsed to set
+	 */
+	public void setLastUsed(Integer lastUsed) {
+		this.lastUsed = lastUsed;
+	}
+
+	/**
+	 * @return the experienceYear
+	 */
+	public Integer getExperienceYear() {
+		return experienceYear;
+	}
+
+	/**
+	 * @param experienceYear
+	 *            the experienceYear to set
+	 */
+	public void setExperienceYear(Integer experienceYear) {
+		this.experienceYear = experienceYear;
+	}
+
+	/**
+	 * @return the experienceMonth
+	 */
+	public Integer getExperienceMonth() {
+		return experienceMonth;
+	}
+
+	/**
+	 * @param experienceMonth
+	 *            the experienceMonth to set
+	 */
+	public void setExperienceMonth(Integer experienceMonth) {
+		this.experienceMonth = experienceMonth;
+	}
+
+	public Applicant getApplicant() {
+		return applicant;
+	}
+
+	public void setApplicant(Applicant applicant) {
+		this.applicant = applicant;
+	}
+
 }

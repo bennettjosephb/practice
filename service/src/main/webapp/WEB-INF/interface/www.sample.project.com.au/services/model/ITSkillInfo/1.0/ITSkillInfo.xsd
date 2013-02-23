@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/ITSkillInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/ITSkillInfo/v1"
+	elementFormDefault="qualified">
+	<complexType name="ITSkillInfo">
+		<sequence>
+			<element name="id" type="long" nillable="true"></element>
+			<element name="name" type="string" />
+			<element name="version" type="string" />
+			<element name="lastUsed" type="int" nillable="true" />
+			<element name="experienceYear" type="int" nillable="true" />
+			<element name="experienceMonth" type="int" nillable="true" />
+			<element name="applicantId" type="long" nillable="true"></element>
+		</sequence>
+	</complexType>
+</schema>
