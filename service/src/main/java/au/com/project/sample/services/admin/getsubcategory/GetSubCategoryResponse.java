@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import au.com.project.sample.common.message.ResponseMessage;
-import au.com.project.sample.services.model.subcategoryinfo.v1.SubCategoryInfo;
+import au.com.project.sample.services.model.SubCategoryInfo;
 
 
 /**

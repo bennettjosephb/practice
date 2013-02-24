@@ -27,7 +27,7 @@
 								<element name="description"
 									type="string">
 								</element>
-								<element name="roles" type="pref3:RoleInfo">
+								<element name="roles" type="pref3:RoleInfo" maxOccurs="unbounded" minOccurs="0">
 								</element>
 							</sequence>
 						</complexType>

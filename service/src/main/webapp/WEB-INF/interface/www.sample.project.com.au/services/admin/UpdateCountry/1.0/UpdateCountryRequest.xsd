@@ -18,7 +18,7 @@
 					<element name="message">
 						<complexType>
 							<sequence>
-								<element name="cityInfo"
+								<element name="countryInfo"
 									type="pref2:CountryInfo">
 								</element>
 							</sequence>

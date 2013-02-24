@@ -4,11 +4,14 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
 
 public class DeleteITSkillImpl implements DeleteITSkill {
 	
+	@Autowired
 	private DeleteITSkillManager deleteITSkillManager;
 
 	@WebResult(name = "deleteITSkillResponse", targetNamespace = "http://www.sample.project.com.au/services/account/DeleteITSkill/DeleteITSkillResponse/v1", partName = "response")
@@ -16,8 +19,7 @@ public class DeleteITSkillImpl implements DeleteITSkill {
 	public DeleteITSkillResponse deleteITSkill(
 			@WebParam(partName = "request", name = "deleteITSkillRequest", targetNamespace = "http://www.sample.project.com.au/services/account/DeleteITSkill/DeleteITSkillRequest/v1") DeleteITSkillRequest request)
 			throws BusinessFault, TechnicalFault {
-		// TODO Auto-generated method stub
-		return null;
+		return deleteITSkillManager.deleteITSkillResponse(request);
 	}
 
 	public DeleteITSkillManager getDeleteITSkillManager() {

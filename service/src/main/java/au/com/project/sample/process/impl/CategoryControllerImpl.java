@@ -26,6 +26,7 @@ public class CategoryControllerImpl implements CategoryController {
 
 		category.setName(categoryDTO.getName());
 		category.setCode(categoryDTO.getCode());
+		category.setId(categoryDTO.getId());
 
 		return category;
 	}
@@ -38,6 +39,7 @@ public class CategoryControllerImpl implements CategoryController {
 	}
 
 	public void deleteCategory(CategoryDTO categoryDTO) {
+		categoryDAO.deleteCategory(updateCountry(categoryDTO));
 	}
 
 	public CategoryDTO findCategory(Object id) {

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import au.com.project.sample.process.ITSkillController;
 import au.com.project.sample.process.impl.dto.ITSkillDTO;
-import au.com.project.sample.services.model.itskillinfo.v1.ITSkillInfo;
+import au.com.project.sample.services.model.ITSkillInfo;
 
 public class CreateITSkillManager {
 

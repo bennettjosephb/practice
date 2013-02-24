@@ -28,7 +28,7 @@
 									type="string">
 								</element>
 								<element name="categories"
-									type="pref3:CategoryInfo">
+									type="pref3:CategoryInfo" maxOccurs="unbounded" minOccurs="0">
 								</element>
 							</sequence>
 						</complexType>

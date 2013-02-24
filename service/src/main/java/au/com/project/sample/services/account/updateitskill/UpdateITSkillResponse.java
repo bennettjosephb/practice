@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import au.com.project.sample.common.message.ResponseMessage;
-import au.com.project.sample.services.model.itskillinfo.v1.ITSkillInfo;
+import au.com.project.sample.services.model.ITSkillInfo;
 
 
 /**

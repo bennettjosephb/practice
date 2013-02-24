@@ -7,14 +7,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import au.com.project.sample.common.message.Request;
-import au.com.project.sample.services.model.countryinfo.v1.CountryInfo;
+import au.com.project.sample.services.model.CountryInfo;
 
 
 /**
  * <p>Java class for UpdateCountryRequest complex type.
- *
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- *
+ * 
  * <pre>
  * &lt;complexType name="UpdateCountryRequest">
  *   &lt;complexContent>
@@ -25,7 +25,7 @@ import au.com.project.sample.services.model.countryinfo.v1.CountryInfo;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="cityInfo" type="{http://www.sample.project.com.au/services/model/CountryInfo/v1}CountryInfo"/>
+ *                   &lt;element name="countryInfo" type="{http://www.sample.project.com.au/services/model/CountryInfo/v1}CountryInfo"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -36,8 +36,8 @@ import au.com.project.sample.services.model.countryinfo.v1.CountryInfo;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- *
- *
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UpdateCountryRequest", propOrder = {
@@ -52,11 +52,11 @@ public class UpdateCountryRequest
 
     /**
      * Gets the value of the message property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UpdateCountryRequest.Message }
-     *
+     *     
      */
     public UpdateCountryRequest.Message getMessage() {
         return message;
@@ -64,11 +64,11 @@ public class UpdateCountryRequest
 
     /**
      * Sets the value of the message property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UpdateCountryRequest.Message }
-     *
+     *     
      */
     public void setMessage(UpdateCountryRequest.Message value) {
         this.message = value;
@@ -77,54 +77,54 @@ public class UpdateCountryRequest
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="cityInfo" type="{http://www.sample.project.com.au/services/model/CountryInfo/v1}CountryInfo"/>
+     *         &lt;element name="countryInfo" type="{http://www.sample.project.com.au/services/model/CountryInfo/v1}CountryInfo"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "cityInfo"
+        "countryInfo"
     })
     public static class Message {
 
         @XmlElement(required = true)
-        protected CountryInfo cityInfo;
+        protected CountryInfo countryInfo;
 
         /**
-         * Gets the value of the cityInfo property.
-         *
+         * Gets the value of the countryInfo property.
+         * 
          * @return
          *     possible object is
          *     {@link CountryInfo }
-         *
+         *     
          */
-        public CountryInfo getCityInfo() {
-            return cityInfo;
+        public CountryInfo getCountryInfo() {
+            return countryInfo;
         }
 
         /**
-         * Sets the value of the cityInfo property.
-         *
+         * Sets the value of the countryInfo property.
+         * 
          * @param value
          *     allowed object is
          *     {@link CountryInfo }
-         *
+         *     
          */
-        public void setCityInfo(CountryInfo value) {
-            this.cityInfo = value;
+        public void setCountryInfo(CountryInfo value) {
+            this.countryInfo = value;
         }
 
     }

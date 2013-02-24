@@ -4,11 +4,14 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import au.com.project.sample.common.message.BusinessFault;
 import au.com.project.sample.common.message.TechnicalFault;
 
 public class CreateITSkillImpl implements CreateITSkill {
 
+	@Autowired
 	private CreateITSkillManager createITSkillManager;
 
 	@WebResult(name = "createITSkillResponse", targetNamespace = "http://www.sample.project.com.au/services/account/CreateITSkill/CreateITSkillResponse/v1", partName = "response")

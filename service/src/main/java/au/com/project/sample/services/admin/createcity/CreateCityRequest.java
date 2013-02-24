@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import au.com.project.sample.common.message.Request;
-import au.com.project.sample.services.model.cityinfo.v1.CityInfo;
+import au.com.project.sample.services.model.CityInfo;
 
 
 /**

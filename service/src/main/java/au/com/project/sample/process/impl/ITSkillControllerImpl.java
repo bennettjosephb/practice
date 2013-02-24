@@ -64,6 +64,8 @@ public class ITSkillControllerImpl implements ITSkillController {
 	}
 
 	public void deleteITSkill(ITSkillDTO iTSkillDTO) {
+		itSkillDAO
+		.deleteITSkill(populateITSkill(iTSkillDTO));
 	}
 
 	public ITSkillDTO findITSkill(Object id) {

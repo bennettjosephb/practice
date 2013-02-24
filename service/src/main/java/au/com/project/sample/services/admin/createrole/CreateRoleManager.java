@@ -21,14 +21,14 @@ public class CreateRoleManager {
 		createRoleResponse.setMessage(new CreateRoleResponse.Message());
 
 		authenticationRoleController
-				.createAuthenticationRole(updateRoleInfoDTO(createRoleRequest));
+				.createAuthenticationRole(populateRoleInfoDTO(createRoleRequest));
 
 		createRoleResponse.getMessage().setStatus(true);
 
 		return createRoleResponse;
 	}
 
-	private AuthenticationRoleDTO updateRoleInfoDTO(
+	private AuthenticationRoleDTO populateRoleInfoDTO(
 			CreateRoleRequest createRoleRequest) {
 		AuthenticationRoleDTO authenticationRoleDTO = new AuthenticationRoleDTO();
 
