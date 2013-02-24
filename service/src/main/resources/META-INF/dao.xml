@@ -8,6 +8,14 @@
 
 	<import resource="classpath:META-INF/datasource.xml" />
 
+	<bean id="applicantDAO"
+		class="au.com.project.sample.persistence.impl.jpa.ApplicantDAOImpl">
+	</bean>
+
+	<bean id="itSkillDAO"
+		class="au.com.project.sample.persistence.impl.jpa.ITSkillDAOImpl">
+	</bean>
+
 	<bean id="employmentSummaryDAO"
 		class="au.com.project.sample.persistence.impl.jpa.EmploymentSummaryDAOImpl">
 	</bean>

@@ -18,7 +18,7 @@
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 
-	<jaxws:endpoint
+	<!--jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/registration/services/GetCountry/v1"
 		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
 		implementor="#getCountry" serviceName="tns:GetCountry"
@@ -26,7 +26,7 @@
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxws:features>
-	</jaxws:endpoint>
+	</jaxws:endpoint-->
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/registration/services/SaveCountry/v1"
@@ -70,9 +70,39 @@
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateRole/v1"
-		id="CreateRoleService" address="/CreateRoleService" endpointName="tns:CreateRoleSOAP"
+		id="createRoleService" address="/CreateRoleService" endpointName="tns:CreateRoleSOAP"
 		implementor="#createRole" serviceName="tns:CreateRole"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateRole/1.0/CreateRole.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+	
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetRole/v1"
+		id="getRoleService" address="/GetRoleService" endpointName="tns:GetRoleSOAP"
+		implementor="#getRole" serviceName="tns:GetRole"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetRole/1.0/GetRole.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateRole/v1"
+		id="updateRoleService" address="/UpdateRoleService" endpointName="tns:UpdateRoleSOAP"
+		implementor="#updateRole" serviceName="tns:UpdateRole"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateRole/1.0/UpdateRole.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteRole/v1"
+		id="deleteRoleService" address="/DeleteRoleService" endpointName="tns:DeleteRoleSOAP"
+		implementor="#deleteRole" serviceName="tns:DeleteRole"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteRole/1.0/DeleteRole.wsdl">
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxws:features>
@@ -80,7 +110,7 @@
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCurrency/v1"
-		id="CreateCurrencyService" address="/CreateCurrencyService" endpointName="tns:CreateCurrencySOAP"
+		id="createCurrencyService" address="/CreateCurrencyService" endpointName="tns:CreateCurrencySOAP"
 		implementor="#createCurrency" serviceName="tns:CreateCurrency"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCurrency/1.0/CreateCurrency.wsdl">
 		<jaxws:features>
@@ -89,8 +119,38 @@
 	</jaxws:endpoint>
 
 	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetCurrency/v1"
+		id="getCurrencyService" address="/GetCurrencyService" endpointName="tns:GetCurrencySOAP"
+		implementor="#getCurrency" serviceName="tns:GetCurrency"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetCurrency/1.0/GetCurrency.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateCurrency/v1"
+		id="updateCurrencyService" address="/UpdateCurrencyService" endpointName="tns:UpdateCurrencySOAP"
+		implementor="#updateCurrency" serviceName="tns:UpdateCurrency"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateCurrency/1.0/UpdateCurrency.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteCurrency/v1"
+		id="deleteCurrencyService" address="/DeleteCurrencyService" endpointName="tns:DeleteCurrencySOAP"
+		implementor="#deleteCurrency" serviceName="tns:DeleteCurrency"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteCurrency/1.0/DeleteCurrency.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCategory/v1"
-		id="CreateCategoryService" address="/CreateCategoryService" endpointName="tns:CreateCategorySOAP"
+		id="createCategoryService" address="/CreateCategoryService" endpointName="tns:CreateCategorySOAP"
 		implementor="#createCategory" serviceName="tns:CreateCategory"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCategory/1.0/CreateCategory.wsdl">
 		<jaxws:features>
@@ -99,8 +159,38 @@
 	</jaxws:endpoint>
 
 	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetCategory/v1"
+		id="getCategoryService" address="/GetCategoryService" endpointName="tns:GetCategorySOAP"
+		implementor="#getCategory" serviceName="tns:GetCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetCategory/1.0/GetCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateCategory/v1"
+		id="updateCategoryService" address="/UpdateCategoryService" endpointName="tns:UpdateCategorySOAP"
+		implementor="#updateCategory" serviceName="tns:UpdateCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateCategory/1.0/UpdateCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteCategory/v1"
+		id="deleteCategoryService" address="/DeleteCategoryService" endpointName="tns:DeleteCategorySOAP"
+		implementor="#deleteCategory" serviceName="tns:DeleteCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteCategory/1.0/DeleteCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateSubCategory/v1"
-		id="CreateSubCategoryService" address="/CreateSubCategoryService" endpointName="tns:CreateSubCategorySOAP"
+		id="createSubCategoryService" address="/CreateSubCategoryService" endpointName="tns:CreateSubCategorySOAP"
 		implementor="#createSubCategory" serviceName="tns:CreateSubCategory"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateSubCategory/1.0/CreateSubCategory.wsdl">
 		<jaxws:features>
@@ -109,8 +199,38 @@
 	</jaxws:endpoint>
 
 	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetSubCategory/v1"
+		id="getSubCategoryService" address="/GetSubCategoryService" endpointName="tns:GetSubCategorySOAP"
+		implementor="#getSubCategory" serviceName="tns:GetSubCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetSubCategory/1.0/GetSubCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateSubCategory/v1"
+		id="updateSubCategoryService" address="/UpdateSubCategoryService" endpointName="tns:UpdateSubCategorySOAP"
+		implementor="#updateSubCategory" serviceName="tns:UpdateSubCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateSubCategory/1.0/UpdateSubCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteSubCategory/v1"
+		id="deleteSubCategoryService" address="/DeleteSubCategoryService" endpointName="tns:DeleteSubCategorySOAP"
+		implementor="#deleteSubCategory" serviceName="tns:DeleteSubCategory"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteSubCategory/1.0/DeleteSubCategory.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateDesignation/v1"
-		id="CreateDesignationService" address="/CreateDesignationService" endpointName="tns:CreateDesignationSOAP"
+		id="createDesignationService" address="/CreateDesignationService" endpointName="tns:CreateDesignationSOAP"
 		implementor="#createDesignation" serviceName="tns:CreateDesignation"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateDesignation/1.0/CreateDesignation.wsdl">
 		<jaxws:features>
@@ -119,8 +239,38 @@
 	</jaxws:endpoint>
 
 	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteDesignation/v1"
+		id="deleteDesignationService" address="/DeleteDesignationService" endpointName="tns:DeleteDesignationSOAP"
+		implementor="#deleteDesignation" serviceName="tns:DeleteDesignation"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteDesignation/1.0/DeleteDesignation.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetDesignation/v1"
+		id="getDesignationService" address="/GetDesignationService" endpointName="tns:GetDesignationSOAP"
+		implementor="#getDesignation" serviceName="tns:GetDesignation"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetDesignation/1.0/GetDesignation.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateDesignation/v1"
+		id="updateDesignationService" address="/UpdateDesignationService" endpointName="tns:UpdateDesignationSOAP"
+		implementor="#updateDesignation" serviceName="tns:UpdateDesignation"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateDesignation/1.0/UpdateDesignation.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/account/CreateEducationSummary/v1"
-		id="CreateEducationSummaryService" address="/CreateEducationSummaryService" endpointName="tns:CreateEducationSummarySOAP"
+		id="createEducationSummaryService" address="/CreateEducationSummaryService" endpointName="tns:CreateEducationSummarySOAP"
 		implementor="#createEducationSummary" serviceName="tns:CreateEducationSummary"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateEducationSummary/1.0/CreateEducationSummary.wsdl">
 		<jaxws:features>
@@ -130,7 +280,7 @@
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/account/CreateEmploymentSummary/v1"
-		id="CreateEmploymentSummaryService" address="/CreateEmploymentSummaryService" endpointName="tns:CreateEmploymentSummarySOAP"
+		id="createEmploymentSummaryService" address="/CreateEmploymentSummaryService" endpointName="tns:CreateEmploymentSummarySOAP"
 		implementor="#createEmploymentSummary" serviceName="tns:CreateEmploymentSummary"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/CreateEmploymentSummary/1.0/CreateEmploymentSummary.wsdl">
 		<jaxws:features>
@@ -140,7 +290,7 @@
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/account/UpdateEmploymentSummary/v1"
-		id="UpdateEmploymentSummaryService" address="/UpdateEmploymentSummaryService" endpointName="tns:UpdateEmploymentSummarySOAP"
+		id="updateEmploymentSummaryService" address="/UpdateEmploymentSummaryService" endpointName="tns:UpdateEmploymentSummarySOAP"
 		implementor="#updateEmploymentSummary" serviceName="tns:UpdateEmploymentSummary"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/UpdateEmploymentSummary/1.0/UpdateEmploymentSummary.wsdl">
 		<jaxws:features>
@@ -150,9 +300,169 @@
 
 	<jaxws:endpoint
 		xmlns:tns="http://www.sample.project.com.au/services/account/DeleteEmploymentSummary/v1"
-		id="DeleteEmploymentSummaryService" address="/DeleteEmploymentSummaryService" endpointName="tns:DeleteEmploymentSummarySOAP"
+		id="deleteEmploymentSummaryService" address="/DeleteEmploymentSummaryService" endpointName="tns:DeleteEmploymentSummarySOAP"
 		implementor="#deleteEmploymentSummary" serviceName="tns:DeleteEmploymentSummary"
 		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/account/DeleteEmploymentSummary/1.0/DeleteEmploymentSummary.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCountry/v1"
+		id="createCountryService" address="/CreateCountryService" endpointName="tns:CreateCountrySOAP"
+		implementor="#createCountry" serviceName="tns:CreateCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCountry/1.0/CreateCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetCountry/v1"
+		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
+		implementor="#getCountry" serviceName="tns:GetCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetCountry/1.0/GetCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateCountry/v1"
+		id="updateCountryService" address="/UpdateCountryService" endpointName="tns:UpdateCountrySOAP"
+		implementor="#updateCountry" serviceName="tns:UpdateCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateCountry/1.0/UpdateCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteCountry/v1"
+		id="deleteCountryService" address="/DeleteCountryService" endpointName="tns:DeleteCountrySOAP"
+		implementor="#deleteCountry" serviceName="tns:DeleteCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteCountry/1.0/DeleteCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCountry/v1"
+		id="createCountryService" address="/CreateCountryService" endpointName="tns:CreateCountrySOAP"
+		implementor="#createCountry" serviceName="tns:CreateCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCountry/1.0/CreateCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetCountry/v1"
+		id="getCountryService" address="/GetCountryService" endpointName="tns:GetCountrySOAP"
+		implementor="#getCountry" serviceName="tns:GetCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetCountry/1.0/GetCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateCountry/v1"
+		id="updateCountryService" address="/UpdateCountryService" endpointName="tns:UpdateCountrySOAP"
+		implementor="#updateCountry" serviceName="tns:UpdateCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateCountry/1.0/UpdateCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteCountry/v1"
+		id="deleteCountryService" address="/DeleteCountryService" endpointName="tns:DeleteCountrySOAP"
+		implementor="#deleteCountry" serviceName="tns:DeleteCountry"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteCountry/1.0/DeleteCountry.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateState/v1"
+		id="createStateService" address="/CreateStateService" endpointName="tns:CreateStateSOAP"
+		implementor="#createState" serviceName="tns:CreateState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateState/1.0/CreateState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetState/v1"
+		id="getStateService" address="/GetStateService" endpointName="tns:GetStateSOAP"
+		implementor="#getState" serviceName="tns:GetState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetState/1.0/GetState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateState/v1"
+		id="updateStateService" address="/UpdateStateService" endpointName="tns:UpdateStateSOAP"
+		implementor="#updateState" serviceName="tns:UpdateState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateState/1.0/UpdateState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteState/v1"
+		id="deleteStateService" address="/DeleteStateService" endpointName="tns:DeleteStateSOAP"
+		implementor="#deleteState" serviceName="tns:DeleteState"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteState/1.0/DeleteState.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/CreateCity/v1"
+		id="createCityService" address="/CreateCityService" endpointName="tns:CreateCitySOAP"
+		implementor="#createCity" serviceName="tns:CreateCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/CreateCity/1.0/CreateCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/GetCity/v1"
+		id="getCityService" address="/GetCityService" endpointName="tns:GetCitySOAP"
+		implementor="#getCity" serviceName="tns:GetCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/GetCity/1.0/GetCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateCity/v1"
+		id="updateCityService" address="/UpdateCityService" endpointName="tns:UpdateCitySOAP"
+		implementor="#updateCity" serviceName="tns:UpdateCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/UpdateCity/1.0/UpdateCity.wsdl">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+
+	<jaxws:endpoint
+		xmlns:tns="http://www.sample.project.com.au/services/admin/DeleteCity/v1"
+		id="deleteCityService" address="/DeleteCityService" endpointName="tns:DeleteCitySOAP"
+		implementor="#deleteCity" serviceName="tns:DeleteCity"
+		wsdlLocation="WEB-INF/interface/www.sample.project.com.au/services/admin/DeleteCity/1.0/DeleteCity.wsdl">
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxws:features>

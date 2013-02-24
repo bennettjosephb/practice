@@ -65,13 +65,13 @@ public class ApplicantDAOImpl extends AbstractDAO<Applicant> implements
 	}
 
 	@Override
-	protected SessionFactory getSessionFactory() {
+	public SessionFactory getSessionFactory() {
 		// TODO Auto-generated method stub
 		return sessionFactory;
 	}
 
 	@Override
-	protected void setSessionFactory(SessionFactory sessionFactory) {
+	public void setSessionFactory(SessionFactory sessionFactory) {
 		// TODO Auto-generated method stub
 		this.sessionFactory = sessionFactory;
 	}
