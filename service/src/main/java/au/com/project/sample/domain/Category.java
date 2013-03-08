@@ -25,7 +25,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PROJECT_CATEGORY")
-@SequenceGenerator(name = "CATEGORY_SEQUENCE", sequenceName = "CATEGORY_SEQUENCE")
 public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1"
+	elementFormDefault="qualified">
+	<simpleType name="AddressTypeInfo">
+		<restriction base="string">
+			<enumeration value="PERMANENT"/>
+			<enumeration value="TEMPORARY"/>
+			<enumeration value="OTHER"/>
+		</restriction>
+	</simpleType>
+</schema>

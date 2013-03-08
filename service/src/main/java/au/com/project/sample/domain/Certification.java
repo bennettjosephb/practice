@@ -5,12 +5,12 @@
 package au.com.project.sample.domain;
 
 import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -19,8 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PROJECT_CERTIFICATION")
-@SequenceGenerator(name="CERTIFICATION_SEQUENCE",
-                   sequenceName="CERTIFICATION_SEQUENCE")
 public class Certification implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -31,7 +29,7 @@ public class Certification implements Serializable {
         return serialVersionUID;
     }
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE, generator="CERTIFICATION_SEQUENCE")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "CER_ID")
     private Long id;
     

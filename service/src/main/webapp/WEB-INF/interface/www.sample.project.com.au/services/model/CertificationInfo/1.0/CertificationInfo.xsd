@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/CertificationInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/CertificationInfo/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1">
+	<import schemaLocation="../../AddressTypeInfo/1.0/AddressTypeInfo.xsd"
+		namespace="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1"></import>
+	<complexType name="CertificationInfo">
+		<sequence>
+			<element name="id" type="long" nillable="true">
+				<annotation>
+					<documentation>
+						Never Use Id attribute for Creating
+						Functionality.
+						Only Used to Retrieve, Update and
+						Delete.
+					</documentation>
+				</annotation>
+			</element>
+			<element name="name" type="string" nillable="true" />
+			<element name="version" type="string" nillable="true" />
+			<element name="lastUsed" type="string" />
+			<element name="experienceYear" type="string" />
+			<element name="experienceMonth" type="string" />
+		</sequence>
+	</complexType>
+</schema>

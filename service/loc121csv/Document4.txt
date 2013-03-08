@@ -1,0 +1,209 @@
+Afghanistan,Afghan afghani,AFN
+Albania,Albanian lek,ALL
+Algeria,Algerian dinar,DZD
+Andorra,European euro,EUR
+Angola,Angolan kwanza,AOA
+Anguilla,East Caribbean dollar,XCD
+Antigua and Barbuda,East Caribbean dollar,XCD
+Argentina,Argentine peso,ARS
+Armenia,Armenian dram,AMD
+Aruba,Aruban florin,AWG
+Australia,Australian dollar,AUD
+Austria,European euro,EUR
+Azerbaijan,Azerbaijani manat,AZN
+Bahamas,Bahamian dollar,BSD
+Bahrain,Bahraini dinar,BHD
+Bangladesh,Bangladeshi taka,BDT
+Barbados,Barbadian dollar,BBD
+Belarus,Belarusian ruble,BYR
+Belgium,European euro,EUR
+Belize,Belize dollar,BZD
+Benin,West African CFA franc,XOF
+Bhutan,Bhutanese ngultrum,BTN
+Bolivia,Bolivian boliviano,BOB
+Bosnia-Herzegovina,Bosnia and Herzegovina konvertibilna marka,BAM
+Botswana,Botswana pula,BWP
+Brazil,Brazilian real,BRL
+Brunei,Brunei dollar,BND
+Bulgaria,Bulgarian lev,BGN
+Burkina Faso,West African CFA franc,XOF
+Burundi,Burundi franc,BIF
+Cambodia,Cambodian riel,KHR
+Cameroon,Central African CFA franc,XAF
+Canada,Canadian dollar,CAD
+Cape Verde,Cape Verdean escudo,CVE
+Cayman Islands,Cayman Islands dollar,KYD
+Central African Republic,Central African CFA franc,XAF
+Chad,Central African CFA franc,XAF
+Chile,Chilean peso,CLP
+China,Chinese renminbi,CNY
+Colombia,Colombian peso,COP
+Comoros,Comorian franc,KMF
+Congo,Central African CFA franc,XAF
+Congo, Democratic Republic,Congolese franc,CDF
+Costa Rica,Costa Rican colon,CRC
+Côte d'Ivoire,West African CFA franc,XOF
+Croatia,Croatian kuna,HRK
+Cuba,Cuban peso,CUC
+Cyprus,European euro,EUR
+Czech Republic,Czech koruna,CZK
+Denmark,Danish krone,DKK
+Djibouti,Djiboutian franc,DJF
+Dominica,East Caribbean dollar,XCD
+Dominican Republic,Dominican peso,DOP
+East Timor,uses the U.S. Dollar,USD
+Ecuador,uses the U.S. Dollar,USD
+Egypt,Egyptian pound,EGP
+El Salvador,uses the U.S. Dollar,USD
+Equatorial Guinea,Central African CFA franc,GQE
+Eritrea,Eritrean nakfa,ERN
+Estonia,Estonian kroon,EEK
+Ethiopia,Ethiopian birr,ETB
+Falkland Islands,Falkland Islands pound,FKP
+Fiji,Fijian dollar,FJD
+Finland,European euro,EUR
+France,European euro,EUR
+French Polynesia,CFP franc,XPF
+Gabon,Central African CFA franc,XAF
+Gambia,Gambian dalasi,GMD
+Georgia,Georgian lari,GEL
+Germany,European euro,EUR
+Ghana,Ghanaian cedi,GHS
+Gibraltar,Gibraltar pound,GIP
+Greece,European euro,EUR
+Grenada,East Caribbean dollar,XCD
+Guatemala,Guatemalan quetzal,GTQ
+Guinea,Guinean franc,GNF
+Guinea-Bissau,West African CFA franc,XOF
+Guyana,Guyanese dollar,GYD
+Haiti,Haitian gourde,HTG
+Honduras,Honduran lempira,HNL
+Hong Kong,Hong Kong dollar,HKD
+Hungary,Hungarian forint,HUF
+Iceland,Icelandic króna,ISK
+India,Indian rupee,INR
+Indonesia,Indonesian rupiah,IDR
+International Monetary Fund,Special Drawing Rights,XDR
+Iran,Iranian rial,IRR
+Iraq,Iraqi dinar,IQD
+Ireland,European euro,EUR
+Israel,Israeli new sheqel,ILS
+Italy,European euro,EUR
+Jamaica,Jamaican dollar,JMD
+Japan,Japanese yen,JPY
+Jordan,Jordanian dinar,JOD
+Kazakhstan,Kazakhstani tenge,KZT
+Kenya,Kenyan shilling,KES
+Kiribati,Australian dollar,AUD
+Korea North,North Korean won,KPW
+Korea South,South Korean won,KRW
+Kuwait,Kuwaiti dinar,KWD
+Kyrgyzstan,Kyrgyzstani som,KGS
+Laos,Lao kip,LAK
+Latvia,Latvian lats,LVL
+Lebanon,Lebanese lira,LBP
+Lesotho,Lesotho loti,LSL
+Liberia,Liberian dollar,LRD
+Libya,Libyan dinar,LYD
+Liechtenstein,uses the Swiss Franc,CHF
+Lithuania,Lithuanian litas,LTL
+Luxembourg,European euro,EUR
+Macau,Macanese pataca,MOP
+Macedonia (Former Yug. Rep.),Macedonian denar,MKD
+Madagascar,Malagasy ariary,MGA
+Malawi,Malawian kwacha,MWK
+Malaysia,Malaysian ringgit,MYR
+Maldives,Maldivian rufiyaa,MVR
+Mali,West African CFA franc,XOF
+Malta,European Euro,EUR
+Mauritania,Mauritanian ouguiya,MRO
+Mauritius,Mauritian rupee,MUR
+Mexico,Mexican peso,MXN
+Micronesia,uses the U.S. Dollar,USD
+Moldova,Moldovan leu,MDL
+Monaco,European Euro,EUR
+Mongolia,Mongolian tugrik,MNT
+Montenegro,European Euro,EUR
+Montserrat,East Caribbean dollar,XCD
+Morocco,Moroccan dirham,MAD
+Mozambique,Mozambican metical,MZM
+Myanmar,Myanma kyat,MMK
+Namibia,Namibian dollar,NAD
+Nauru,Australian dollar,AUD
+Nepal,Nepalese rupee,NPR
+Netherlands Antilles,Netherlands Antillean gulden,ANG
+Netherlands,European euro,EUR
+New Caledonia,CFP franc,XPF
+New Zealand,New Zealand dollar,NZD
+Nicaragua,Nicaraguan cordoba,NIO
+Niger,West African CFA franc,XOF
+Nigeria,Nigerian naira,NGN
+Norway,Norwegian krone,NOK
+Oman,Omani rial,OMR
+Pakistan,Pakistani rupee,PKR
+Palau,uses the U.S. Dollar,USD
+Panama,Panamanian balboa,PAB
+Panama Canal Zone,uses the U.S. Dollar,USD
+Papua New Guinea,Papua New Guinean kina,PGK
+Paraguay,Paraguayan guarani,PYG
+Peru,Peruvian nuevo sol,PEN
+Philippines,Philippine peso,PHP
+Poland,Polish zloty,PLN
+Portugal,European euro,EUR
+Puerto Rico,uses the U.S. Dollar,USD
+Qatar,Qatari riyal,QAR
+Romania,Romanian leu,RON
+Russia,Russian ruble,RUB
+Rwanda,Rwandan franc,RWFSaint Helena,Saint Helena pound,SHP
+Saint Kitts and Nevis,East Caribbean dollar,XCD
+Saint Lucia,East Caribbean dollar,XCD
+Saint Vincent and the Grenadines,East Caribbean dollar,XCD
+Samoa (Western),Samoan tala,WST
+San Marino,European euro,EUR
+Sao Tome and Principe,Sao Tome and Principe dobra,STD
+Saudi Arabia,Saudi riyal,SAR
+Senegal,West African CFA franc,XOF
+Serbia,Serbian dinar,RSD
+Seychelles,Seychellois rupee,SCR
+Sierra Leone,Sierra Leonean leone,SLL
+Singapore,Singapore dollar,SGD
+Slovakia,Slovak koruna,SKK
+Slovenia,European euro,EUR
+Solomon Islands,Solomon Islands dollar,SBD
+Somalia,Somali shilling,SOS
+South Africa,South African rand,ZAR
+South Sudan,Sudanese pound,SDG
+Spain,European euro,EUR
+Sri Lanka,Sri Lankan rupee,LKR
+Sudan,Sudanese pound,SDG
+Suriname,Surinamese dollar,SRD
+Swaziland,Swazi lilangeni,SZL
+Sweden,Swedish krona,SEK
+Switzerland,Swiss franc,CHF
+Syria,Syrian pound,SYP
+Taiwan,New Taiwan dollar,TWD
+Tajikistan,Tajikistani somoni,TJS
+Tanzania,Tanzanian shilling,TZS
+Thailand,Thai baht,THB
+Togo,West African CFA franc,XOF
+Tonga,Paanga,TOP
+Trinidad and Tobago,Trinidad and Tobago dollar,TTD
+Tunisia,Tunisian dinar,TND
+Turkey,Turkish new lira,TRY
+Turkmenistan,Turkmen manat,TMM
+Tuvalu,Australian dollar,AUD
+Uganda,Ugandan shilling,UGX
+Ukraine,Ukrainian hryvnia,UAH
+United Arab Emirates,UAE dirham,AED
+United Kingdom,British pound,GBP
+United States of America,United States dollar,USD
+Uruguay,Uruguayan peso,UYU
+Uzbekistan,Uzbekistani som,UZS
+Vanuatu,Vanuatu vatu,VUV
+Vatican,European euro,EUR
+Venezuela,Venezuelan bolivar,VEB
+Vietnam,Vietnamese dong,VND
+Wallis and Futuna Islands,CFP franc,XPF
+Yemen,Yemeni rial,YER
+Zambia,Zambian kwacha,ZMK
+Zimbabwe,Zimbabwean dollar,ZWD

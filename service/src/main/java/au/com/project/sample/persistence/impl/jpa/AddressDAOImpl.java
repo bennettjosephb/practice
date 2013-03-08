@@ -28,10 +28,10 @@ public class AddressDAOImpl extends AbstractDAO<Address> implements AddressDAO {
 	}
 
 	public void createAddress(Address address) {
-		if (address.getCity().getId() == null) {
+/*		if (address.getCity().getId() == null) {
 			cityDAO.createCity(address.getCity());
 		}
-		saveOrUpdate(address);
+*/		saveOrUpdate(address);
 	}
 
 	public void updateAddress(Address address) {

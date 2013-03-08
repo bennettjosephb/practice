@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/SaveEducationInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/SaveEducationInfo/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1" xmlns:pref1="http://www.sample.project.com.au/services/model/EducationType/v1">
+	<import schemaLocation="../../EducationType/1.0/EducationType.xsd" namespace="http://www.sample.project.com.au/services/model/EducationType/v1"></import>
+	<complexType name="SaveEducationInfo">
+		<sequence>
+			<element name="id" type="long" nillable="true">
+				<annotation>
+					<documentation>
+						Never Use Id attribute for Creating
+						Functionality. Only Used to Retrieve, Update and
+						Delete.
+					</documentation>
+				</annotation>
+			</element>
+			<element name="fromDate" type="string" nillable="true" />
+			<element name="toDate" type="string" nillable="true" />
+			<element name="courseName" type="string" />
+			<element name="passingYear" type="string" nillable="true" />
+			<element name="institute" type="string" nillable="true" />
+			<element name="specialization" type="string"
+				nillable="true" />
+			<element name="educationType" type="pref1:EducationType" nillable="true" />
+			<element name="applicantId" type="long" nillable="true">
+			</element>
+		</sequence>
+	</complexType>
+</schema>

@@ -14,7 +14,6 @@ public class DeleteCityImpl implements DeleteCity {
 	public DeleteCityResponse deleteCity(
 			@WebParam(partName = "request", name = "deleteCityRequest", targetNamespace = "http://www.sample.project.com.au/registration/services/DeleteCity/DeleteCityRequest/v1") DeleteCityRequest request)
 			throws TechnicalFault, BusinessFault {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

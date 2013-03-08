@@ -4,14 +4,17 @@
 	xmlns:tns="http://www.sample.project.com.au/services/account/GetEducationSummary/GetEducationSummaryResponse/v1"
 	elementFormDefault="qualified"
 	xmlns:pref="http://www.sample.project.com.au/common/message/Response/v1"
-	xmlns:pref1="http://www.sample.project.com.au/common/message/ResponseMessage/v1">
+	xmlns:pref1="http://www.sample.project.com.au/common/message/ResponseMessage/v1" xmlns:pref2="http://www.sample.project.com.au/services/model/EducationSummaryInfo/v1">
 
-	<import schemaLocation="../../../../common/messages/1.0/Response.xsd"
+	<import
+		schemaLocation="../../../../common/messages/1.0/Response.xsd"
 		namespace="http://www.sample.project.com.au/common/message/Response/v1">
 	</import>
-	<import schemaLocation="../../../../common/messages/1.0/ResponseMessage.xsd"
+	<import
+		schemaLocation="../../../../common/messages/1.0/ResponseMessage.xsd"
 		namespace="http://www.sample.project.com.au/common/message/ResponseMessage/v1">
 	</import>
+	<import schemaLocation="../../../model/EducationSummaryInfo/1.0/EducationSummaryInfo.xsd" namespace="http://www.sample.project.com.au/services/model/EducationSummaryInfo/v1"></import>
 	<complexType name="GetEducationSummaryResponse">
 		<complexContent>
 			<extension base="pref1:ResponseMessage">
@@ -23,6 +26,9 @@
 								<element name="description"
 									type="string">
 								</element>
+								<element name="educationSummaryInfos"
+									type="pref2:EducationSummaryInfo" maxOccurs="unbounded" minOccurs="0">
+								</element>
 							</sequence>
 						</complexType>
 					</element>
@@ -32,6 +38,8 @@
 	</complexType>
 
 
-	<element name="getEducationSummaryResponse" type="tns:GetEducationSummaryResponse"></element>
+	<element name="getEducationSummaryResponse"
+		type="tns:GetEducationSummaryResponse">
+	</element>
 
 </schema>

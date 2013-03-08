@@ -8,6 +8,7 @@
 	<complexType name="Request">
 		<sequence>
 			<element name="header" type="pref:Header"></element>
+			<element name="serviceName" type="string"></element>
 		</sequence>
 	</complexType>
 </schema>

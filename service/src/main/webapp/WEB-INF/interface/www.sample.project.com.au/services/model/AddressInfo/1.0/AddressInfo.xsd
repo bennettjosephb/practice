@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/model/AddressInfo/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/model/AddressInfo/v1"
+	elementFormDefault="qualified" xmlns:pref="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1">
+	<import schemaLocation="../../AddressTypeInfo/1.0/AddressTypeInfo.xsd" namespace="http://www.sample.project.com.au/services/model/AddressTypeInfo/v1"></import>
+	<complexType name="AddressInfo">
+		<sequence>
+			<element name="id" type="long" nillable="true">
+				<annotation>
+					<documentation>
+						Never Use Id attribute for Creating
+						Functionality. Only Used to Retrieve, Update and
+						Delete.
+					</documentation>
+				</annotation>
+			</element>
+			<element name="number" type="string" nillable="true" />
+			<element name="street1" type="string" nillable="true" />
+			<element name="street2" type="string" />
+			<element name="city" type="string" nillable="true" />
+			<element name="state" type="string" nillable="true" />
+			<element name="country" type="string" nillable="true" />
+			<element name="postalCode" type="string" nillable="true" />
+			<element name="copyToTemporaryAddress" type="boolean"
+				nillable="true">
+			</element>
+			<element name="addressTypeInfo" type="pref:AddressTypeInfo"></element>
+		</sequence>
+	</complexType>
+</schema>

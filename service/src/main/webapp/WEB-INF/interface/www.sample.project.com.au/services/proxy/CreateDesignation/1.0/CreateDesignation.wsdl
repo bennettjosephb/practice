@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.sample.project.com.au/services/admin/CreateDesignation/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationRequest/v1"
+	xmlns:pref1="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationResponse/v1"
+	name="CreateDesignation"
+	targetNamespace="http://www.sample.project.com.au/services/admin/CreateDesignation/v1"
+	xmlns:fault="http://www.sample.project.com.au/common/message/FaultMessage/v1">
+	<wsdl:import location="../../../../common/messages/1.0/FaultMessage.wsdl"
+		namespace="http://www.sample.project.com.au/common/message/FaultMessage/v1"></wsdl:import>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.sample.project.com.au/services/admin/CreateDesignation/v1"
+			xmlns:pref="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationRequest/v1"
+			xmlns:pref1="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationResponse/v1"
+			xmlns:pref2="http://www.sample.project.com.au/common/message/TechnicalException/v1">
+			<xsd:import schemaLocation="CreateDesignationRequest.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationRequest/v1">
+			</xsd:import>
+			<xsd:import schemaLocation="CreateDesignationResponse.xsd"
+				namespace="http://www.sample.project.com.au/services/admin/CreateDesignation/CreateDesignationResponse/v1">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="createDesignationRequest">
+		<wsdl:part element="pref:createDesignationRequest" name="request" />
+	</wsdl:message>
+	<wsdl:message name="createDesignationResponse">
+		<wsdl:part element="pref1:createDesignationResponse" name="response" />
+	</wsdl:message>
+	<wsdl:portType name="CreateDesignation">
+		<wsdl:operation name="CreateDesignation">
+			<wsdl:input message="tns:createDesignationRequest" />
+			<wsdl:output message="tns:createDesignationResponse" />
+			<wsdl:fault name="technicalFault" message="fault:technicalFault" />
+			<wsdl:fault name="businessFault" message="fault:businessFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CreateDesignationSOAP" type="tns:CreateDesignation">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateDesignation">
+			<soap:operation
+				soapAction="http://www.sample.project.com.au/services/admin/CreateDesignation/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CreateDesignation">
+		<wsdl:port binding="tns:CreateDesignationSOAP" name="CreateDesignationSOAP">
+			<soap:address location="http://localhost/service/-1.0" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

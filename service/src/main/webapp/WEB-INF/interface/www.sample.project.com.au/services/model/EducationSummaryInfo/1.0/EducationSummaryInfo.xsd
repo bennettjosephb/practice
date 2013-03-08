@@ -15,6 +15,9 @@
 			<element name="institute" type="string" />
 			<element name="specialization" type="string" />
 			<element name="educationType" type="pref1:EducationType" />
+			<element name="applicantId" type="long"
+				nillable="true">
+			</element>
 		</sequence>
 	</complexType>
 </schema>

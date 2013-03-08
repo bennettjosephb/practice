@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/account/GetCertification/GetCertificationResponse/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/account/GetCertification/GetCertificationResponse/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Response/v1"
+	xmlns:pref1="http://www.sample.project.com.au/common/message/ResponseMessage/v1" xmlns:pref2="http://www.sample.project.com.au/services/model/CertificationInfo/v1">
+
+	<import
+		schemaLocation="../../../../common/messages/1.0/Response.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Response/v1">
+	</import>
+	<import
+		schemaLocation="../../../../common/messages/1.0/ResponseMessage.xsd"
+		namespace="http://www.sample.project.com.au/common/message/ResponseMessage/v1">
+	</import>
+	<import schemaLocation="../../../model/CertificationInfo/1.0/CertificationInfo.xsd" namespace="http://www.sample.project.com.au/services/model/CertificationInfo/v1"></import>
+	<complexType name="GetCertificationResponse">
+		<complexContent>
+			<extension base="pref1:ResponseMessage">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<sequence>
+								<element name="status" type="boolean"></element>
+								<element name="description"
+									type="string">
+								</element>
+								<element name="certificationInfos"
+									type="pref2:CertificationInfo" maxOccurs="unbounded" minOccurs="0">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+
+	<element name="getCertificationResponse" type="tns:GetCertificationResponse"></element>
+
+</schema>

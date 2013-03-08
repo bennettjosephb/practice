@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sample.project.com.au/services/admin/UpdateRole/UpdateRoleRequest/v1"
+	xmlns:tns="http://www.sample.project.com.au/services/admin/UpdateRole/UpdateRoleRequest/v1"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.sample.project.com.au/common/message/Request/v1" 
+	xmlns:pref1="http://www.sample.project.com.au/services/model/RoleInfo/v1">
+
+
+	<import schemaLocation="../../../../common/messages/1.0/Request.xsd"
+		namespace="http://www.sample.project.com.au/common/message/Request/v1">
+	</import>
+	<import schemaLocation="../../../model/RoleInfo/1.0/RoleInfo.xsd" namespace="http://www.sample.project.com.au/services/model/RoleInfo/v1"></import>
+	<complexType name="UpdateRoleRequest">
+		<complexContent>
+			<extension base="pref:Request">
+				<sequence>
+					<element name="message">
+						<complexType>
+							<sequence>
+								<element name="roleInfo"
+									type="pref1:RoleInfo">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="updateRoleRequest"
+		type="tns:UpdateRoleRequest">
+	</element>
+
+</schema>
