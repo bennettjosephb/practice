@@ -46,7 +46,7 @@
 					spacing="5" styleName="{createAccount.createAccountVerticalPanel}">
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Name" />
+							<g:Label><ui:msg key="name" description="Name">Name</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5" width="380px">
 								<g:Cell width="50%">
 									<g:FlowPanel>
@@ -66,7 +66,7 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Username" />
+							<g:Label><ui:msg key="username" description="User Name">Username</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
 								<g:TextBox styleName="{common.input}" visibleLength="54"
 									ui:field="username" />
@@ -76,7 +76,7 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Password" />
+							<g:Label><ui:msg key="password" description="Password">Password</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
 								<g:PasswordTextBox styleName="{common.input}"
 									visibleLength="54" ui:field="password" />
@@ -86,7 +86,7 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Confirm Password" />
+							<g:Label><ui:msg key="confirmPassword" description="Confirm Password">Confirm Password</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
 								<g:PasswordTextBox styleName="{common.input}"
 									visibleLength="54" ui:field="confirmPassword" />
@@ -96,9 +96,9 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Date Of Birth" />
+							<g:Label><ui:msg key="dob" description="Date Of Birth">Date Of Birth</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
-								<g:ListBox styleName="{style.styled-select}" width="120px"
+								<g:ListBox styleName="{common.select}" width="120px"
 									ui:field="monthBD" />
 								<g:IntegerBox styleName="{common.input}" width="115px"
 									ui:field="dateBD" />
@@ -110,9 +110,9 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Gender" />
+							<g:Label><ui:msg key="gender" description="Gender Details">Gender</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
-								<g:ListBox styleName="{style.styled-select}" width="370px"
+								<g:ListBox styleName="{common.select}" width="370px"
 									ui:field="gender" />
 							</g:HorizontalPanel>
 							<g:Label ui:field="genderErrorLabel" />
@@ -120,7 +120,7 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Location" />
+							<g:Label><ui:msg key="location" description="Location">Location</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
 								<g:SuggestBox styleName="{common.input}" width="370px"
 									ui:field="location" />
@@ -130,12 +130,22 @@
 					</g:Cell>
 					<g:Cell height="66px">
 						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
-							<g:Label text="Phone Number" />
+							<g:Label><ui:msg key="phoneNumber" description="Phone Number">Phone Number</ui:msg></g:Label>
 							<g:HorizontalPanel spacing="5">
 								<g:TextBox styleName="{common.input}" width="370px"
 									ui:field="phoneNumber" />
 							</g:HorizontalPanel>
 							<g:Label ui:field="phoneNumberErrorLabel" />
+						</g:HTMLPanel>
+					</g:Cell>
+					<g:Cell height="66px">
+						<g:HTMLPanel styleName="{createAccount.createAccountSpacing}">
+							<g:Label><ui:msg key="emailAddress" description="email Address">email Address</ui:msg></g:Label>
+							<g:HorizontalPanel spacing="5">
+								<g:TextBox styleName="{common.input}" width="370px"
+									ui:field="emailId" />
+							</g:HorizontalPanel>
+							<g:Label ui:field="emailIdErrorLabel" />
 						</g:HTMLPanel>
 					</g:Cell>
 					<g:Cell height="">

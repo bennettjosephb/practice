@@ -1,8 +1,6 @@
 package com.gwt.sample.client.login.createaccount.event;
 
 import com.google.gwt.event.shared.GwtEvent;
-import com.google.gwt.event.shared.EventHandler;
-import java.lang.String;
 import com.google.gwt.event.shared.HasHandlers;
 
 public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
@@ -11,7 +9,10 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	private String username;
 	private String password;
 	private String confirmPassword;
-	private String dateOfBirth;
+
+	private Integer date;
+	private Integer month;
+	private Integer year;
 	private String gender;
 	private String location;
 	private String phoneNumber;
@@ -19,18 +20,44 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	private String lastName;
 
 	public CreateAccountEvent(String username, String password,
-			String confirmPassword, String dateOfBirth, String gender,
-			String location, String phoneNumber, String firstName,
-			String lastName) {
+			String confirmPassword, Integer date, Integer month, Integer year,
+			String gender, String location, String phoneNumber,
+			String firstName, String lastName) {
 		this.username = username;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
-		this.dateOfBirth = dateOfBirth;
+		this.date = date;
+		this.month = month;
+		this.year = year;
 		this.gender = gender;
 		this.location = location;
 		this.phoneNumber = phoneNumber;
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+
+	public Integer getDate() {
+		return date;
+	}
+
+	public void setDate(Integer date) {
+		this.date = date;
+	}
+
+	public Integer getMonth() {
+		return month;
+	}
+
+	public void setMonth(Integer month) {
+		this.month = month;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 	public String getUsername() {
@@ -43,10 +70,6 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 
 	public String getConfirmPassword() {
 		return confirmPassword;
-	}
-
-	public String getDateOfBirth() {
-		return dateOfBirth;
 	}
 
 	public String getGender() {
@@ -84,11 +107,11 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	}
 
 	public static void fire(HasHandlers source, String username,
-			String password, String confirmPassword, String dateOfBirth,
-			String gender, String location, String phoneNumber,
-			String firstName, String lastName) {
+			String password, String confirmPassword, Integer date,
+			Integer month, Integer year, String gender, String location,
+			String phoneNumber, String firstName, String lastName) {
 		source.fireEvent(new CreateAccountEvent(username, password,
-				confirmPassword, dateOfBirth, gender, location, phoneNumber,
-				firstName, lastName));
+				confirmPassword, date, month, year, gender, location,
+				phoneNumber, firstName, lastName));
 	}
 }

@@ -116,9 +116,9 @@ public class CreateAccountDetailPresenter
 	Boolean phoneNumberTextBoxEntered = false;
 
 	Boolean firstNameTextBoxEntered = false;
-	
+
 	Boolean lastNameTextBoxEntered = false;
-	
+
 	DateTimeConstantsImpl dateTimeConstants;
 
 	CreateAccountConstants createAccountConstants;
@@ -307,8 +307,9 @@ public class CreateAccountDetailPresenter
 
 			@Override
 			public void onBlur(BlurEvent event) {
-				CreateAccountHelper.checkName(firstNameTextBoxEntered, lastNameTextBoxEntered, getView().getFirstName(), getView().getLastName(),
-						getView().getNameErrorLabel());
+				CreateAccountHelper.checkName(firstNameTextBoxEntered,
+						lastNameTextBoxEntered, getView().getFirstName(),
+						getView().getLastName(), getView().getNameErrorLabel());
 			}
 		});
 
@@ -324,8 +325,9 @@ public class CreateAccountDetailPresenter
 
 			@Override
 			public void onBlur(BlurEvent event) {
-				CreateAccountHelper.checkName(firstNameTextBoxEntered, lastNameTextBoxEntered, getView().getFirstName(), getView().getLastName(),
-						getView().getNameErrorLabel());
+				CreateAccountHelper.checkName(firstNameTextBoxEntered,
+						lastNameTextBoxEntered, getView().getFirstName(),
+						getView().getLastName(), getView().getNameErrorLabel());
 			}
 		});
 
@@ -336,18 +338,14 @@ public class CreateAccountDetailPresenter
 				CreateAccountEvent createAccountEvent = new CreateAccountEvent(
 						getView().getUsername().getText(), getView()
 								.getPassword().getText(), getView()
-								.getConfirmPassword().getText(), getView()
-								.getDateBD().getText()
-								+ "/"
-								+ getView().getMonthBD().getValue(
-										getView().getMonthBD()
-												.getSelectedIndex())
-								+ "/"
-								+ getView().getYearBD().getText(), getView()
-								.getGender().getItemText(
-										getView().getGender()
-												.getSelectedIndex()), getView()
-								.getLocation().getText(), getView()
+								.getConfirmPassword().getText(), Integer
+								.parseInt(getView().getDateBD().getText()),
+						Integer.parseInt(getView().getMonthBD().getValue(
+								getView().getMonthBD().getSelectedIndex())),
+						Integer.parseInt(getView().getYearBD().getText()),
+						getView().getGender().getItemText(
+								getView().getGender().getSelectedIndex()),
+						getView().getLocation().getText(), getView()
 								.getPhoneNumber().getText(), getView()
 								.getFirstName().getText(), getView()
 								.getLastName().getText());
@@ -370,18 +368,18 @@ public class CreateAccountDetailPresenter
 		public void onCreateAccount(CreateAccountEvent event) {
 			CreateAccountAction createAccountAction = new CreateAccountAction(
 					event.getUsername(), event.getPassword(),
-					event.getConfirmPassword(), event.getDateOfBirth(),
-					event.getGender(), event.getLocation(),
-					event.getPhoneNumber(), event.getFirstName(),
-					event.getLastName());
+					event.getConfirmPassword(), event.getDate(),
+					event.getMonth(), event.getYear(), event.getGender(),
+					event.getLocation(), event.getPhoneNumber(),
+					event.getFirstName(), event.getLastName());
 			validate();
 			dispatchAsync.execute(createAccountAction,
 					createAccountActionResult);
 		}
 	};
-	
-	private void validate(){
-		
+
+	private void validate() {
+
 	}
 
 	private final AsyncCallback<CreateAccountActionResult> createAccountActionResult = new AsyncCallback<CreateAccountActionResult>() {
@@ -389,11 +387,8 @@ public class CreateAccountDetailPresenter
 		@Override
 		public void onSuccess(CreateAccountActionResult result) {
 			if (result.getAccountedCreated()) {
-				// Window.alert("redirect"+GWT.getModuleBaseURL()+"#newURL");
-				// Window.Location.replace(GWT.getModuleBaseURL()+"#newURL");
 				History.newItem("homepage");
 			}
-			// Window.alert(result.getSessionId());
 		}
 
 		@Override

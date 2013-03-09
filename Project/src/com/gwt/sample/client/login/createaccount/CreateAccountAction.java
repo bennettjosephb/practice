@@ -1,15 +1,20 @@
 package com.gwt.sample.client.login.createaccount;
 
 import com.gwtplatform.dispatch.shared.ActionImpl;
-import com.gwt.sample.client.login.createaccount.CreateAccountActionResult;
-import java.lang.String;
 
 public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 
 	private String username;
 	private String password;
 	private String confirmPassword;
-	private String dateOfBirth;
+
+	public Integer getDate() {
+		return date;
+	}
+
+	private Integer date;
+	private Integer month;
+	private Integer year;
 	private String gender;
 	private String location;
 	private String phoneNumber;
@@ -20,25 +25,47 @@ public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 	private CreateAccountAction() {
 		// For serialization only
 	}
-	
+
 	@Override
 	public boolean isSecured() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	public CreateAccountAction(String username, String password,
-			String confirmPassword, String dateOfBirth, String gender,
-			String location, String phoneNumber, String firstName, String lastName) {
+			String confirmPassword, Integer date, Integer month, Integer year,
+			String gender, String location, String phoneNumber,
+			String firstName, String lastName) {
 		this.username = username;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
-		this.dateOfBirth = dateOfBirth;
+		this.date = date;
+		this.month = month;
+		this.year = year;
 		this.gender = gender;
 		this.location = location;
 		this.phoneNumber = phoneNumber;
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+
+	public void setDate(Integer date) {
+		this.date = date;
+	}
+
+	public Integer getMonth() {
+		return month;
+	}
+
+	public void setMonth(Integer month) {
+		this.month = month;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 	public String getUsername() {
@@ -51,10 +78,6 @@ public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 
 	public String getConfirmPassword() {
 		return confirmPassword;
-	}
-
-	public String getDateOfBirth() {
-		return dateOfBirth;
 	}
 
 	public String getGender() {
