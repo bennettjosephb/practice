@@ -9,7 +9,6 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	private String username;
 	private String password;
 	private String confirmPassword;
-
 	private Integer date;
 	private Integer month;
 	private Integer year;
@@ -18,11 +17,12 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	private String phoneNumber;
 	private String firstName;
 	private String lastName;
+	private String emailId;
 
 	public CreateAccountEvent(String username, String password,
 			String confirmPassword, Integer date, Integer month, Integer year,
 			String gender, String location, String phoneNumber,
-			String firstName, String lastName) {
+			String firstName, String lastName, String emailId) {
 		this.username = username;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
@@ -34,6 +34,15 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 		this.phoneNumber = phoneNumber;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.emailId = emailId;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 	public Integer getDate() {
@@ -109,9 +118,10 @@ public class CreateAccountEvent extends GwtEvent<CreateAccountHandler> {
 	public static void fire(HasHandlers source, String username,
 			String password, String confirmPassword, Integer date,
 			Integer month, Integer year, String gender, String location,
-			String phoneNumber, String firstName, String lastName) {
+			String phoneNumber, String firstName, String lastName,
+			String eMailId) {
 		source.fireEvent(new CreateAccountEvent(username, password,
 				confirmPassword, date, month, year, gender, location,
-				phoneNumber, firstName, lastName));
+				phoneNumber, firstName, lastName, eMailId));
 	}
 }

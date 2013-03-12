@@ -12,6 +12,7 @@ import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.i18n.client.constants.DateTimeConstantsImpl;
 import com.google.gwt.user.client.History;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.MultiWordSuggestOracle;
 import com.google.inject.Inject;
@@ -348,7 +349,8 @@ public class CreateAccountDetailPresenter
 						getView().getLocation().getText(), getView()
 								.getPhoneNumber().getText(), getView()
 								.getFirstName().getText(), getView()
-								.getLastName().getText());
+								.getLastName().getText(), getView()
+								.getEmailId().getText());
 				eventBus.fireEvent(createAccountEvent);
 			}
 		});
@@ -371,7 +373,8 @@ public class CreateAccountDetailPresenter
 					event.getConfirmPassword(), event.getDate(),
 					event.getMonth(), event.getYear(), event.getGender(),
 					event.getLocation(), event.getPhoneNumber(),
-					event.getFirstName(), event.getLastName());
+					event.getFirstName(), event.getLastName(),
+					event.getEmailId());
 			validate();
 			dispatchAsync.execute(createAccountAction,
 					createAccountActionResult);
@@ -386,8 +389,10 @@ public class CreateAccountDetailPresenter
 
 		@Override
 		public void onSuccess(CreateAccountActionResult result) {
-			if (result.getAccountedCreated()) {
+			if (result.getStatus()) {
 				History.newItem("homepage");
+			} else {
+				Window.alert(result.getDescription());
 			}
 		}
 

@@ -20,6 +20,16 @@ public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 	private String phoneNumber;
 	private String firstName;
 	private String lastName;
+	private String emailId;
+	
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
 
 	@SuppressWarnings("unused")
 	private CreateAccountAction() {
@@ -34,7 +44,7 @@ public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 	public CreateAccountAction(String username, String password,
 			String confirmPassword, Integer date, Integer month, Integer year,
 			String gender, String location, String phoneNumber,
-			String firstName, String lastName) {
+			String firstName, String lastName, String emailId) {
 		this.username = username;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
@@ -46,6 +56,7 @@ public class CreateAccountAction extends ActionImpl<CreateAccountActionResult> {
 		this.phoneNumber = phoneNumber;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.emailId = emailId;
 	}
 
 	public void setDate(Integer date) {
