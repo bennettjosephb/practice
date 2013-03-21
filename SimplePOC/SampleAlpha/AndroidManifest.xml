@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.com.mobileroo.kidsalpha"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.LearnUpperCaseActivity"
+            android:label="@string/title_activity_learn_upper_case" >
+        </activity>
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.LearnLowerCaseActivity"
+            android:label="@string/title_activity_learn_lower_case" >
+        </activity>
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.MatchCaseGameActivity"
+            android:label="@string/title_activity_match_case_game" >
+        </activity>
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.GuessAlphabetActivity"
+            android:label="@string/title_activity_guess_alphabet" >
+        </activity>
+        <activity
+            android:name="au.com.mobileroo.kidsalpha.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>

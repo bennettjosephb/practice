@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_guess_alphabet_box"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".GuessAlphabetActivity" >
+
+    <TextView
+        android:id="@+id/suggetion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="@string/missingAlphabet"
+        android:textIsSelectable="true" />
+
+    <RelativeLayout
+        android:id="@+id/answers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/suggetion" >
+
+        <View
+            android:id="@+id/strut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/GuessOptionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/strut"
+            android:layout_below="@+id/suggetion"
+            android:background="@drawable/button_orange"
+            android:onClick="button1Pressed" >
+        </Button>
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/GuessOptionButton"
+            android:layout_alignLeft="@id/strut"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/button1"
+            android:background="@drawable/button_blue"
+            android:onClick="button2Pressed" >
+        </Button>
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/GuessOptionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/strut"
+            android:layout_below="@+id/button1"
+            android:background="@drawable/button_green"
+            android:onClick="button3Pressed" >
+        </Button>
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/GuessOptionButton"
+            android:layout_alignLeft="@id/strut"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/button2"
+            android:layout_toRightOf="@+id/button3"
+            android:background="@drawable/button_pink"
+            android:onClick="button4Pressed" >
+        </Button>
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/GuessOptionButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/strut"
+            android:layout_below="@+id/button3"
+            android:background="@drawable/button_yellow"
+            android:onClick="button5Pressed" >
+        </Button>
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/GuessOptionButton"
+            android:layout_alignLeft="@id/strut"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/button3"
+            android:background="@drawable/button_purple"
+            android:onClick="button6Pressed" >
+        </Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answers"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/home"
+            style="@style/HomeButton"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/answers"
+            android:background="@drawable/button_red"
+            android:onClick="home"
+            android:text="@string/home" >
+        </Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp" >
+
+        <Button
+            android:id="@+id/question1"
+            style="@style/QuestionButton"
+            android:background="@drawable/button_orange" />
+
+        <Button
+            android:id="@+id/question2"
+            style="@style/QuestionButton"
+            android:layout_toRightOf="@+id/question1"
+            android:background="@drawable/button_green" />
+
+        <Button
+            android:id="@+id/question3"
+            style="@style/QuestionButton"
+            android:layout_toRightOf="@+id/question2"
+            android:background="@drawable/button_blue" />
+    </RelativeLayout>
+
+</RelativeLayout>

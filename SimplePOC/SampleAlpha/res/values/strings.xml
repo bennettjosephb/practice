@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kids Alpha</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="learnUpperCase">LEARN UPPERCASE</string>
+    <string name="missingAlphabet">The Missing Alphabet is ...</string>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="GuessOptionButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="QuestionButton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HomeButton">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <string name="title_activity_learn_upper_case">LearnUpperCaseActivity</string>
+    <string name="title_activity_learn_lower_case">LearnLowerCaseActivity</string>
+    <string name="title_activity_match_case_game">MatchCaseGameActivity</string>
+    <string name="title_activity_guess_alphabet">GuessAlphabetActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+</resources>
