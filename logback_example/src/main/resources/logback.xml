@@ -4,11 +4,22 @@
 		<file>myLogFile.log</file>
 		<append>true</append>
 		<encoder>
-			<pattern>%d [%thread] %-5level  %logger{35} - %msg%n</pattern>
+			<pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
 		</encoder>
 	</appender>
-	
+
+	<appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+		<connectionSource
+			class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+			<driverClass>com.mysql.jdbc.Driver</driverClass>
+			<url>jdbc:mysql://localhost:3306/testing</url>
+			<user>testing</user>
+			<password>testing</password>
+		</connectionSource>
+	</appender>
+
 	<root level="TRACE">
 		<appender-ref ref="fileAppender" />
+		<appender-ref ref="DB" />
 	</root>
 </configuration>
