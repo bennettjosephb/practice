@@ -2,12 +2,10 @@ package au.com.showcase.application;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.ResourceBundle;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,6 +42,9 @@ public class SampleReport extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		Connection conn = null;
+		JRExporter exporter = null;
+		OutputStream ouputStream = response.getOutputStream();
+
 		try {
 
 			// this code deals with get the database configuration information
@@ -65,16 +66,13 @@ public class SampleReport extends HttpServlet {
 			JasperPrint jasperPrint = null;
 
 			HashMap<String, Object> data = new HashMap<String, Object>();
-			
+
 			System.out.println(data);
 			System.out.println(conn);
 			System.out.println(path);
 
-			jasperPrint = JasperFillManager.fillReport(path, data, conn);
+			jasperPrint = JasperFillManager.fillReport(path, null, conn);
 
-			OutputStream ouputStream = response.getOutputStream();
-
-			JRExporter exporter = null;
 
 			response.setContentType("application/pdf");
 
@@ -91,8 +89,9 @@ public class SampleReport extends HttpServlet {
 		}// try
 
 		catch (SQLException | ClassNotFoundException e) {
-			System.out.println("In Reports_VoucherRecharges.jsp:Connection not gotted: "
-					+ e);
+			System.out
+					.println("In Reports_VoucherRecharges.jsp:Connection not gotted: "
+							+ e);
 
 		}// catch
 		catch (JRException e) {
@@ -100,6 +99,43 @@ public class SampleReport extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		try {
+
+			exporter.exportReport();
+
+		} catch (JRException e) {
+			throw new ServletException(e);
+
+		} finally {
+			/* Added for the Audi Trail purpose */
+			if (conn != null) {
+
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+
+					e.printStackTrace();
+
+				}
+
+			}
+			if (ouputStream != null) {
+
+				try {
+
+					ouputStream.close();
+
+				} catch (IOException ex) {
+
+					ex.printStackTrace();
+
+				}
+			}
+		}
+
+		exporter = null;
 	}
 
 	/**
