@@ -61,7 +61,7 @@ public class App {
 
 		idProof.setName("PASSPORT");
 
-		userProfile.save(customer);
+		userProfile.save(customer, idProof);
 
 		//userProfile.delete(customer);
 

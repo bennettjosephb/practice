@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import au.com.showcase.application.dao.AddressDao;
 import au.com.showcase.application.dao.CustomerDao;
@@ -62,6 +63,7 @@ public class UserProfileImpl implements UserProfile {
 		return customerDao.findByCustomerMobile(customerMobile);
 	}
 
+	@Transactional
 	public void save(Customer customer, IDProof idProof) {
 		customerDao.save(customer);
 
@@ -71,9 +73,8 @@ public class UserProfileImpl implements UserProfile {
 		//
 		// customer.setIdProof(list);
 
-		// idProof.setCustomer(customer);
-
-		//idProofDao.save(idProof);
+		idProof.setCustomer(customer);
+		idProofDao.save(null);
 
 	}
 }
