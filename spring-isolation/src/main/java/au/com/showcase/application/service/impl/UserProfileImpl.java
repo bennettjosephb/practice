@@ -1,8 +1,5 @@
 package au.com.showcase.application.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -74,7 +71,8 @@ public class UserProfileImpl implements UserProfile {
 		// customer.setIdProof(list);
 
 		idProof.setCustomer(customer);
-		idProofDao.save(null);
+		idProofDao.save(idProof);
+		// idProofDao.save(null); // FOR GENERATING EXCEPTION
 
 	}
 }
