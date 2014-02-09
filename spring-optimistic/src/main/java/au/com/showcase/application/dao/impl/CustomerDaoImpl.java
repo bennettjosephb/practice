@@ -15,7 +15,8 @@ public class CustomerDaoImpl extends CustomHibernateDaoSupport implements
 		CustomerDao {
 
 	public Long save(Customer stock) {
-		return (Long) getHibernateTemplate().save(stock);
+		getHibernateTemplate().saveOrUpdate(stock);
+		return (Long) 1l;
 	}
 
 	public void update(Customer stock) {
@@ -37,11 +38,7 @@ public class CustomerDaoImpl extends CustomHibernateDaoSupport implements
 		List<Customer> list = (List<Customer>) getHibernateTemplate().find(
 				"from Customer where mobileNumber=?", stockCode);
 
-		for (Iterator iterator = list.iterator(); iterator.hasNext();) {
-			Customer customer = (Customer) iterator.next();
-			System.out.println(customer);
-			System.out.println("=================");
-		}
+		System.out.println(list.get(0));
 		return list.get(0);
 	}
 

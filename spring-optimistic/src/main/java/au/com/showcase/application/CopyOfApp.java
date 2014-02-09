@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import au.com.showcase.application.bo.StockBo;
+import au.com.showcase.application.model.Customer;
 import au.com.showcase.application.model.Stock;
 import au.com.showcase.application.service.UserProfile;
 
@@ -17,13 +18,26 @@ public class CopyOfApp {
 				"spring/config/BeanLocations.xml");
 
 		StockBo stockBo = (StockBo) appContext.getBean("stockBo");
-		UserProfile userProfile = (UserProfile) appContext.getBean("userProfile");
+		UserProfile userProfile = (UserProfile) appContext
+				.getBean("userProfile");
+
+		Customer customer = new Customer();
+
+		customer = userProfile.findByCustomerMobile("20340324803210");
+		customer.setFirstName("MODIFED");
+
+		try {
+			Thread.sleep(10000);
+		} catch (Exception e) {
+
+		}
+
+		userProfile.save(customer);
 
 		/** insert **/
 		Stock stock = new Stock();
 		stock.setStockCode("7668");
-		
-		
+
 		stock.setStockName("HAIO");
 		stockBo.save(stock);
 
@@ -33,10 +47,10 @@ public class CopyOfApp {
 
 		/** update **/
 		stock2.setStockName("HAIO-1");
-		//stockBo.update(stock2);
+		// stockBo.update(stock2);
 
 		/** delete **/
-		//stockBo.delete(stock2);
+		// stockBo.delete(stock2);
 
 		System.out.println("Done");
 	}

@@ -25,53 +25,58 @@ public class App {
 		UserProfile userProfile = (UserProfile) appContext
 				.getBean("userProfile");
 
-		Customer customer = new Customer();
+		Customer customer = null;
 
 		// customer.setAddress(address);
 
-		customer.setDob(Calendar.getInstance());
-		customer.setEmailId("hai@gmail.com");
-		customer.setFirstName("Bennet");
-		customer.setLastName("Xavier");
-		customer.setGender(Gender.MALE);
-		customer.setMobileNumber("20340324803210");
-		customer.setPhoneNumber("203403248032");
-		customer.setNationality("INININ");
-		customer.setName("Summa1");
-		customer.setValue("Value1");
-		customer.setCreatedDate(Calendar.getInstance());
-		customer.setCreatedTime(Calendar.getInstance());
+//		customer.setDob(Calendar.getInstance());
+//		customer.setEmailId("hai@gmail.com");
+//		customer.setFirstName("Bennet");
+//		customer.setLastName("Xavier");
+//		customer.setGender(Gender.MALE);
+//		customer.setMobileNumber("20340324803210");
+//		customer.setPhoneNumber("203403248032");
+//		customer.setNationality("INININ");
+//		customer.setName("Summa1");
+//		customer.setValue("Value1");
+//		customer.setCreatedDate(Calendar.getInstance());
+//		customer.setCreatedTime(Calendar.getInstance());
 		// customer.setIdProof(idProof);
 
 		// Long longId = userProfile.save(customer);
 
-		System.out.println(customer.getId());
+		//System.out.println(customer.getId());
 
-		IDProof idProof = new IDProof();
-		idProof.setCustomer(customer);
+		// IDProof idProof = new IDProof();
+		// idProof.setCustomer(customer);
+		//
+		// List<IDProof> list = new ArrayList<IDProof>();
+		//
+		// list.add(idProof);
+		//
+		// customer.setIdProof(list);
+		//
+		// idProof.setName("PASSPORT");
 
-		List<IDProof> list = new ArrayList<IDProof>();
+		// userProfile.save(customer, idProof);
 
-		list.add(idProof);
-
-		customer.setIdProof(list);
-
-		idProof.setName("PASSPORT");
-
-		userProfile.save(customer, idProof);
-
-		//userProfile.delete(customer);
+		// userProfile.delete(customer);
 
 		customer = userProfile.findByCustomerMobile("20340324803210");
+		customer.setFirstName("MODIFIED");
+		System.out.println(customer);
 
-		System.out.println(customer.getIdProof().size());
+		userProfile.save(customer);
 
-		for (Iterator<IDProof> iterator = customer.getIdProof().iterator(); iterator
-				.hasNext();) {
-			IDProof type = (IDProof) iterator.next();
-			System.out.println(type.getName());
-
-		}
+		// System.out.println(customer.getIdProof().size());
+		//
+		// for (Iterator<IDProof> iterator = customer.getIdProof().iterator();
+		// iterator
+		// .hasNext();) {
+		// IDProof type = (IDProof) iterator.next();
+		// System.out.println(type.getName());
+		//
+		// }
 
 		// /** insert **/
 		// Stock stock = new Stock();
