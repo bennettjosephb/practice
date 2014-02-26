@@ -89,9 +89,13 @@ html,body {
 	width: 360px;
 	height: 15px;
 	font-size: 15px;
-	font: arial, helvetica, sans-serif;
+	font: Verdana, Tahoma, sans-serif;
+	font-family: sans-serif, Arial Narrow, Arial, Helvetica Condensed,
+		Helvetica;
 	float: left;
 	padding: 5px;
+	float: left;
+	float: left;
 }
 
 .textboxFirstName {
@@ -140,7 +144,7 @@ html,body {
 	outline: 0;
 	margin-left: 0;
 	margin-top: 5px;
-	margin-right: 2px;
+	margin-right: 5px;
 	margin-bottom: 5px;
 	font: normal 15px/100% Verdana, Tahoma, sans-serif;
 	background: #FFFFFF url('bg_form.png') left top repeat-x;
@@ -154,6 +158,114 @@ html,body {
 }
 
 .textboxLastName:focus {
+	-webkit-transition: 0.3s linear;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+	transition-delay: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	border-color: #A0A0A0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+}
+
+.month {
+	height: 30px;
+	width: 140px;
+	padding-left: 5px;
+	padding-right: 0px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	font: normal 15px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF),
+		color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin-bottom: 5px;
+}
+
+.month:focus {
+	-webkit-transition: 0.3s linear;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+	transition-delay: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	border-color: #A0A0A0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+}
+
+.date {
+	height: 30px;
+	width: 80px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	font: normal 15px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF),
+		color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin-bottom: 5px;
+}
+
+.date:focus {
+	-webkit-transition: 0.3s linear;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+	transition-delay: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	border-color: #A0A0A0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+}
+
+.year {
+	height: 30px;
+	width: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 8px;
+	margin-bottom: 5px;
+	font: normal 15px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF),
+		color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	margin-bottom: 5px;
+}
+
+.year:focus {
 	-webkit-transition: 0.3s linear;
 	-moz-transition: 0.3s linear;
 	-o-transition: 0.3s linear;
@@ -202,6 +314,41 @@ html,body {
 	-ms-transition: 0.3s linear;
 }
 
+.gender {
+	height: 30px;
+	width: 350px;
+	padding-left: 0;
+	padding-right: 0;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 0;
+	margin-bottom: 5px;
+	font: normal 15px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF),
+		color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+.gender:focus {
+	-webkit-transition: 0.3s linear;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+	transition-delay: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	border-color: #A0A0A0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+}
+
 .site-footer,.page-wrap:after {
 	/* .push must be the same height as footer */
 	height: 142px;
@@ -231,18 +378,20 @@ html,body {
 				<input class="textboxChooseUserName" type="password">
 				<div class="label">Confirm password</div>
 				<input class="textboxChooseUserName" type="password">
-				<div class="label">Confirm password</div>
+				<div class="label">Date of Birth</div>
+				<select class="month"></select> <select class="date"></select> <select
+					class="year"></select>
+				<div class="label">Gender</div>
+				<select class="gender"></select>
+				<div class="label">Mobile Phone</div>
 				<input class="textboxChooseUserName" type="text">
-				<div class="label">Confirm password</div>
+				<div class="label">Your email address</div>
 				<input class="textboxChooseUserName" type="text">
-				<div class="label">Confirm password</div>
+				<div class="label">Location</div>
 				<input class="textboxChooseUserName" type="text">
-				<div class="label">Confirm password</div>
-				<input class="textboxChooseUserName" type="text">
-				<div class="label">Confirm password</div>
-				<input class="textboxChooseUserName" type="text">
-				<div class="label">Confirm password</div>
-				<input class="textboxChooseUserName" type="text">
+				<div class="label">Type the character in below textbox</div>
+				<img alt="" src="/asdf"> <input class="textboxChooseUserName"
+					type="text">
 				<div class="label">Confirm password</div>
 				<input class="textboxChooseUserName" type="text">
 			</div>
