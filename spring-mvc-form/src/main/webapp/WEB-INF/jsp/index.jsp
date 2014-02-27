@@ -606,6 +606,12 @@ label.css-label {
 	font-family: sans-serif, Arial Narrow, Arial, Helvetica Condensed,
 		Helvetica;
 }
+
+.fileUpload {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
 </style>
 
 <script src="http://code.jquery.com/jquery-latest.js">
@@ -642,28 +648,27 @@ label.css-label {
 
 		<div id="content">
 			<div class="addForm" id="addForm">
-				Instant Money Transfer </br>
-				</br>
-				</br> PFG Money is the quickest and safest way to send or receive money
-				internationally. We offer the best foreign exchange rates, and our
-				service is backed by a100% money back guarantee. Using PFG Money
-				agents, in partnership with the worldwide network of world renowned
-				remittance providers , money can be transferred to and from over 180
-				countries in just minutes. PFG Money and our partner agents are
-				everywhere: you and your overseas contact will find an agent just
-				around the corner. Instant Money Transfer is a simple four step
-				process: </br></br>1. The sender visits any PFG Money office or agent. He or
-				she completes a simple form and provides the money to be sent plus a
-				transfer fee. </br>2. Notification is sent immediately to the selected
-				PFG Money office or agent in the country of the receiver. The sender
-				provides the receiver with a security code. </br>3. The receiver visits
-				the selected office or agent. They provide the security code and
-				personal identification (where applicable). </br>4. The receiver is
-				provided with the transferred funds in local currency. The sender
-				instantly receives an SMS notification that the transaction has been
-				completed. You’ll find ourservice second to none. Combining this
-				with excellent exchange rates, competitive fees and a dedication to
-				your security, why look anywhere else?
+				Instant Money Transfer </br> </br> </br> PFG Money is the quickest and safest way
+				to send or receive money internationally. We offer the best foreign
+				exchange rates, and our service is backed by a100% money back
+				guarantee. Using PFG Money agents, in partnership with the worldwide
+				network of world renowned remittance providers , money can be
+				transferred to and from over 180 countries in just minutes. PFG
+				Money and our partner agents are everywhere: you and your overseas
+				contact will find an agent just around the corner. Instant Money
+				Transfer is a simple four step process: </br> </br>1. The sender visits any
+				PFG Money office or agent. He or she completes a simple form and
+				provides the money to be sent plus a transfer fee. </br>2. Notification
+				is sent immediately to the selected PFG Money office or agent in the
+				country of the receiver. The sender provides the receiver with a
+				security code. </br>3. The receiver visits the selected office or agent.
+				They provide the security code and personal identification (where
+				applicable). </br>4. The receiver is provided with the transferred funds
+				in local currency. The sender instantly receives an SMS notification
+				that the transaction has been completed. You’ll find ourservice
+				second to none. Combining this with excellent exchange rates,
+				competitive fees and a dedication to your security, why look
+				anywhere else?
 			</div>
 			<form action="/newregistration.htm">
 				<div class="registrationForm" id="registrationForm">
@@ -731,12 +736,12 @@ label.css-label {
 					<div class="label">Type the character in below textbox</div>
 					<img id="captcha_image" class="captchaImage" alt=""
 						src="SimpleCaptcha.jpg" /> <input class="captchaRegenerate"
-						type="button" value="Regenerate Image" onclick="reloadCaptcha()"><input
-						class="textboxChooseUserName" type="text"> <input
+						type="button" value="Regenerate Image" onclick="reloadCaptcha()">
+					<input class="textboxChooseUserName" type="text"> <input
 						type="checkbox" name="checkboxG1" id="checkboxG1"
-						class="css-checkbox" /> <label for="checkboxG1" class="css-label"><a
-						href="http://www.google.com">Terms and Conditions</a></label><input
-						class="submit" type="submit" value="Submit">
+						class="css-checkbox" /> <label for="checkboxG1" class="css-label">
+						<a href="http://www.google.com">Terms and Conditions</a>
+					</label> <input class="submit" type="submit" value="Submit">
 				</div>
 				<div class="clear"></div>
 			</form>
