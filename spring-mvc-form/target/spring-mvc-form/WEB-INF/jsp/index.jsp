@@ -1,5 +1,4 @@
-<%@page isELIgnored="false"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%><!DOCTYPE html>
+<%@page isELIgnored="false"%><!DOCTYPE html>
 <html>
 <head>
 <meta charset=utf-8 />
@@ -311,41 +310,17 @@ html,body {
 }
 
 .textboxChooseUserName:focus {
-}
-
-input[type=checkbox].css-checkbox {
-	display: none;
-}
-
-input[type=checkbox].css-checkbox+label.css-label {
-	padding-left: 23px;
-	height: 22px;
-	display: inline-block;
-	line-height: 22px;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	font-size: 14px;
-	font-family: sans-serif, Arial Narrow, Arial, Helvetica Condensed;
-	vertical-align: middle;
-	cursor: pointer;
-	vertical-align: middle;
-}
-
-input[type=checkbox].css-checkbox:checked+label.css-label {
-	background-position: 0 -22px;
-}
-
-label.css-label {
-	background:
-		url(http://csscheckbox.com/checkboxes/u/csscheckbox_3292e00418673db9d0a94b031e48d539.png);
-	border-left: 5px solid transparent;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-touch-callout: none;
+	-webkit-transition: 0.3s linear;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
+	transition-delay: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	border-color: #A0A0A0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	-moz-transition: 0.3s linear;
+	-o-transition: 0.3s linear;
+	-ms-transition: 0.3s linear;
 }
 
 .gender {
@@ -539,11 +514,6 @@ label.css-label {
 		rgba(255, 255, 255, 0.3);
 }
 
-.selectStyle {
-	color: #F1F1F1;
-	background-color: #FF0000;
-}
-
 ::-webkit-input-placeholder {
 	padding-top: 2px;
 }
@@ -559,18 +529,6 @@ label.css-label {
 :-ms-input-placeholder {
 	padding-top: 8px;
 }
-
-.textBoxError {
-	border-color: #C9C9C9;
-	background: url('images/Warning.png'),
-		-webkit-gradient(linear, left top, left 25, from(#FFFFFF),
-		color-stop(4%, #EEEEEE), to(#FFFFFF));
-	background: url('images/Warning.png'),
-		-moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
-	background-position: center right;
-	background-repeat: no-repeat;
-	outline: none;
-}
 </style>
 
 <script src="http://code.jquery.com/jquery-latest.js">
@@ -580,24 +538,6 @@ label.css-label {
 	function reloadCaptcha() {
 		$("#captcha_image").attr("src", "SimpleCaptcha.jpg");
 	}
-	$("#target").focus(function() {
-		alert("Handler for .focus() called.");
-	});
-	$("input").focusout(function() {
-		$(this).css("background-color", "#FFFFFF");
-	});
-	$("input").focusin(function() {
-		$(this).css("background-color", "#FFFFFF");
-	});
-
-	$(document).ready(function() {
-		$("input").focusin(function() {
-			$(this).addClass("textBoxError");
-		});
-		$("input").focusout(function() {
-			$(this).removeClass("textBoxError");
-		});
-	});
 </script>
 
 </head>
@@ -618,38 +558,10 @@ label.css-label {
 					<div class="label">Confirm password</div>
 					<input class="textboxChooseUserName" type="password">
 					<div class="label">Date of Birth</div>
-					<select class="month">
-						<option value="0">Month</option>
-						<option value="1">January</option>
-						<option value="2">Febuary</option>
-						<option value="3">March</option>
-						<option value="4">April</option>
-						<option value="5">May</option>
-						<option value="6">June</option>
-						<option value="7">July</option>
-						<option value="8">August</option>
-						<option value="9">September</option>
-						<option value="10">October</option>
-						<option value="11">November</option>
-						<option value="12">December</option>
-					</select> <select class="date">
-						<option value="0">Date</option>
-						<c:forEach var="count" begin="1" end="31">
-							<option value="${count}">${count}</option>
-						</c:forEach>
-					</select> <select class="year">
-						<option value="0">Year</option>
-						<c:forEach var="count" begin="1" end="200">
-							<option value="${count}">${count + 1900}</option>
-						</c:forEach>
-					</select>
+					<select class="month"></select> <select class="date"></select> <select
+						class="year"></select>
 					<div class="label">Gender</div>
-					<select class="gender">
-						<option value="0">Select</option>
-						<option value="1">Male</option>
-						<option value="2">Female</option>
-						<option value="3">Other</option>
-					</select>
+					<select class="gender"></select>
 					<div class="label">Mobile Phone</div>
 					<input class="textboxChooseUserName" type="text">
 					<div class="label">Your email address</div>
@@ -663,23 +575,22 @@ label.css-label {
 					<div class="label">State</div>
 					<input class="textboxChooseUserName" type="text">
 					<div class="label">Country</div>
-					<select class="gender">
-					</select>
+					<select class="gender"></select>
 					<div class="label">Type the character in below textbox</div>
-					<img id="captcha_image" class="captchaImage" alt=""
-						src="SimpleCaptcha.jpg" /> <input class="captchaRegenerate"
-						type="button" value="Regenerate Image" onclick="reloadCaptcha()"><input
+					<img class="captchaImage" alt="" src="SimpleCaptcha.jpg" /> <input
+						class="captchaRegenerate" type="button" value="Regenerate Image"><input
 						class="textboxChooseUserName" type="text">
 					<div class="label">Confirm password</div>
-					<input type="checkbox" name="checkboxG1" id="checkboxG1"
-						class="css-checkbox" /> <label for="checkboxG1" class="css-label"><a
-						href="http://www.google.com">Terms and Conditions</a></label><input
+					<input class="textboxChooseUserName" type="text"> <input
 						class="submit" type="submit" value="Submit">
 				</div>
 				<div class="clear"></div>
 			</form>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">Aenean vulputate eleifend tellus. Aenean leo
+		ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
+		lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+		viverra nulla ut metus</div>
 </body>
 </html>
