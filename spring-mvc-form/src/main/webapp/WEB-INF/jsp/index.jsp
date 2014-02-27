@@ -63,13 +63,15 @@ html,body {
 	border-top-color: #E0E0E0;
 	border-top-style: solid;
 	border-top-width: 1px;
-	padding-top: 3px;
+	padding-top: 8px;
+	padding-left: 5px;
 	font-size: 12px;
 	font: Verdana, Tahoma, sans-serif;
 	font-family: sans-serif, Arial Narrow, Arial, Helvetica Condensed,
 		Helvetica;
 	font-size: 12px;
 	min-width: 1000px;
+	font-size: 12px;
 }
 
 .rightAlign {
@@ -90,7 +92,6 @@ html,body {
 #registrationForm {
 	width: 360px;
 	float: right;
-	background-color: #EFEFEF;
 	margin-bottom: 10px;
 }
 
@@ -311,6 +312,7 @@ html,body {
 }
 
 .textboxChooseUserName:focus {
+	
 }
 
 input[type=checkbox].css-checkbox {
@@ -571,6 +573,39 @@ label.css-label {
 	background-repeat: no-repeat;
 	outline: none;
 }
+
+#banner_area {
+	float: left;
+	margin-bottom: 10px;
+}
+
+#banner_area img {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#banner_area img:first-child {
+	display: block;
+}
+
+#banner_area>img {
+	width: 620px;
+	height: 1000px;
+}
+
+#addForm {
+	width: 620px;
+	height: 1120px;
+	background-color: #F1F1F1;
+	float: left;
+	margin-bottom: 10px;
+	word-wrap: break-word;
+	padding: 5px;
+	font-family: sans-serif, Arial Narrow, Arial, Helvetica Condensed,
+		Helvetica;
+}
 </style>
 
 <script src="http://code.jquery.com/jquery-latest.js">
@@ -603,9 +638,33 @@ label.css-label {
 </head>
 <body>
 	<div id="wrap">
-		<div id="header">header</div>
+		<div id="header">LOGO OR HEADING</div>
 
 		<div id="content">
+			<div class="addForm" id="addForm">
+				Instant Money Transfer </br>
+				</br>
+				</br> PFG Money is the quickest and safest way to send or receive money
+				internationally. We offer the best foreign exchange rates, and our
+				service is backed by a100% money back guarantee. Using PFG Money
+				agents, in partnership with the worldwide network of world renowned
+				remittance providers , money can be transferred to and from over 180
+				countries in just minutes. PFG Money and our partner agents are
+				everywhere: you and your overseas contact will find an agent just
+				around the corner. Instant Money Transfer is a simple four step
+				process: </br></br>1. The sender visits any PFG Money office or agent. He or
+				she completes a simple form and provides the money to be sent plus a
+				transfer fee. </br>2. Notification is sent immediately to the selected
+				PFG Money office or agent in the country of the receiver. The sender
+				provides the receiver with a security code. </br>3. The receiver visits
+				the selected office or agent. They provide the security code and
+				personal identification (where applicable). </br>4. The receiver is
+				provided with the transferred funds in local currency. The sender
+				instantly receives an SMS notification that the transaction has been
+				completed. You’ll find ourservice second to none. Combining this
+				with excellent exchange rates, competitive fees and a dedication to
+				your security, why look anywhere else?
+			</div>
 			<form action="/newregistration.htm">
 				<div class="registrationForm" id="registrationForm">
 					<div class="label">Name</div>
@@ -645,7 +704,7 @@ label.css-label {
 					</select>
 					<div class="label">Gender</div>
 					<select class="gender">
-						<option value="0">Select</option>
+						<option value="0">Gender</option>
 						<option value="1">Male</option>
 						<option value="2">Female</option>
 						<option value="3">Other</option>
@@ -664,14 +723,17 @@ label.css-label {
 					<input class="textboxChooseUserName" type="text">
 					<div class="label">Country</div>
 					<select class="gender">
+						<option value="0">Country</option>
+						<option value="1">Male</option>
+						<option value="2">Female</option>
+						<option value="3">Other</option>
 					</select>
 					<div class="label">Type the character in below textbox</div>
 					<img id="captcha_image" class="captchaImage" alt=""
 						src="SimpleCaptcha.jpg" /> <input class="captchaRegenerate"
 						type="button" value="Regenerate Image" onclick="reloadCaptcha()"><input
-						class="textboxChooseUserName" type="text">
-					<div class="label">Confirm password</div>
-					<input type="checkbox" name="checkboxG1" id="checkboxG1"
+						class="textboxChooseUserName" type="text"> <input
+						type="checkbox" name="checkboxG1" id="checkboxG1"
 						class="css-checkbox" /> <label for="checkboxG1" class="css-label"><a
 						href="http://www.google.com">Terms and Conditions</a></label><input
 						class="submit" type="submit" value="Submit">
@@ -680,6 +742,6 @@ label.css-label {
 			</form>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">@Copyright Pty Ltd</div>
 </body>
 </html>
