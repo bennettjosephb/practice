@@ -338,8 +338,7 @@ input[type=checkbox].css-checkbox:checked+label.css-label {
 }
 
 label.css-label {
-	background:
-		url(http://csscheckbox.com/checkboxes/u/csscheckbox_3292e00418673db9d0a94b031e48d539.png);
+	background: url(images/csscheckbox.png);
 	border-left: 5px solid transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -614,7 +613,7 @@ label.css-label {
 }
 </style>
 
-<script src="http://code.jquery.com/jquery-latest.js">
+<script src="js/jquery-2.1.0.js">
 	
 </script>
 <script type="text/javascript">
@@ -737,7 +736,14 @@ label.css-label {
 					<img id="captcha_image" class="captchaImage" alt=""
 						src="SimpleCaptcha.jpg" /> <input class="captchaRegenerate"
 						type="button" value="Regenerate Image" onclick="reloadCaptcha()">
-					<input class="textboxChooseUserName" type="text"> <input
+					<input class="textboxChooseUserName" type="text">
+					<div class="label">ID Proof</div>
+					<select class="gender">
+						<option value="0">ID Type</option>
+						<option value="1">Male</option>
+						<option value="2">Female</option>
+						<option value="3">Other</option>
+					</select> <input class="fileUpload" type="file" name="file" /> <input
 						type="checkbox" name="checkboxG1" id="checkboxG1"
 						class="css-checkbox" /> <label for="checkboxG1" class="css-label">
 						<a href="http://www.google.com">Terms and Conditions</a>

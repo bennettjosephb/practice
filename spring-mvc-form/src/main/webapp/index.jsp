@@ -1,81 +1,46 @@
-<%@page isELIgnored="false"%><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>Layout</title>
+<title>jQuery goes to DOM-ville</title>
 <style>
-* {
-	margin: 0;
-	padding: 0;
+#change_me {
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	font: 24px arial;
 }
 
-html,body {
-	height: 100%;
-}
-
-#wrap {
-	min-height: 100%;
-}
-
-/* Make Header Sticky */
-#header_container {
-	background: #eee;
-	border: 1px solid #666;
-	height: 50px;
-	left: 0;
-	position: fixed;
-	width: 100%;
-	top: 0;
-}
-
-#header {
-	line-height: 50px;
-	margin: 0 auto;
-	width: 940px;
-	text-align: center;
-}
-
-#content {
-	padding-bottom: 30px;
-	width: 1000px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-left: 10px;
-	margin-top: 60px;
-	margin-bottom: 40px;
-	text-align: justify;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #FF00FF;
-	margin-top: 60px;
-}
-
-#footer {
-	height: 30px;
-	margin-top: -30px;
-	bottom: 0;
-	background: green;
+#move_up #move_down #color #disappear {
+	padding: 5px;
 }
 </style>
+<script src="js/jquery-2.1.0.js"></script>
 </head>
 <body>
-	<div id="wrap">
-		<!-- BEGIN: Sticky Header -->
-		<div id="header_container">
-			<div id="header">Hwweader Content</div>
-		</div>
-		<!-- END: Sticky Header -->
-
-
-		<div id="content">
-			<p>Greetings, it is now </p>
-		</div>
-	</div>
-	<div id="footer">Aenean vulputate eleifend tellus. Aenean leo
-		ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-		lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-		viverra nulla ut metus</div>
+	<button id="move_up">Move Up</button>
+	<button id="move_down">Move Down</button>
+	<button id="color">Change Color</button>
+	<button id="disappear">Disappear/Re-appear</button>
+	<div id="change_me">Make Me Do Stuff!</div>
+	<script>
+		$(document).ready(function() {
+			$("#move_up").click(function() {
+				$("#change_me").animate({
+					top : 30
+				}, 200);
+			});//end move_up
+			$("#move_down").click(function() {
+				$("#change_me").animate({
+					top : 500
+				}, 2000);
+			});//end move_down
+			$("#color").click(function() {
+				$("#change_me").css("color", "purple");
+			});//end color
+			$("#disappear").click(function() {
+				$("#change_me").toggle("slow");
+			});//end disappear
+		});//end doc ready
+	</script>
 </body>
 </html>
