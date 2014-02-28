@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>jQuery goes to DOM-ville</title>
+<link rel="stylesheet" type="text/css" href="css/my_style.css">
 <style>
 #change_me {
 	position: absolute;
@@ -38,9 +39,48 @@
 				$("#change_me").css("color", "purple");
 			});//end color
 			$("#disappear").click(function() {
-				$("#change_me").toggle("slow");
+				$("#change_me").fadeOut();
 			});//end disappear
 		});//end doc ready
+	</script>
+
+	<div id="showfriend">
+		<a href="#">Our Furry Friends Need Your Help <img
+			src="images/nike_brandbuttons.jpg">
+		</a>
+	</div>
+
+	<div id="clickMe">Show Me the Furry Friend of the Day</div>
+	<div id="picframe">
+		<img src="images/nike_brandbuttons.jpg">
+	</div>
+	<div id="header">
+		<h2>Jump for Joy Sale</h2>
+	</div>
+	<div id="main">
+		<div>
+			<img src="images/nike_brandbuttons.jpg" />
+		</div>
+		<div>
+			<img src="images/nike_brandbuttons2.jpg" />
+		</div>
+		<div>
+			<img src="images/nike_brandbuttons3.jpg" />
+		</div>
+		<div>
+			<img src="images/nike_brandbuttons4.jpg" />
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$("#clickMe").click(function() {
+				$("img").fadeIn(1000);
+				$("#picframe").slideToggle("slow");
+			});
+			$("div").click(function() {
+				alert("You clicked me.");
+			});//end click function
+		});
 	</script>
 </body>
 </html>
