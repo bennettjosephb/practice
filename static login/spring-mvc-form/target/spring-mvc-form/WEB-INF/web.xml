@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>springapp</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SimpleCaptcha</servlet-name>
+		<servlet-class>au.com.showcase.application.captcha.ExtendedCaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>width</param-name>
+			<param-value>347</param-value>
+		</init-param>
+		<init-param>
+			<param-name>height</param-name>
+			<param-value>60</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SimpleCaptcha</servlet-name>
+		<url-pattern>/SimpleCaptcha.jpg</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>springapp</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>
+			index.htm
+		</welcome-file>
+	</welcome-file-list>
+</web-app>
