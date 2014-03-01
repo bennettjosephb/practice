@@ -74,11 +74,12 @@
 	<script>
 		$(document).ready(function() {
 			$("#clickMe").click(function() {
-				$("img").fadeIn(1000);
-				$("#picframe").slideToggle("slow");
+				//$("img").fadeIn(1000);
+				$("#picframe").fadeToggle(1000);
+				$("#picframe").slideToggle(1000);
 			});
 			$("div").click(function() {
-				alert("You clicked me.");
+				//alert("You clicked me.");
 			});//end click function
 		});
 	</script>

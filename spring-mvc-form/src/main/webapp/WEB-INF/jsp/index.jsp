@@ -723,6 +723,8 @@ label.css-label {
 					<input class="textboxChooseUserName" type="text">
 					<div class="label">Suburb</div>
 					<input class="textboxChooseUserName" type="text">
+					<div class="label">Postcode</div>
+					<input class="textboxChooseUserName" type="text">
 					<div class="label">State</div>
 					<input class="textboxChooseUserName" type="text">
 					<div class="label">Country</div>
